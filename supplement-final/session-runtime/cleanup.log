@@ -1,0 +1,16 @@
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-auto-session-supplement-23370-gateway-1 Stopping 
+ Container mcp-auto-session-supplement-23370-gateway-1 Stopped 
+ Container mcp-auto-session-supplement-23370-gateway-1 Removing 
+ Container mcp-auto-session-supplement-23370-gateway-1 Removed 
+ Container mcp-auto-session-supplement-23370-backend-secondary-1 Stopping 
+ Container mcp-auto-session-supplement-23370-backend-primary-1 Stopping 
+ Container mcp-auto-session-supplement-23370-backend-secondary-1 Stopped 
+ Container mcp-auto-session-supplement-23370-backend-secondary-1 Removing 
+ Container mcp-auto-session-supplement-23370-backend-secondary-1 Removed 
+ Container mcp-auto-session-supplement-23370-backend-primary-1 Stopped 
+ Container mcp-auto-session-supplement-23370-backend-primary-1 Removing 
+ Container mcp-auto-session-supplement-23370-backend-primary-1 Removed 
+ Network mcp-auto-session-supplement-23370_default Removing 
+ Network mcp-auto-session-supplement-23370_default Removed 

@@ -1,0 +1,7 @@
+{
+  "accepted": true,
+  "fixtureSequenceFailure": false,
+  "httpStatus": 400,
+  "idMatches": true,
+  "rpcErrorCode": -32020
+}

@@ -1,0 +1,95 @@
+{
+  "accessRequestIds": [
+    "supplement-alice",
+    "supplement-bob"
+  ],
+  "bothInitializeRequestsObservedBeforeRelease": true,
+  "events": [
+    {
+      "authAlias": "bob",
+      "requestKey": "bob",
+      "requestSessionMatches": null,
+      "rpcMethod": "server/discover",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "alice",
+      "requestKey": "alice",
+      "requestSessionMatches": null,
+      "rpcMethod": "server/discover",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "bob",
+      "requestKey": "bob",
+      "requestSessionMatches": null,
+      "rpcMethod": "initialize",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "alice",
+      "requestKey": "alice",
+      "requestSessionMatches": null,
+      "rpcMethod": "initialize",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "alice",
+      "requestKey": "alice",
+      "requestSessionMatches": true,
+      "rpcMethod": "notifications/initialized",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "bob",
+      "requestKey": "bob",
+      "requestSessionMatches": true,
+      "rpcMethod": "notifications/initialized",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "alice",
+      "requestKey": "alice",
+      "requestSessionMatches": true,
+      "rpcMethod": "tools/call",
+      "unexpectedEarlySession": false
+    },
+    {
+      "authAlias": "bob",
+      "requestKey": "bob",
+      "requestSessionMatches": true,
+      "rpcMethod": "tools/call",
+      "unexpectedEarlySession": false
+    }
+  ],
+  "executions": {
+    "alice": 1,
+    "bob": 1
+  },
+  "oracle": {
+    "negativeControls": [
+      {
+        "phase": "notifications/initialized",
+        "swappedSessionRejected": true
+      },
+      {
+        "phase": "tools/call",
+        "swappedSessionRejected": true
+      }
+    ],
+    "positive": true,
+    "rawSessionValuesPublished": false
+  },
+  "responses": {
+    "alice": {
+      "hasResult": true,
+      "status": 200
+    },
+    "bob": {
+      "hasResult": true,
+      "status": 200
+    }
+  },
+  "sourceSha": "53587de46153829d05130649aa132e45885c77f6",
+  "status": "PASS"
+}

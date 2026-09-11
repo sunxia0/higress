@@ -1,0 +1,32 @@
+{
+  "auto": {
+    "case": "unset",
+    "executions": {},
+    "released": {},
+    "returned": {},
+    "waiting": []
+  },
+  "events": [
+    {
+      "authorizationMatchesExplicitPolicy": false,
+      "authorizationPresent": false,
+      "cookiePresent": false,
+      "futureParam": null,
+      "httpMethod": "POST",
+      "internalRoutePresent": false,
+      "lastEventIDPresent": false,
+      "mcpMethod": "tools/call",
+      "mcpName": "proxy_echo",
+      "origin": "secondary",
+      "path": "/modern",
+      "protocolVersion": "2026-07-28",
+      "rpcId": "after-failure",
+      "rpcMethod": "tools/call",
+      "seq": 1,
+      "sessionPresent": false,
+      "toolName": "proxy_echo",
+      "unrelatedCredentialPresent": false
+    }
+  ],
+  "origin": "secondary"
+}

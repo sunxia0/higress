@@ -1,0 +1,21 @@
+go-sdk v1.7.0: direct negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-modern negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-legacy negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-auto-modern negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-auto-legacy negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-auto-switch negotiated, listed, and called successfully
+go-sdk v1.7.0: proxy-auto-error stopped before business
+
+added 13 packages, and audited 14 packages in 1s
+
+2 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+typescript-client 2.0.0: direct negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-modern negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-legacy negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-auto-modern negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-auto-legacy negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-auto-switch negotiated, listed, and called successfully
+typescript-client 2.0.0: proxy-auto-error stopped before business

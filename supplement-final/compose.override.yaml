@@ -1,0 +1,11 @@
+services:
+  backend-primary:
+    command: ["python", "/supplement/session_backend.py"]
+    volumes:
+      - ${MCP_SUPPLEMENT_DIR:?set MCP_SUPPLEMENT_DIR}:/supplement:ro
+  verifier:
+    environment:
+      MCP_EXPECTED_SOURCE_SHA: ${MCP_EXPECTED_SOURCE_SHA:?set exact final candidate SHA}
+    command: ["python", "/supplement/verify_session.py"]
+    volumes:
+      - ${MCP_SUPPLEMENT_DIR:?set MCP_SUPPLEMENT_DIR}:/supplement:ro

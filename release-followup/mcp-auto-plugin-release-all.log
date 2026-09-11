@@ -1,0 +1,119 @@
+--- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR (162.92s)
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/squash-merged-reviewed-preparation-pr (6.11s)
+        approval_chain_contract_test.go:1043: authorized promotion was rejected: exit status 127
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRsquash-merged-reviewed-preparation-pr955361728/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/approved-review-missing (5.51s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRapproved-review-missing794503449/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/self-approval (5.30s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRself-approval3144681767/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/comment-only-review (5.75s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRcomment-only-review3324896634/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/changes-requested-review (5.18s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRchanges-requested-review1750163536/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/approval-after-merge (5.31s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRapproval-after-merge627321554/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/approval-of-stale-head (5.23s)
+        approval_chain_contract_test.go:1034: authorization output lacks "has no review by someone other than its author":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRapproval-of-stale-head3040865288/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/write-collaborator-approval (5.40s)
+        approval_chain_contract_test.go:1034: authorization output lacks "no pre-merge APPROVED review of head commit":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRwrite-collaborator-approval1772369689/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+    --- FAIL: TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPR/reviewer-permission-lookup-unknown (5.08s)
+        approval_chain_contract_test.go:1034: authorization output lacks "no pre-merge APPROVED review of head commit":
+            From /var/folders/kb/ly0ydl6x1nj7t_xpzgvs14br0000gp/T/TestPromotionAuthorizationRequiresTheReviewedAutomationPreparationPRreviewer-permission-lookup-unknown2336962349/001
+             * branch            main       -> FETCH_HEAD
+            bash: line 90: mapfile: command not found
+--- FAIL: TestGoBatchBuildUsesReleaseEligibleCatalogSelection (0.06s)
+    batch_build_contract_test.go:38: list release Go batch: exit status 127
+        Build wasm-go plugins (default when PLUGIN_TYPE is unset)
+        tools/hack/build-wasm-plugins.sh: line 68: mapfile: command not found
+--- FAIL: TestGoE2EBatchIsProductionUnionManifestDependencies (0.07s)
+    batch_build_contract_test.go:83: list release Go batch: exit status 127
+        Build wasm-go plugins (default when PLUGIN_TYPE is unset)
+        tools/hack/build-wasm-plugins.sh: line 68: mapfile: command not found
+--- FAIL: TestPromotionLatestContractSkipsMigrationExcludedPlugins (5.55s)
+    migration_promotion_contract_test.go:110: latest phase rejected a migration exclusion: exit status 1
+        bash: line 135: 96429 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+        1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+--- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement (25.08s)
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/verified-bootstrap (4.24s)
+        promotion_latest_contract_test.go:52: verified bootstrap latest replacement failed: exit status 1
+            bash: line 135: 98679 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/verified-bootstrap-missing (3.25s)
+        promotion_latest_contract_test.go:70: verified missing bootstrap entry did not authorize its legacy latest migration: exit status 1
+            bash: line 135: 98777 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/ordinary-snapshot (2.92s)
+        promotion_latest_contract_test.go:81: ordinary snapshot accepted an unannotated latest: err=exit status 1
+            bash: line 135: 99086 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/invalid-evidence-status (2.92s)
+        promotion_latest_contract_test.go:118: invalid bootstrap binding was accepted: err=exit status 1
+            bash: line 135: 99220 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/missing-evidence (2.95s)
+        promotion_latest_contract_test.go:118: invalid bootstrap binding was accepted: err=exit status 1
+            bash: line 135: 99627 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/wrong-public-reference (2.74s)
+        promotion_latest_contract_test.go:118: invalid bootstrap binding was accepted: err=exit status 1
+            bash: line 135: 99721 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/public-evidence-same-version (2.68s)
+        promotion_latest_contract_test.go:137: bootstrap evidence allowed a same-version different-digest replacement: err=exit status 1
+            bash: line 135: 99816 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractAllowsOnlyEvidenceBoundBootstrapReplacement/missing-evidence-version-mismatch (3.30s)
+        promotion_latest_contract_test.go:149: missing evidence authorized a different selected version: err=exit status 1
+            bash: line 135:   122 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+--- FAIL: TestPromotionLatestContractKeepsAnnotatedMonotonicityAndConflicts (5.51s)
+    --- FAIL: TestPromotionLatestContractKeepsAnnotatedMonotonicityAndConflicts/downgrade (3.04s)
+        promotion_latest_contract_test.go:172: annotated latest guard did not fail as expected: err=exit status 1
+            bash: line 135:   257 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+    --- FAIL: TestPromotionLatestContractKeepsAnnotatedMonotonicityAndConflicts/same-version-conflict (2.47s)
+        promotion_latest_contract_test.go:172: annotated latest guard did not fail as expected: err=exit status 1
+            bash: line 135:   446 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+            1 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+--- FAIL: TestPromotionLatestContractCreatesAbsentAndSkipsIdentical (5.10s)
+    promotion_latest_contract_test.go:186: absent/identical latest batch failed: exit status 1
+        bash: line 135:   610 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+        bash: line 135:   671 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+        2 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+--- FAIL: TestPromotionLatestContractDoesNotMutateBeforeCompletePreflight (4.86s)
+    promotion_latest_contract_test.go:203: incomplete preflight unexpectedly succeeded: err=exit status 1
+        bash: line 135:   845 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+        bash: line 135:   975 Killed: 9               /tmp/plugin-release verify-pulled-plugin --manifest "$pull_dir/manifest.json" --config "$pull_dir/config.json" --wasm "$pull_dir/plugin.wasm" --digest "$digest" --source-commit "$source_commit" --source-created "$source_created" --version "$version" --input-hash "$input_hash" 2> "$pull_error"
+        2 public artifact pull gate(s) failed; passing latest aliases were processed, no completion marker was published
+--- FAIL: TestPromotionLatestPullGateJournalsFailureAndProcessesPassingPlugins (5.63s)
+    promotion_latest_contract_test.go:220: passing plugin's latest alias was not processed:
+        manifest fetch registry.example.invalid/plugins/bad@sha256:63fcf04ba5c5885c5ba7349528a512073d1754ca11ce90a7308621cb19289909 --output /tmp/plugin-release-pull-bad/manifest.json
+        pull registry.example.invalid/plugins/bad@sha256:63fcf04ba5c5885c5ba7349528a512073d1754ca11ce90a7308621cb19289909 --output /tmp/plugin-release-pull-bad
+        manifest fetch registry.example.invalid/plugins/good@sha256:4f0c1a72c98206064f3f252c63fed20a775efe882665a8cde038f852bf1e4158 --output /tmp/plugin-release-pull-good/manifest.json
+        pull registry.example.invalid/plugins/good@sha256:4f0c1a72c98206064f3f252c63fed20a775efe882665a8cde038f852bf1e4158 --output /tmp/plugin-release-pull-good
+FAIL
+FAIL	github.com/higress-group/higress/tools/plugin-release	529.205s
+FAIL

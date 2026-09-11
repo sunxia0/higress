@@ -1,0 +1,125 @@
+{
+  "descriptorCanonicalization": "type-tagged UTF-8 JSON; object keys sorted; numeric lexemes retained and distinct from strings",
+  "fixtures": [
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "9e4033c79a1bea94f527346c7c2f6b9f2f517e461fa689dade199cf012d3d8ca",
+      "fixture": "unsupported-semantics",
+      "legacyMapping": true,
+      "port": 14000,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "678012238a7e4c772687249995ed2957c9edd6d08624b581a802817751d87164",
+      "fixture": "contradictory-semantics",
+      "legacyMapping": true,
+      "port": 14001,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "032d98b3206182d8d9241f41a6a442734b88b7cdb7792eb247991b4a7752a731",
+      "fixture": "byte-limit",
+      "legacyMapping": true,
+      "port": 14002,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "f2e76ff654cd5de5dfc3e9d21a3301bb71fb567dcb70149b1a2e4c37d2f3b554",
+      "fixture": "depth-limit",
+      "legacyMapping": true,
+      "port": 14003,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "389a2afdd4bea90691e73ee6b8dc27e1df132e5d292c5ccf9a0a8f9d3c9b077c",
+      "fixture": "node-limit",
+      "legacyMapping": true,
+      "port": 14004,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "f7ab76dc708aea4c43a1840f6dfaeb422b7f6a09114dbceb6bf51fff5e7718e6",
+      "fixture": "collection-limit",
+      "legacyMapping": true,
+      "port": 14005,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "fb5e6c85e8612ce22f96bacbaa10307c1277d4906cadfb96d0a955df4e6efdb4",
+      "fixture": "enum-limit",
+      "legacyMapping": true,
+      "port": 14006,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+      "fixture": "mixed-valid-invalid",
+      "legacyMapping": true,
+      "port": 14007,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+      "fixture": "rule-level",
+      "legacyMapping": true,
+      "port": 14008,
+      "tool": "fixture_tool"
+    },
+    {
+      "expectedAcceptance": {
+        "affected": false,
+        "candidate": true,
+        "oracle": true
+      },
+      "expectedInputSchemaSha256": "ac94cfd01fb8a4bbd929b8a05de157c5e2d727983bfcd345a952bfa3a950dd60",
+      "fixture": "numeric-comparison-limit",
+      "legacyMapping": false,
+      "port": 14009,
+      "tool": "numeric_comparison"
+    }
+  ]
+}

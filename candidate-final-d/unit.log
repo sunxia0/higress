@@ -1,0 +1,7 @@
+?   	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp	[no test files]
+?   	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/consts	[no test files]
+?   	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/filter	[no test files]
+ok  	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/protocol	0.534s
+ok  	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/server	1.192s
+ok  	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/utils	1.427s
+ok  	github.com/alibaba/higress/plugins/wasm-go/pkg/mcp/validator	1.895s

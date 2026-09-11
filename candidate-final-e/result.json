@@ -1,0 +1,16 @@
+{
+  "source_sha": "53587de46153829d05130649aa132e45885c77f6",
+  "source_tree_clean": true,
+  "command": [
+    "bash",
+    "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/run.sh"
+  ],
+  "environment_overrides": {
+    "RUNTIME_EVIDENCE": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-final-e/runtime"
+  },
+  "started_at": "2026-09-11T10:12:52.152954+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-09-11T10:16:46.213946+00:00",
+  "final_head": "53587de46153829d05130649aa132e45885c77f6",
+  "final_status": ""
+}

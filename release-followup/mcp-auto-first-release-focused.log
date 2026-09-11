@@ -1,0 +1,10 @@
+=== RUN   TestFirstManagedReleasePlansExactlyFromV223DespiteMissingVersions
+--- PASS: TestFirstManagedReleasePlansExactlyFromV223DespiteMissingVersions (25.02s)
+=== RUN   TestFirstManagedReleaseDefersNewAlphaUntilStable
+=== RUN   TestFirstManagedReleaseDefersNewAlphaUntilStable/2.0.3-alpha
+=== RUN   TestFirstManagedReleaseDefersNewAlphaUntilStable/2.0.3
+--- PASS: TestFirstManagedReleaseDefersNewAlphaUntilStable (2.32s)
+    --- PASS: TestFirstManagedReleaseDefersNewAlphaUntilStable/2.0.3-alpha (0.66s)
+    --- PASS: TestFirstManagedReleaseDefersNewAlphaUntilStable/2.0.3 (0.91s)
+PASS
+ok  	github.com/higress-group/higress/tools/plugin-release	27.912s

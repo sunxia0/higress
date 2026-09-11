@@ -1,0 +1,14 @@
+Release "higress" does not exist. Installing it now.
+NAME: higress
+LAST DEPLOYED: Fri Sep 11 17:49:29 2026
+NAMESPACE: higress-system
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+NOTES:
+Higress successfully installed!
+
+To learn more about the release, try:
+  $ helm status higress -n higress-system
+  $ helm get all higress -n higress-system
