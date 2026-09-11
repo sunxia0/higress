@@ -1,0 +1,190 @@
+{
+  "source_sha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "started_at": "2026-09-11T09:27:38.849476+00:00",
+  "commands": [
+    {
+      "name": "compile",
+      "command": [
+        "go",
+        "test",
+        "-c",
+        "-tags",
+        "conformance",
+        "-o",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-3966c7e6-kind/conformance.test",
+        "./test/e2e/e2e_test.go"
+      ],
+      "started_at": "2026-09-11T09:27:38.850535+00:00",
+      "log": "compile.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:29:16.646909+00:00"
+    },
+    {
+      "name": "start-node",
+      "command": [
+        "podman",
+        "start",
+        "mcp-auto-4684-control-plane"
+      ],
+      "started_at": "2026-09-11T09:29:16.674491+00:00",
+      "log": "start-node.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:29:19.060540+00:00"
+    },
+    {
+      "name": "load-python",
+      "command": [
+        "kind",
+        "load",
+        "image-archive",
+        "--name",
+        "mcp-auto-4684",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/kind/python.tar"
+      ],
+      "started_at": "2026-09-11T09:29:19.062132+00:00",
+      "log": "load-python.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:29:26.235699+00:00"
+    },
+    {
+      "name": "wait-controller",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-controller",
+        "-n",
+        "higress-system",
+        "--timeout=120s"
+      ],
+      "started_at": "2026-09-11T09:29:26.239062+00:00",
+      "log": "wait-controller.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:29:30.534670+00:00"
+    },
+    {
+      "name": "restart-gateway",
+      "command": [
+        "kubectl",
+        "rollout",
+        "restart",
+        "deployment/higress-gateway",
+        "-n",
+        "higress-system"
+      ],
+      "started_at": "2026-09-11T09:29:30.535695+00:00",
+      "log": "restart-gateway.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:29:33.953161+00:00"
+    },
+    {
+      "name": "wait-gateway",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-gateway",
+        "-n",
+        "higress-system",
+        "--timeout=120s"
+      ],
+      "started_at": "2026-09-11T09:29:33.954143+00:00",
+      "log": "wait-gateway.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:30:05.458925+00:00"
+    },
+    {
+      "name": "copy-test",
+      "command": [
+        "podman",
+        "cp",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-3966c7e6-kind/conformance.test",
+        "mcp-auto-4684-control-plane:/conformance.test"
+      ],
+      "started_at": "2026-09-11T09:30:05.468052+00:00",
+      "log": "copy-test.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:30:08.828928+00:00"
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "podman",
+        "exec",
+        "-e",
+        "KUBECONFIG=/etc/kubernetes/admin.conf",
+        "mcp-auto-4684-control-plane",
+        "/conformance.test",
+        "-test.v",
+        "-test.timeout=8m",
+        "-isWasmPluginTest=true",
+        "-wasmPluginType=GO",
+        "-wasmPluginName=mcp-server",
+        "--ingress-class=higress",
+        "--debug=true",
+        "--test-area=run",
+        "--execute-tests=WasmPluginsMCP20260728"
+      ],
+      "started_at": "2026-09-11T09:30:08.830109+00:00",
+      "log": "conformance.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:30:15.645612+00:00"
+    },
+    {
+      "name": "gateway-log",
+      "command": [
+        "kubectl",
+        "logs",
+        "-n",
+        "higress-system",
+        "deployment/higress-gateway"
+      ],
+      "started_at": "2026-09-11T09:30:15.649087+00:00",
+      "log": "gateway-log.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:30:17.492045+00:00"
+    },
+    {
+      "name": "image-identities",
+      "command": [
+        "podman",
+        "exec",
+        "mcp-auto-4684-control-plane",
+        "ctr",
+        "-n",
+        "k8s.io",
+        "images",
+        "list"
+      ],
+      "started_at": "2026-09-11T09:30:17.493049+00:00",
+      "log": "image-identities.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:30:18.073089+00:00"
+    }
+  ],
+  "adaptation": "../kind/environment-adaptation.json",
+  "expected_cases": [
+    "auto_legacy_discovers_before_direct_call",
+    "auto_modern_discovers_before_direct_call",
+    "cross-origin_request_rejected",
+    "legacy_tools/list_remains_unshaped",
+    "modern_discovery",
+    "modern_tools/call",
+    "modern_tools/list"
+  ],
+  "passed_cases": [
+    "auto_legacy_discovers_before_direct_call",
+    "auto_modern_discovers_before_direct_call",
+    "cross-origin_request_rejected",
+    "legacy_tools/list_remains_unshaped",
+    "modern_discovery",
+    "modern_tools/call",
+    "modern_tools/list"
+  ],
+  "pass_": true,
+  "sha256": {
+    "plugin.wasm": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9",
+    "conformance.test": "9f4ae72ab51c0738f8a53c74123615e59b3f343dc06e7a827a565e2f70ab15e6"
+  },
+  "finished_at": "2026-09-11T09:30:18.183987+00:00"
+}

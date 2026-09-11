@@ -1,0 +1,47 @@
+version_info: "candidate-unsupported-semantics"
+resources:
+  - "@type": type.googleapis.com/envoy.config.listener.v3.Listener
+    name: corpus-candidate-unsupported-semantics
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 14000}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: corpus-candidate-unsupported-semantics
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=corpus-candidate-unsupported-semantics method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-corpus-candidate-unsupported-semantics
+                virtual_hosts:
+                  - name: local-corpus-candidate-unsupported-semantics
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: corpus-candidate-unsupported-semantics
+                      root_id: corpus-candidate-unsupported-semantics
+                      vm_config:
+                        vm_id: corpus-candidate-unsupported-semantics
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/corpus-plugin-candidate.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"corpus-unsupported-semantics","type":"rest"},"tools":[{"args":[{"name":"recordId","position":"path","required":true,"type":"string"},{"name":"page","position":"query","type":"integer"},{"name":"X-Corpus-Flag","position":"header","type":"boolean"},{"name":"payload","position":"body","properties":{"amount":{"type":"integer"}},"type":"object"},{"items":{"oneOf":[]},"name":"problem","position":"body","type":"array"}],"description":"Representative unsupported-semantics schema fixture","name":"fixture_tool","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend-primary:8080/corpus/unsupported-semantics/{recordId}?fixed=yes"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+
+type_url: type.googleapis.com/envoy.config.listener.v3.Listener

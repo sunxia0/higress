@@ -1,0 +1,2618 @@
+{
+  "cases": [
+    {
+      "case": "proxy-modern-stateless-and-header-isolation",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-list",
+              "rpcMethod": "tools/list",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": "opaque-current-call",
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-call",
+              "rpcMethod": "tools/call",
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10003-proxy-modern-list",
+            "case": "proxy-modern-stateless-and-header-isolation",
+            "request": {
+              "authorizationPresent": true,
+              "cookiePresent": true,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": true,
+              "listenerPort": 10003,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": true,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "proxy-modern-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "e869ea2c5e055c6b9959687aafd555b447afbf1d8e900588da45438b22be885f",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-proxy-modern-call",
+            "case": "proxy-modern-stateless-and-header-isolation",
+            "request": {
+              "authorizationPresent": true,
+              "cookiePresent": true,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": true,
+              "listenerPort": 10003,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-call",
+              "rpcMethod": "tools/call",
+              "sessionPresent": true,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "proxy-modern-call",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:modern",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "7fca380c4f7cf891e4a6d07a4484e59dbe79f7c0ea4408dbc78059be47fb261a",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "singleStatelessRPC": true,
+        "upstreamSequence": [
+          "tools/list",
+          "tools/call"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-modern-to-legacy-isolated-handshakes",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 2,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 3,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 4,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 5,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 6,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10004-bridge-list",
+            "case": "proxy-modern-to-legacy-isolated-handshakes",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10004,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "bridge-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "bridge-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "proxy-legacy",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "2ff607ecb253cc52767f126135addba83b756bdba2ba9760b2692faf2ad9ec42",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10004-bridge-call",
+            "case": "proxy-modern-to-legacy-isolated-handshakes",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10004,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "bridge-call",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "bridge-call",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "mcp-proxy",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:bridge",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "44152dcfcb23cc36bcb2549c19042be604923fcf947b22e37c7e72efe59439ff",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "isolatedHandshakes": 2,
+        "upstreamSequence": [
+          "initialize",
+          "notifications/initialized",
+          "tools/list",
+          "initialize",
+          "notifications/initialized",
+          "tools/call"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 2,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 3,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 4,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 5,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 6,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 7,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 8,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 9,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 10,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 11,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 12,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 13,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 14,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 15,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 16,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 17,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 18,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10005-default-init-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-0",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2024-11-05",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "7ea213d63b4acb07732f43d23f1e3a3ea614b3659a5a88083016c0f2e040ad08",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "default-list-0",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "962b8e59bae6af19084531d5b1f35cf3b9609330caffa4153291b8a4b11ce2a2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "default-call-0",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2024-11-05",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "03cba3632bb211b7473ddc54d028c917731dadfeb64bd4d098c61d20a44586cb",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-init-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-1",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-03-26",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "782f1792d0d9a74f79eb72099b3db85da981e479c77cd51fb43e6b1eb60599d7",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "default-list-1",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "5ac952f25a6d9540e47b515ca524c22bedaa1011f7c35d8e1e2ae4b3363edfa2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "default-call-1",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2025-03-26",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "382f83953835d8fac0543c56d6315adeaa9694804c57dfcb68ddebfb94fda856",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-init-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-2",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-06-18",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "2ace9e26920ff110f603ef6e090b89580f07f65f40ed2c2eb67968785fc732a0",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "default-list-2",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "5e2445a756d45e12142ec277540ff2ee75ccc2e899e5b694dae7ab28f0ef45b0",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "default-call-2",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2025-06-18",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "8ed9d18a6466bac921c8ec6476c3fd5a5f0e4f4be71f5873bb176fc6cf916811",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "upstreamInitializeCount": 6,
+        "versions": [
+          "2024-11-05",
+          "2025-03-26",
+          "2025-06-18"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+      "detail": {
+        "autoDetection": false,
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10003-unsupported",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "unsupported",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "unsupported",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-06-18",
+                  "serverInfo": {
+                    "name": "proxy-modern",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "dc47c2e2fc7840e0cd0ea0c5009952862b9dd5233dbcb821b8ce344bcab0e183",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-unsupported-initialized",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-unsupported-list",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "unsupported-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32601,
+                  "message": "legacy downstream is unsupported by a modern-only upstream"
+                },
+                "id": "unsupported-list",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "87867b4bafe0230294383a013dffd2831b75684d35290b248b022ca2443cc643",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "status": 200,
+        "upstreamCalls": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth-ok",
+              "rpcMethod": "tools/call",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth401",
+              "rpcMethod": "tools/call",
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth403",
+              "rpcMethod": "tools/call",
+              "seq": 3,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "backend-secondary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "secondary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "after-failure",
+              "rpcMethod": "tools/call",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10006-auth-ok",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth-ok",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "auth-ok",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:authorized",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "393bc6360a607e4c814645193cd0367e2166f64a79f378d67f5eee4abdd12f5b",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10006-auth401",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth401",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32603,
+                  "message": "upstream authorization failed"
+                },
+                "id": "auth401",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "d0668740a978e8b71f3a26fd315de22160f5fb6b6ea61a3ec38b16d97a8097cb",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false,
+                "www-authenticate": "Bearer realm=\"runtime-fixture\""
+              },
+              "status": 401
+            }
+          },
+          {
+            "accessRequestId": "rv-10006-auth403",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth403",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32603,
+                  "message": "upstream authorization failed"
+                },
+                "id": "auth403",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "9b339ef3ca891290db29c9a3b72bb6744bb2f79574bb6fc7216d9ff669410598",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false,
+                "www-authenticate": "Bearer error=\"insufficient_scope\""
+              },
+              "status": 403
+            }
+          },
+          {
+            "accessRequestId": "rv-10007-after-failure",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10007,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "after-failure",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "after-failure",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:secondary",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "eadee874b63906e136d94bdb8b679b081ec5c481ebd2797b73df7376e9d51e03",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "explicitAuth": true,
+        "postFailureOrigin": "secondary",
+        "preservedStatuses": [
+          401,
+          403
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "exchanges": [
+    {
+      "accessRequestId": "rv-10003-proxy-modern-list",
+      "case": "proxy-modern-stateless-and-header-isolation",
+      "request": {
+        "authorizationPresent": true,
+        "cookiePresent": true,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": true,
+        "listenerPort": 10003,
+        "mcpMethod": "tools/list",
+        "mcpName": null,
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "proxy-modern-list",
+        "rpcMethod": "tools/list",
+        "sessionPresent": true,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "proxy-modern-list",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "fixture-modern",
+                "version": "1.0.0"
+              }
+            },
+            "cacheScope": "private",
+            "resultType": "complete",
+            "tools": [
+              {
+                "description": "fixture echo",
+                "inputSchema": {
+                  "type": "object"
+                },
+                "name": "proxy_echo"
+              }
+            ],
+            "ttlMs": 0
+          }
+        },
+        "bodySha256": "e869ea2c5e055c6b9959687aafd555b447afbf1d8e900588da45438b22be885f",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10003-proxy-modern-call",
+      "case": "proxy-modern-stateless-and-header-isolation",
+      "request": {
+        "authorizationPresent": true,
+        "cookiePresent": true,
+        "futureParamPresent": true,
+        "httpMethod": "POST",
+        "lastEventIDPresent": true,
+        "listenerPort": 10003,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "proxy-modern-call",
+        "rpcMethod": "tools/call",
+        "sessionPresent": true,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "proxy-modern-call",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "fixture-modern",
+                "version": "1.0.0"
+              }
+            },
+            "content": [
+              {
+                "text": "echo:modern",
+                "type": "text"
+              }
+            ],
+            "isError": false,
+            "resultType": "complete"
+          }
+        },
+        "bodySha256": "7fca380c4f7cf891e4a6d07a4484e59dbe79f7c0ea4408dbc78059be47fb261a",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10004-bridge-list",
+      "case": "proxy-modern-to-legacy-isolated-handshakes",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": true,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10004,
+        "mcpMethod": "tools/list",
+        "mcpName": null,
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "bridge-list",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "bridge-list",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "proxy-legacy",
+                "version": "1.0.0"
+              }
+            },
+            "cacheScope": "private",
+            "resultType": "complete",
+            "tools": [
+              {
+                "description": "fixture echo",
+                "inputSchema": {
+                  "type": "object"
+                },
+                "name": "proxy_echo"
+              }
+            ],
+            "ttlMs": 0
+          }
+        },
+        "bodySha256": "2ff607ecb253cc52767f126135addba83b756bdba2ba9760b2692faf2ad9ec42",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10004-bridge-call",
+      "case": "proxy-modern-to-legacy-isolated-handshakes",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": true,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10004,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "bridge-call",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "bridge-call",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "mcp-proxy",
+                "version": "1.0.0"
+              }
+            },
+            "content": [
+              {
+                "text": "echo:bridge",
+                "type": "text"
+              }
+            ],
+            "isError": false,
+            "resultType": "complete"
+          }
+        },
+        "bodySha256": "44152dcfcb23cc36bcb2549c19042be604923fcf947b22e37c7e72efe59439ff",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-init-0",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": null,
+        "rpcId": "default-init-0",
+        "rpcMethod": "initialize",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-init-0",
+          "jsonrpc": "2.0",
+          "result": {
+            "capabilities": {
+              "tools": {}
+            },
+            "protocolVersion": "2024-11-05",
+            "serverInfo": {
+              "name": "proxy-default-legacy",
+              "version": "1.0.0"
+            }
+          }
+        },
+        "bodySha256": "7ea213d63b4acb07732f43d23f1e3a3ea614b3659a5a88083016c0f2e040ad08",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-initialized-0",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2024-11-05",
+        "rpcId": null,
+        "rpcMethod": "notifications/initialized",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": null,
+        "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "headers": {
+          "mcp-session-id-present": false
+        },
+        "status": 202
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-list-0",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2024-11-05",
+        "rpcId": "default-list-0",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-list-0",
+          "jsonrpc": "2.0",
+          "result": {
+            "tools": [
+              {
+                "description": "fixture echo",
+                "inputSchema": {
+                  "type": "object"
+                },
+                "name": "proxy_echo"
+              }
+            ]
+          }
+        },
+        "bodySha256": "962b8e59bae6af19084531d5b1f35cf3b9609330caffa4153291b8a4b11ce2a2",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-call-0",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2024-11-05",
+        "rpcId": "default-call-0",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "default-call-0",
+          "jsonrpc": "2.0",
+          "result": {
+            "content": [
+              {
+                "text": "echo:2024-11-05",
+                "type": "text"
+              }
+            ],
+            "isError": false
+          }
+        },
+        "bodySha256": "03cba3632bb211b7473ddc54d028c917731dadfeb64bd4d098c61d20a44586cb",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-init-1",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": null,
+        "rpcId": "default-init-1",
+        "rpcMethod": "initialize",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-init-1",
+          "jsonrpc": "2.0",
+          "result": {
+            "capabilities": {
+              "tools": {}
+            },
+            "protocolVersion": "2025-03-26",
+            "serverInfo": {
+              "name": "proxy-default-legacy",
+              "version": "1.0.0"
+            }
+          }
+        },
+        "bodySha256": "782f1792d0d9a74f79eb72099b3db85da981e479c77cd51fb43e6b1eb60599d7",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-initialized-1",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-03-26",
+        "rpcId": null,
+        "rpcMethod": "notifications/initialized",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": null,
+        "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "headers": {
+          "mcp-session-id-present": false
+        },
+        "status": 202
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-list-1",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-03-26",
+        "rpcId": "default-list-1",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-list-1",
+          "jsonrpc": "2.0",
+          "result": {
+            "tools": [
+              {
+                "description": "fixture echo",
+                "inputSchema": {
+                  "type": "object"
+                },
+                "name": "proxy_echo"
+              }
+            ]
+          }
+        },
+        "bodySha256": "5ac952f25a6d9540e47b515ca524c22bedaa1011f7c35d8e1e2ae4b3363edfa2",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-call-1",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-03-26",
+        "rpcId": "default-call-1",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "default-call-1",
+          "jsonrpc": "2.0",
+          "result": {
+            "content": [
+              {
+                "text": "echo:2025-03-26",
+                "type": "text"
+              }
+            ],
+            "isError": false
+          }
+        },
+        "bodySha256": "382f83953835d8fac0543c56d6315adeaa9694804c57dfcb68ddebfb94fda856",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-init-2",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": null,
+        "rpcId": "default-init-2",
+        "rpcMethod": "initialize",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-init-2",
+          "jsonrpc": "2.0",
+          "result": {
+            "capabilities": {
+              "tools": {}
+            },
+            "protocolVersion": "2025-06-18",
+            "serverInfo": {
+              "name": "proxy-default-legacy",
+              "version": "1.0.0"
+            }
+          }
+        },
+        "bodySha256": "2ace9e26920ff110f603ef6e090b89580f07f65f40ed2c2eb67968785fc732a0",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-initialized-2",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": null,
+        "rpcMethod": "notifications/initialized",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": null,
+        "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "headers": {
+          "mcp-session-id-present": false
+        },
+        "status": 202
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-list-2",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": "default-list-2",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "default-list-2",
+          "jsonrpc": "2.0",
+          "result": {
+            "tools": [
+              {
+                "description": "fixture echo",
+                "inputSchema": {
+                  "type": "object"
+                },
+                "name": "proxy_echo"
+              }
+            ]
+          }
+        },
+        "bodySha256": "5e2445a756d45e12142ec277540ff2ee75ccc2e899e5b694dae7ab28f0ef45b0",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10005-default-call-2",
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10005,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": "default-call-2",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "default-call-2",
+          "jsonrpc": "2.0",
+          "result": {
+            "content": [
+              {
+                "text": "echo:2025-06-18",
+                "type": "text"
+              }
+            ],
+            "isError": false
+          }
+        },
+        "bodySha256": "8ed9d18a6466bac921c8ec6476c3fd5a5f0e4f4be71f5873bb176fc6cf916811",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10003-unsupported",
+      "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10003,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": null,
+        "rpcId": "unsupported",
+        "rpcMethod": "initialize",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "unsupported",
+          "jsonrpc": "2.0",
+          "result": {
+            "capabilities": {
+              "tools": {}
+            },
+            "protocolVersion": "2025-06-18",
+            "serverInfo": {
+              "name": "proxy-modern",
+              "version": "1.0.0"
+            }
+          }
+        },
+        "bodySha256": "dc47c2e2fc7840e0cd0ea0c5009952862b9dd5233dbcb821b8ce344bcab0e183",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10003-unsupported-initialized",
+      "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10003,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": null,
+        "rpcMethod": "notifications/initialized",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": null,
+        "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "headers": {
+          "mcp-session-id-present": false
+        },
+        "status": 202
+      }
+    },
+    {
+      "accessRequestId": "rv-10003-unsupported-list",
+      "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10003,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": "unsupported-list",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "error": {
+            "code": -32601,
+            "message": "legacy downstream is unsupported by a modern-only upstream"
+          },
+          "id": "unsupported-list",
+          "jsonrpc": "2.0"
+        },
+        "bodySha256": "87867b4bafe0230294383a013dffd2831b75684d35290b248b022ca2443cc643",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10006-auth-ok",
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10006,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "auth-ok",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "auth-ok",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "fixture-modern",
+                "version": "1.0.0"
+              }
+            },
+            "content": [
+              {
+                "text": "echo:authorized",
+                "type": "text"
+              }
+            ],
+            "isError": false,
+            "resultType": "complete"
+          }
+        },
+        "bodySha256": "393bc6360a607e4c814645193cd0367e2166f64a79f378d67f5eee4abdd12f5b",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-10006-auth401",
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10006,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "auth401",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "error": {
+            "code": -32603,
+            "message": "upstream authorization failed"
+          },
+          "id": "auth401",
+          "jsonrpc": "2.0"
+        },
+        "bodySha256": "d0668740a978e8b71f3a26fd315de22160f5fb6b6ea61a3ec38b16d97a8097cb",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false,
+          "www-authenticate": "Bearer realm=\"runtime-fixture\""
+        },
+        "status": 401
+      }
+    },
+    {
+      "accessRequestId": "rv-10006-auth403",
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10006,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "auth403",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "error": {
+            "code": -32603,
+            "message": "upstream authorization failed"
+          },
+          "id": "auth403",
+          "jsonrpc": "2.0"
+        },
+        "bodySha256": "9b339ef3ca891290db29c9a3b72bb6744bb2f79574bb6fc7216d9ff669410598",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false,
+          "www-authenticate": "Bearer error=\"insufficient_scope\""
+        },
+        "status": 403
+      }
+    },
+    {
+      "accessRequestId": "rv-10007-after-failure",
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 10007,
+        "mcpMethod": "tools/call",
+        "mcpName": "proxy_echo",
+        "origin": "http://mcp.runtime.test",
+        "path": "/mcp",
+        "protocolVersion": "2026-07-28",
+        "rpcId": "after-failure",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "proxy_echo"
+      },
+      "response": {
+        "body": {
+          "id": "after-failure",
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "fixture-modern",
+                "version": "1.0.0"
+              }
+            },
+            "content": [
+              {
+                "text": "echo:secondary",
+                "type": "text"
+              }
+            ],
+            "isError": false,
+            "resultType": "complete"
+          }
+        },
+        "bodySha256": "eadee874b63906e136d94bdb8b679b081ec5c481ebd2797b73df7376e9d51e03",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    }
+  ]
+}

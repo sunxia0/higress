@@ -1,0 +1,43 @@
+=== RUN   TestHigressConformanceTests
+    suite.go:197: 🧹 Test Cleanup: Ensuring base resources have been cleaned up
+    apply.go:209: 🚮 Deleting higress-conformance-infra Namespace 
+    apply.go:209: 🚮 Deleting infra-backend-v1 Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v1 Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v1-ip Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v1-ip Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v2 Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v2 Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v3 Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-v3 Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-mirror Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-mirror Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-echo-body-v1 Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-echo-body-v1 Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-echo-body-v2 Service higress-conformance-infra
+    apply.go:209: 🚮 Deleting infra-backend-echo-body-v2 Deployment higress-conformance-infra
+    apply.go:209: 🚮 Deleting higress-conformance-app-backend Namespace 
+    apply.go:209: 🚮 Deleting app-backend-v1 Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting app-backend-v1 Deployment higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting app-backend-v2 Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting app-backend-v2 Deployment higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting higress-conformance-web-backend Namespace 
+    apply.go:209: 🚮 Deleting web-backend Service higress-conformance-web-backend
+    apply.go:209: 🚮 Deleting web-backend Deployment higress-conformance-web-backend
+    apply.go:209: 🚮 Deleting consul-standalone Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting consul-service Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting httpbin Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting eureka-cm ConfigMap higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting eureka Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting eureka StatefulSet higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting eureka-registry-provider Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting nacos-standlone-rc3 Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting nacos-standlone-rc3-service Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting dubbo-demo-provider Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting opa Deployment higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting opa Service higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting curl-opa Pod higress-conformance-app-backend
+    apply.go:209: 🚮 Deleting higress-conformance-ai-backend Namespace 
+    apply.go:209: 🚮 Deleting llm-mock Pod higress-conformance-ai-backend
+    apply.go:209: 🚮 Deleting llm-mock-service Service higress-conformance-ai-backend
+--- PASS: TestHigressConformanceTests (0.56s)
+PASS

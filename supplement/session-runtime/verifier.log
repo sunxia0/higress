@@ -1,0 +1,5 @@
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-auto-session-supplement-54805-verifier-run-c3f2c4df8849 Creating 
+ Container mcp-auto-session-supplement-54805-verifier-run-c3f2c4df8849 Created 
+{"status": "PASS", "evidence": "/evidence/session-isolation.json"}

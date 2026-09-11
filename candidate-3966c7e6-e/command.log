@@ -1,0 +1,328 @@
+building exact-head mcp-server WASM from 3966c7e6c189fa1007fdca0386ad9a8f4291e953
+building exact-head registered-schema corpus WASM from 3966c7e6c189fa1007fdca0386ad9a8f4291e953
+building pinned baseline mcp-server WASM from c55d9825c90868f50edbff9764a6b3cf2eb13162
+building v2.0.0 compatibility oracle WASM from 39ec41aab6eb1d40499bed2847085696de0ebb96
+runtime orchestration fault-injection self-tests passed
+failed to confirm still-running stopped after compose status 1 and 1 inspections
+failed to confirm success-but-running stopped after compose status 0 and 1 inspections
+backend-primary remained unavailable after 2 health probes
+backend-primary was healthy but reset failed after 2 attempts
+runtime lifecycle fault-injection self-tests passed
+descriptor canonical self-test fixtures prepared
+descriptor canonical positive and tamper-negative self-tests passed
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0mresolved Compose Envoy concurrency self-test passed
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Network mcp-runtime-38747_default Creating 
+ Network mcp-runtime-38747_default Creating 
+ Network mcp-runtime-38747_default Created 
+ Network mcp-runtime-38747_default Created 
+ Container mcp-runtime-38747-backend-secondary-1 Creating 
+ Container mcp-runtime-38747-backend-primary-1 Creating 
+ Container mcp-runtime-38747-backend-primary-1 Created 
+ Container mcp-runtime-38747-backend-secondary-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Starting 
+ Container mcp-runtime-38747-backend-secondary-1 Starting 
+ Container mcp-runtime-38747-backend-primary-1 Started 
+ Container mcp-runtime-38747-backend-secondary-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-auto-1 Creating 
+ Container mcp-runtime-38747-gateway-auto-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-auto-1 Starting 
+ Container mcp-runtime-38747-gateway-auto-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-auto-baseline-1 Creating 
+ Container mcp-runtime-38747-gateway-auto-baseline-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-auto-baseline-1 Starting 
+ Container mcp-runtime-38747-gateway-auto-baseline-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-baseline-1 Creating 
+ Container mcp-runtime-38747-gateway-baseline-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-baseline-1 Starting 
+ Container mcp-runtime-38747-gateway-baseline-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-control-candidate-1 Creating 
+ Container mcp-runtime-38747-gateway-control-candidate-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-control-candidate-1 Starting 
+ Container mcp-runtime-38747-gateway-control-candidate-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-control-affected-1 Creating 
+ Container mcp-runtime-38747-gateway-control-affected-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-control-affected-1 Starting 
+ Container mcp-runtime-38747-gateway-control-affected-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-control-oracle-1 Creating 
+ Container mcp-runtime-38747-gateway-control-oracle-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-control-oracle-1 Starting 
+ Container mcp-runtime-38747-gateway-control-oracle-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-oracle-1 Creating 
+ Container mcp-runtime-38747-gateway-oracle-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-oracle-1 Starting 
+ Container mcp-runtime-38747-gateway-oracle-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-14dd946b3943 Creating 
+ Container mcp-runtime-38747-verifier-run-14dd946b3943 Created 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-corpus-candidate-1 Creating 
+ Container mcp-runtime-38747-gateway-corpus-candidate-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-corpus-candidate-1 Starting 
+ Container mcp-runtime-38747-gateway-corpus-candidate-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-ee7bc08f92e8 Creating 
+ Container mcp-runtime-38747-verifier-run-ee7bc08f92e8 Created 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-corpus-affected-1 Creating 
+ Container mcp-runtime-38747-gateway-corpus-affected-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-corpus-affected-1 Starting 
+ Container mcp-runtime-38747-gateway-corpus-affected-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-64151da9f16d Creating 
+ Container mcp-runtime-38747-verifier-run-64151da9f16d Created 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-corpus-oracle-1 Creating 
+ Container mcp-runtime-38747-gateway-corpus-oracle-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-corpus-oracle-1 Starting 
+ Container mcp-runtime-38747-gateway-corpus-oracle-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-c571564fdb8a Creating 
+ Container mcp-runtime-38747-verifier-run-c571564fdb8a Created 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-generation-1 Creating 
+ Container mcp-runtime-38747-gateway-generation-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-generation-1 Starting 
+ Container mcp-runtime-38747-gateway-generation-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-b7fb1ebcc7d0 Creating 
+ Container mcp-runtime-38747-verifier-run-b7fb1ebcc7d0 Created 
+PASS generation-valid-before state=validated backend_calls=1
+PASS generation-validation-unavailable state=validation-unavailable backend_calls=0
+PASS generation-valid-after state=validated backend_calls=1
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-auto-explicit-baseline-1 Creating 
+ Container mcp-runtime-38747-gateway-auto-explicit-baseline-1 Created 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-auto-explicit-baseline-1 Starting 
+ Container mcp-runtime-38747-gateway-auto-explicit-baseline-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-verifier-run-4c90db9a62bd Creating 
+ Container mcp-runtime-38747-verifier-run-4c90db9a62bd Created 
+PASS proxy-modern-stateless-and-header-isolation
+PASS proxy-modern-to-legacy-isolated-handshakes
+PASS proxy-default-is-legacy-for-three-versions
+PASS proxy-legacy-to-modern-is-explicitly-unsupported
+PASS proxy-auth-errors-and-cross-origin-isolation
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-backend-secondary-1 Running 
+ Container mcp-runtime-38747-gateway-1 Creating 
+ Container mcp-runtime-38747-gateway-1 Created 
+ Container mcp-runtime-38747-backend-secondary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-secondary-1 Healthy 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-gateway-1 Starting 
+ Container mcp-runtime-38747-gateway-1 Started 
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m Container mcp-runtime-38747-backend-secondary-1 Running 
+ Container mcp-runtime-38747-backend-primary-1 Running 
+ Container mcp-runtime-38747-gateway-1 Running 
+ Container mcp-runtime-38747-backend-secondary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Waiting 
+ Container mcp-runtime-38747-backend-primary-1 Healthy 
+ Container mcp-runtime-38747-backend-secondary-1 Healthy 
+ Container mcp-runtime-38747-verifier-run-451bfd9f75f0 Creating 
+ Container mcp-runtime-38747-verifier-run-451bfd9f75f0 Created 
+PASS registered-modern-discover-list-call
+PASS rest-modern-discover-list-call
+PASS rest-invalid-args-and-hostile-origin
+PASS composed-list-and-router-call-boundary
+PASS rest-three-legacy-versions
+PASS rest-schema-compatibility-modern-block-and-legacy-pass-through
+PASS proxy-modern-stateless-and-header-isolation
+PASS proxy-modern-to-legacy-isolated-handshakes
+PASS proxy-default-is-legacy-for-three-versions
+PASS proxy-legacy-to-modern-is-explicitly-unsupported
+PASS proxy-auth-errors-and-cross-origin-isolation
+PASS auto-success-modern
+PASS auto-success-legacy
+PASS auto-success-legacy-session
+PASS auto-success-version
+PASS auto-success-http400
+PASS auto-success-http404
+PASS auto-success-http405
+PASS auto-success-sse
+PASS auto-failure-401
+PASS auto-failure-403
+PASS auto-failure-429
+PASS auto-failure-500
+PASS auto-failure-302
+PASS auto-failure-header-mismatch
+PASS auto-failure-missing-capability
+PASS auto-failure-modern-404
+PASS auto-failure-version-unknown
+PASS auto-failure-version-conflict
+PASS auto-failure-oversize
+PASS auto-failure-malformed
+PASS auto-failure-wrong-id
+PASS auto-failure-no-tools
+PASS auto-failure-sse-duplicate
+PASS auto-failure-sse-missing
+PASS auto-failure-init-version
+PASS auto-failure-notify-fail
+PASS auto-failure-network
+PASS auto-failure-modern-ordinary-error
+PASS auto-failure-trailing-json
+PASS auto-failure-batch
+PASS auto-fresh-and-concurrent
+PASS auto-auth-session-isolation
+PASS auto-local-permission-continuation-cursor
+PASS auto-execution-loss-no-replay
+PASS auto-probe-timeout
+PASS auto-cancel-server-discover
+PASS auto-cancel-initialize
+PASS auto-cancel-notifications-initialized
+PASS auto-cancel-tools-call
+SUMMARY pass=50 fail=0
+[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m[4m>>>> Executing external compose provider "/usr/local/bin/docker-compose". Please see podman-compose(1) for how to disable this message. <<<<
+
+[0m{"access_coverage": "PASS", "evidence": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-3966c7e6-e/runtime", "fail": 0, "pass": 68, "plugin_sha256": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9", "source_sha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953"}

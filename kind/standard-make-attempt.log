@@ -1,0 +1,13 @@
+Makefile.core.mk:442: warning: overriding commands for target `build-test-pilot'
+Makefile.core.mk:351: warning: ignoring old commands for target `build-test-pilot'
+cd tools/src/kind && GOOS= GOARCH= go build -o /Users/xiao/.codex/worktrees/8e59/higress-fork/tools/bin/kind $(sed -En 's,^import "(.*)".*,\1,p' pin.go)
+tools/bin/kind delete cluster --name higress
+enabling experimental podman provider
+Deleting cluster "higress" ...
+tools/hack/create-cluster.sh
+v1.25.3
+higress
+enabling experimental podman provider
+Creating cluster "higress" ...
+ • Ensuring node image (kindest/node:v1.25.3) 🖼  ...
+make: *** [create-cluster] Error 130

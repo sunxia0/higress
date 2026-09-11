@@ -1,0 +1,408 @@
+admin:
+  address:
+    socket_address: {address: 0.0.0.0, port_value: 9901}
+static_resources:
+  listeners:
+  - name: registered-amap
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10000}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: registered-amap
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=registered-amap method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-registered-amap
+                virtual_hosts:
+                  - name: local-registered-amap
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: registered-amap
+                      root_id: registered-amap
+                      vm_config:
+                        vm_id: registered-amap
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"config":{"apiKey":"runtime-key"},"name":"amap-tools"}}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: runtime-rest
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10001}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: runtime-rest
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=runtime-rest method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-runtime-rest
+                virtual_hosts:
+                  - name: local-runtime-rest
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: runtime-rest
+                      root_id: runtime-rest
+                      vm_config:
+                        vm_id: runtime-rest
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"runtime-rest","type":"rest"},"tools":[{"args":[{"description":"City","name":"city","required":true,"type":"string"}],"description":"Query deterministic weather","name":"get_weather","requestTemplate":{"argsToUrlParam":true,"method":"GET","url":"http://backend-primary:8080/rest/weather"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: composed-tools
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10002}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: composed-tools
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=composed-tools method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-composed-tools
+                virtual_hosts:
+                  - name: local-composed-tools
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: composed-tools
+                      root_id: composed-tools
+                      vm_config:
+                        vm_id: composed-tools
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"_rules_":[{"_match_domain_":["mcp.runtime.test"],"toolSet":{"name":"runtime-composed","serverTools":[{"serverName":"amap-tools","tools":["maps_weather"]}]}}],"server":{"config":{"apiKey":"runtime-key"},"name":"amap-tools"}}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: proxy-modern
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10003}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: proxy-modern
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=proxy-modern method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-proxy-modern
+                virtual_hosts:
+                  - name: local-proxy-modern
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: proxy-modern
+                      root_id: proxy-modern
+                      vm_config:
+                        vm_id: proxy-modern
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"mcpServerURL":"http://backend-primary:8080/modern","name":"proxy-modern","protocolStrategy":"modern","transport":"http","type":"mcp-proxy"},"tools":[{"args":[{"description":"Value to echo","name":"value","required":true,"type":"string"}],"description":"Deterministic observable proxy tool","name":"proxy_echo"}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: proxy-legacy
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10004}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: proxy-legacy
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=proxy-legacy method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-proxy-legacy
+                virtual_hosts:
+                  - name: local-proxy-legacy
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: proxy-legacy
+                      root_id: proxy-legacy
+                      vm_config:
+                        vm_id: proxy-legacy
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"mcpServerURL":"http://backend-primary:8080/legacy","name":"proxy-legacy","protocolStrategy":"legacy","transport":"http","type":"mcp-proxy"},"tools":[{"args":[{"description":"Value to echo","name":"value","required":true,"type":"string"}],"description":"Deterministic observable proxy tool","name":"proxy_echo"}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: proxy-default-legacy
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10005}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: proxy-default-legacy
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=proxy-default-legacy method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-proxy-default-legacy
+                virtual_hosts:
+                  - name: local-proxy-default-legacy
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: proxy-default-legacy
+                      root_id: proxy-default-legacy
+                      vm_config:
+                        vm_id: proxy-default-legacy
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"mcpServerURL":"http://backend-primary:8080/legacy","name":"proxy-default-legacy","transport":"http","type":"mcp-proxy"},"tools":[{"args":[{"description":"Value to echo","name":"value","required":true,"type":"string"}],"description":"Deterministic observable proxy tool","name":"proxy_echo"}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: proxy-auth-modern
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10006}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: proxy-auth-modern
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=proxy-auth-modern method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-proxy-auth-modern
+                virtual_hosts:
+                  - name: local-proxy-auth-modern
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: proxy-auth-modern
+                      root_id: proxy-auth-modern
+                      vm_config:
+                        vm_id: proxy-auth-modern
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"defaultUpstreamSecurity":{"id":"RuntimeBearer"},"mcpServerURL":"http://backend-primary:8080/modern","name":"proxy-auth-modern","protocolStrategy":"modern","securitySchemes":[{"defaultCredential":"runtime-upstream-token","id":"RuntimeBearer","scheme":"bearer","type":"http"}],"transport":"http","type":"mcp-proxy"},"tools":[{"args":[{"description":"Value to echo","name":"value","required":true,"type":"string"}],"description":"Deterministic observable proxy tool","name":"proxy_echo"}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: proxy-secondary-modern
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10007}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: proxy-secondary-modern
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=proxy-secondary-modern method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-proxy-secondary-modern
+                virtual_hosts:
+                  - name: local-proxy-secondary-modern
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-secondary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: proxy-secondary-modern
+                      root_id: proxy-secondary-modern
+                      vm_config:
+                        vm_id: proxy-secondary-modern
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"mcpServerURL":"http://backend-secondary:8080/modern","name":"proxy-secondary-modern","protocolStrategy":"modern","transport":"http","type":"mcp-proxy"},"tools":[{"args":[{"description":"Value to echo","name":"value","required":true,"type":"string"}],"description":"Deterministic observable proxy tool","name":"proxy_echo"}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: schema-compatibility
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 10008}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: schema-compatibility
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=schema-compatibility method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-schema-compatibility
+                virtual_hosts:
+                  - name: local-schema-compatibility
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: schema-compatibility
+                      root_id: schema-compatibility
+                      vm_config:
+                        vm_id: schema-compatibility
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/auto-baseline-plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"schema-compatibility","type":"rest"},"tools":[{"args":[{"description":"Transaction identifier","name":"transactionId","position":"path","required":true,"type":"string"},{"default":10,"description":"Page number","name":"page","position":"query","type":"integer"},{"default":false,"description":"Compatibility flag","name":"X-Compat-Flag","position":"header","type":"boolean"},{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","position":"body","type":"array"},{"description":"Deterministic payload","name":"payload","position":"body","properties":{"amount":{"type":"integer"}},"type":"object"}],"description":"Pinned schema compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend-primary:8080/compat/{transactionId}?fixed=yes"}},{"description":"Unrelated valid compatibility tool","name":"compat_health","requestTemplate":{"method":"GET","url":"http://backend-primary:8080/compat/health"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  clusters:
+  - name: backend-primary
+    connect_timeout: 5s
+    type: STRICT_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: backend-primary
+      endpoints:
+        - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address: {address: backend-primary, port_value: 8080}
+  - name: backend-secondary
+    connect_timeout: 5s
+    type: STRICT_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: backend-secondary
+      endpoints:
+        - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address: {address: backend-secondary, port_value: 8080}

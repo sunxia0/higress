@@ -1,0 +1,8 @@
+{
+  "login": "sunxia0",
+  "role_name": "admin",
+  "canonical_repository": "higress-group/higress",
+  "token_overrides_unset_for_identity_checks": true,
+  "checked_at": "2026-09-11T08:07:24.934043+00:00",
+  "rationale": "User identified as maintainer and explicitly authorized starting implementation of Proposal 4683 and Design 4684. Verified administrator exception; retain all planned runtime verification. Actual new PR author must be checked against sunxia0 immediately after PR creation and before review."
+}

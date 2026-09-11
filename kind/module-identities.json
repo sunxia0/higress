@@ -1,0 +1,32 @@
+[
+  {
+    "submodule": "envoy/go-control-plane",
+    "sha": "4f11f65d9bc54bb8b18f1cc7c25460d3f8afef75",
+    "target": "/Users/xiao/.codex/worktrees/8e59/higress-fork/external/go-control-plane",
+    "source": "pinned Git object from local clone; no working tree content"
+  },
+  {
+    "submodule": "istio/api",
+    "sha": "efc0fe428cccecc0285dbf51e2023f8e0422597c",
+    "target": "/Users/xiao/.codex/worktrees/8e59/higress-fork/external/api",
+    "source": "pinned Git object from local clone; no working tree content"
+  },
+  {
+    "submodule": "istio/client-go",
+    "sha": "09ed8dc4e7484d303c931fa42df7f7c728296923",
+    "target": "/Users/xiao/.codex/worktrees/8e59/higress-fork/external/client-go",
+    "source": "pinned Git object from local clone; no working tree content"
+  },
+  {
+    "submodule": "istio/istio",
+    "sha": "65133dd61c6c597fb301c53beaa777ca5c9e4ba2",
+    "target": "/Users/xiao/.codex/worktrees/8e59/higress-fork/external/istio",
+    "source": "pinned Git object from local clone; no working tree content"
+  },
+  {
+    "submodule": "istio/pkg",
+    "sha": "15c662994e6515201dc106a2ec3de85ed50e8078",
+    "target": "/Users/xiao/.codex/worktrees/8e59/higress-fork/external/pkg",
+    "source": "pinned Git object from local clone; no working tree content"
+  }
+]

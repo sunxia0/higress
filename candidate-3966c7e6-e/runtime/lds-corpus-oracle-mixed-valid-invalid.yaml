@@ -1,0 +1,47 @@
+version_info: "oracle-mixed-valid-invalid"
+resources:
+  - "@type": type.googleapis.com/envoy.config.listener.v3.Listener
+    name: corpus-oracle-mixed-valid-invalid
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 14007}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: corpus-oracle-mixed-valid-invalid
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=corpus-oracle-mixed-valid-invalid method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-corpus-oracle-mixed-valid-invalid
+                virtual_hosts:
+                  - name: local-corpus-oracle-mixed-valid-invalid
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: corpus-oracle-mixed-valid-invalid
+                      root_id: corpus-oracle-mixed-valid-invalid
+                      vm_config:
+                        vm_id: corpus-oracle-mixed-valid-invalid
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/corpus-plugin-oracle.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"corpus-mixed-valid-invalid","type":"rest"},"tools":[{"args":[{"name":"recordId","position":"path","required":true,"type":"string"},{"name":"page","position":"query","type":"integer"},{"name":"X-Corpus-Flag","position":"header","type":"boolean"},{"name":"payload","position":"body","properties":{"amount":{"type":"integer"}},"type":"object"},{"enum":["A"],"items":{"type":"string"},"name":"problem","position":"body","type":"array"}],"description":"Representative mixed-valid-invalid schema fixture","name":"fixture_tool","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend-primary:8080/corpus/mixed-valid-invalid/{recordId}?fixed=yes"}},{"name":"valid_sibling","requestTemplate":{"method":"GET","url":"http://backend-primary:8080/corpus/valid"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+
+type_url: type.googleapis.com/envoy.config.listener.v3.Listener

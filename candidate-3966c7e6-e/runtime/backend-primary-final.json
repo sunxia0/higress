@@ -1,0 +1,75 @@
+{
+  "auto": {
+    "case": "auto-cancel-tools-call",
+    "executions": {
+      "cancel-tools-call": 1
+    },
+    "released": {
+      "tools/call": true
+    },
+    "returned": {
+      "server/discover": true,
+      "tools/call": true
+    },
+    "waiting": [
+      "tools/call"
+    ]
+  },
+  "events": [
+    {
+      "authAlias": "none",
+      "authority": "backend-primary:8080",
+      "authorizationMatchesExplicitPolicy": false,
+      "authorizationPresent": false,
+      "autoCase": "auto-cancel-tools-call",
+      "continuationPresent": false,
+      "cookiePresent": false,
+      "futureParam": null,
+      "httpMethod": "POST",
+      "internalRoutePresent": false,
+      "lastEventIDPresent": false,
+      "mcpMethod": "server/discover",
+      "mcpName": null,
+      "modernMetaPresent": true,
+      "origin": "primary",
+      "path": "/auto/mcp",
+      "protocolVersion": "2026-07-28",
+      "requestKey": "cancel-tools-call",
+      "rpcId": "higress-auto-discover",
+      "rpcMethod": "server/discover",
+      "seq": 1,
+      "sessionAlias": "none",
+      "sessionPresent": false,
+      "toolName": null,
+      "unrelatedCredentialPresent": false
+    },
+    {
+      "authAlias": "none",
+      "authority": "backend-primary:8080",
+      "authorizationMatchesExplicitPolicy": false,
+      "authorizationPresent": false,
+      "autoCase": "auto-cancel-tools-call",
+      "continuationPresent": false,
+      "cookiePresent": false,
+      "futureParam": null,
+      "httpMethod": "POST",
+      "internalRoutePresent": false,
+      "lastEventIDPresent": false,
+      "mcpMethod": "tools/call",
+      "mcpName": "proxy_echo",
+      "modernMetaPresent": true,
+      "origin": "primary",
+      "path": "/auto/mcp",
+      "protocolVersion": "2026-07-28",
+      "requestKey": "cancel-tools-call",
+      "rpcId": "cancel-tools-call",
+      "rpcMethod": "tools/call",
+      "seq": 2,
+      "sessionAlias": "none",
+      "sessionPresent": false,
+      "toolName": "proxy_echo",
+      "unrelatedCredentialPresent": false
+    }
+  ],
+  "origin": "primary"
+}

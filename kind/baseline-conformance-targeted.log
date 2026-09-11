@@ -1,0 +1,1152 @@
+=== RUN   TestHigressConformanceTests
+    suite.go:186: 🚀 Start Running 73 Test Cases: 
+        
+        🎯 CaseNum: 1
+        CaseName: ConfigMapGlobalEnvoy
+        Scenario: The Envoy config should contain global config
+        Features: [envoy-config]
+        
+        🎯 CaseNum: 2
+        CaseName: ConfigmapGzip
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the configmap gzip.
+        Features: [http]
+        
+        🎯 CaseNum: 3
+        CaseName: ConfigMapGzipEnvoy
+        Scenario: The Envoy config should contain gzip config
+        Features: [envoy-config]
+        
+        🎯 CaseNum: 4
+        CaseName: ConfigmapHttps
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the configmap https.
+        Features: [http]
+        
+        🎯 CaseNum: 5
+        CaseName: ConfigMapMcpRedisSecret
+        Scenario: Envoy MCP session filter should resolve Redis password from Kubernetes secret and react to updates
+        Features: [envoy-config]
+        
+        🎯 CaseNum: 6
+        CaseName: CPPWasmPluginsBasicAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the CPP basic-auth WASM plugin.
+        Features: [wasm-cpp]
+        
+        🎯 CaseNum: 7
+        CaseName: CPPWasmPluginsKeyAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the CPP key_auth wasmplugins.
+        Features: [wasm-cpp]
+        
+        🎯 CaseNum: 8
+        CaseName: CPPWasmPluginsRequestBlock
+        Scenario: The Ingress in the higress-conformance-infra namespace test the cpp request-block wasmplugins.
+        Features: [wasm-cpp]
+        
+        🎯 CaseNum: 9
+        CaseName: WasmPluginAiCache
+        Scenario: The Ingress in the higress-conformance-infra namespace test the ai-cache WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 10
+        CaseName: WasmPluginAiProxy
+        Scenario: The Ingress in the higress-conformance-ai-backend namespace test the ai-proxy WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 11
+        CaseName: WasmPluginsBasicAuthTemplate
+        Scenario: The Ingress in the higress-conformance-infra namespace test the basic-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 12
+        CaseName: WasmPluginsBasicAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the basic-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 13
+        CaseName: WasmPluginsBotDetect
+        Scenario: The Ingress in the higress-conformance-infra namespace test the bot detect WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 14
+        CaseName: WasmPluginCacheControl
+        Scenario: The Ingress in the higress-conformance-infra namespace test the cache control WASM Plugin
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 15
+        CaseName: WasmPluginsCustomResponse
+        Scenario: The Ingress in the higress-conformance-infra namespace test the custom-response WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 16
+        CaseName: WasmPluginsGeoIPPlugin
+        Scenario: The geo-ip wasm pluin finds the client's geographic information according to the client's ip address.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 17
+        CaseName: WasmPluginsIPRestrictionAllow
+        Scenario: The Ingress in the higress-conformance-infra namespace test the ip-restriction wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 18
+        CaseName: WasmPluginsIPRestrictionDeny
+        Scenario: The Ingress in the higress-conformance-infra namespace test the ip-restriction wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 19
+        CaseName: WasmPluginsJWTAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the jwt-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 20
+        CaseName: WasmPluginsJWTAuthExpried
+        Scenario: The Ingress in the higress-conformance-infra namespace test the jwt-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 21
+        CaseName: WasmPluginsJWTAuthDeny
+        Scenario: The Ingress in the higress-conformance-infra namespace test the jwt-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 22
+        CaseName: WasmPluginsJWTAuthSingleConsumer
+        Scenario: The Ingress in the higress-conformance-infra namespace test the jwt-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 23
+        CaseName: WasmPluginsKeyAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the key-auth WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 24
+        CaseName: WasmPluginsMCP20260728
+        Scenario: The mcp-server WASM plugin serves the 2026-07-28 tools baseline while preserving legacy and origin-security behavior.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 25
+        CaseName: WasmPluginsOpa
+        Scenario: The Ingress in the higress-conformance-infra namespace test the opa wasm plugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 26
+        CaseName: WasmPluginsReplayProtection
+        Scenario: The replay protection wasm plugin prevents replay attacks by validating request nonce.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 27
+        CaseName: WasmPluginsRequestBlock
+        Scenario: The Ingress in the higress-conformance-infra namespace test the request-block wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 28
+        CaseName: WasmPluginsRequestValidation
+        Scenario: The Ingress in the higress-conformance-infra namespace test the request-validation wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 29
+        CaseName: WasmPluginsRerouteMatchRule
+        Scenario: Tests that wasm plugin matchRules work correctly after reroute triggered by a previous plugin (issue #3571).
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 30
+        CaseName: WasmPluginsSimpleJwtAuth
+        Scenario: The Ingress in the higress-conformance-infra namespace test the simple-jwt-auth wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 31
+        CaseName: WasmPluginsSniMisdirect
+        Scenario: The Ingress in the higress-conformance-infra namespace test the sni-misdirect wasmplugins.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 32
+        CaseName: WasmPluginsRedisInjectSpin
+        Scenario: Reproduce #4034: redis-failure callback + inject must not spin the worker; gateway stays responsive.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 33
+        CaseName: WasmPluginTransformer
+        Scenario: The Ingress in the higress-conformance-infra namespace test the transformer WASM plugin.
+        Features: [wasm-go]
+        
+        🎯 CaseNum: 34
+        CaseName: HTTPRouteAppRoot
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the app root.
+        Features: [http]
+        
+        🎯 CaseNum: 35
+        CaseName: HTTPRouteCanaryHeaderWithCustomizedHeader
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the canary header traffic split when same host and path but different header
+        Features: [http]
+        
+        🎯 CaseNum: 36
+        CaseName: HTTPRouteCanaryHeader
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the canary header traffic split.
+        Features: [http]
+        
+        🎯 CaseNum: 37
+        CaseName: HTTPRouteCanaryWeight
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the canary weight traffic split.
+        Features: [http]
+        
+        🎯 CaseNum: 38
+        CaseName: HTTPRouteConsulHttpBin
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the consul service registry.
+        Features: [consul]
+        
+        🎯 CaseNum: 39
+        CaseName: HTTPRouteDefaultBackend
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the default backend for fallback
+        Features: [http]
+        
+        🎯 CaseNum: 40
+        CaseName: HTTPRouteDNSRegistry
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the dns service registry.
+        Features: [http]
+        
+        🎯 CaseNum: 41
+        CaseName: HTTPRouteDownstreamEncryption
+        Scenario: A single Ingress in the higress-conformance-infra namespace for downstream encryption.
+        Features: [http]
+        
+        🎯 CaseNum: 42
+        CaseName: HTTPRouteEnableCors
+        Scenario: A single Ingress in the higress-conformance-infra namespace demonstrates enable cors ability.
+        Features: [http]
+        
+        🎯 CaseNum: 43
+        CaseName: HTTPRouteEnableIgnoreCase
+        Scenario: A Ingress in the higress-conformance-infra namespace that ignores URI case in HTTP match.
+        Features: [http]
+        
+        🎯 CaseNum: 44
+        CaseName: HTTPRouteEurekaRegistry
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the eureka service registry.
+        Features: [eureka]
+        
+        🎯 CaseNum: 45
+        CaseName: HTTPRouteExactDomainFallback
+        Scenario: A Ingress with separate wildcard and exact domains. www.foo.com/foo should fallback to wildcard route.
+        Features: [http]
+        
+        🎯 CaseNum: 46
+        CaseName: HttpForceRedirectHttps
+        Scenario:  The ingress in the higress-conformance-infra namespace enforces server-side HTTPS with forced redirection.
+        Features: [http]
+        
+        🎯 CaseNum: 47
+        CaseName: HTTPRouteFullPathRegex
+        Scenario: test for 'higress.io/full-path-regex' annotation
+        Features: [http]
+        
+        🎯 CaseNum: 48
+        CaseName: HTTPRouteHostNameSameNamespace
+        Scenario: A Ingress in the higress-conformance-infra namespace demonstrates host match ability.
+        Features: [http]
+        
+        🎯 CaseNum: 49
+        CaseName: HTTPRouteHttp2RpcCreate
+        Scenario: The Ingress in the higress-conformance-infra namespace test create the http2rpc.
+        Features: [dubbo nacos]
+        
+        🎯 CaseNum: 50
+        CaseName: HTTPRouteHttp2RpcUpdate
+        Scenario: The Ingress in the higress-conformance-infra namespace test delete the http2rpc.
+        Features: [dubbo nacos]
+        
+        🎯 CaseNum: 51
+        CaseName: HTTPHttpsWithoutSni
+        Scenario: A single Ingress in the higress-conformance-infra namespace for https without sni.
+        Features: [http]
+        
+        🎯 CaseNum: 52
+        CaseName: HttpRouteLimiter
+        Scenario: The Ingress in the higress-conformance-infra namespace uses rps annotation
+        Features: [http]
+        
+        🎯 CaseNum: 53
+        CaseName: HTTPRouteMatchHeaders
+        Scenario: A single Ingress in the higress-conformance-infra namespace uses the match headers.
+        Features: [http]
+        
+        🎯 CaseNum: 54
+        CaseName: HTTPRouteMatchMethods
+        Scenario: A single Ingress in the higress-conformance-infra namespace uses the match methods.
+        Features: [http]
+        
+        🎯 CaseNum: 55
+        CaseName: HTTPRouteMatchPath
+        Scenario: A Ingress in the higress-conformance-infra namespace that match different path.
+        Features: [http]
+        
+        🎯 CaseNum: 56
+        CaseName: HTTPRouteMatchPseudoHeaders
+        Scenario: Ingresses in the higress-conformance-infra namespace uses the match pseudo-headers.
+        Features: [http]
+        
+        🎯 CaseNum: 57
+        CaseName: HTTPRouteMatchQueryParams
+        Scenario: A single Ingress in the higress-conformance-infra namespace uses the match queryParams.
+        Features: [http]
+        
+        🎯 CaseNum: 58
+        CaseName: HTTPRouteMirrorTargetService
+        Scenario: The Ingress in the higress-conformance-infra namespace mirror request to target service
+        Features: [http]
+        
+        🎯 CaseNum: 59
+        CaseName: HTTPRoutePermanentRedirectCode
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the permanent redirect code header.
+        Features: [http]
+        
+        🎯 CaseNum: 60
+        CaseName: HTTPRoutePermanentRedirect
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the permanent redirect header.
+        Features: [http]
+        
+        🎯 CaseNum: 61
+        CaseName: HttpRedirectAsHttps
+        Scenario: The Ingress in the higress-conformance-infra namespace Server-side HTTPS enforcement through redirect.
+        Features: [http]
+        
+        🎯 CaseNum: 62
+        CaseName: HTTPRouteRequestHeaderControl
+        Scenario: A single Ingress in the higress-conformance-infra namespace controls the request header.
+        Features: [http]
+        
+        🎯 CaseNum: 63
+        CaseName: HTTPRouteResponseHeaderControl
+        Scenario: A single Ingress in the higress-conformance-infra namespace controls the response header.
+        Features: [http]
+        
+        🎯 CaseNum: 64
+        CaseName: HTTPRouteRewriteHost
+        Scenario: A single Ingress in the higress-conformance-infra namespace uses the rewrite host.
+        Features: [http]
+        
+        🎯 CaseNum: 65
+        CaseName: HTTPRouteRewritePath
+        Scenario: A single Ingress in the higress-conformance-infra namespace uses the rewrite path.
+        Features: [http]
+        
+        🎯 CaseNum: 66
+        CaseName: HTTPRouteSameHostAndPath
+        Scenario: A single Ingress in the higress-conformance-infra namespace demonstrates the situation with same path and host
+        Features: [http]
+        
+        🎯 CaseNum: 67
+        CaseName: HTTPRouteSimpleSameNamespace
+        Scenario: A single Ingress in the higress-conformance-infra namespace demonstrates basic routing ability.
+        Features: [http]
+        
+        🎯 CaseNum: 68
+        CaseName: HTTPRouteStaticRegistry
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the static service registry.
+        Features: [http]
+        
+        🎯 CaseNum: 69
+        CaseName: HTTPRouteTemporalRedirect
+        Scenario: The Ingress in the higress-conformance-infra namespace uses the temporal redirect header.
+        Features: [http]
+        
+        🎯 CaseNum: 70
+        CaseName: HttpTimeout
+        Scenario: The Ingress in the higress-conformance-infra namespace uses timeout annotation
+        Features: [http]
+        
+        🎯 CaseNum: 71
+        CaseName: HTTPRouteWhitelistSourceRange
+        Scenario: A single Ingress in the higress-conformance-infra namespace demonstrates ip access control
+        Features: [http]
+        
+        🎯 CaseNum: 72
+        CaseName: IngressLoadBalanceMcpSse
+        Scenario: The Envoy config should contain MCP SSE stateful session filter when load-balance annotation is set to mcp-sse
+        Features: [envoy-config]
+        
+        🎯 CaseNum: 73
+        CaseName: RustWasmPluginsAiDataMasking
+        Scenario: The Ingress in the higress-conformance-infra namespace test the rust ai-data-masking wasmplugins.
+        Features: [wasm-rust]
+        
+=== RUN   TestHigressConformanceTests/ConfigMapGlobalEnvoy
+    suite.go:241: 🏊🏼 Skipping ConfigMapGlobalEnvoy: suite does not support envoy-config
+=== RUN   TestHigressConformanceTests/ConfigmapGzip
+    suite.go:241: 🏊🏼 Skipping ConfigmapGzip: suite does not support http
+=== RUN   TestHigressConformanceTests/ConfigMapGzipEnvoy
+    suite.go:241: 🏊🏼 Skipping ConfigMapGzipEnvoy: suite does not support envoy-config
+=== RUN   TestHigressConformanceTests/ConfigmapHttps
+    suite.go:241: 🏊🏼 Skipping ConfigmapHttps: suite does not support http
+=== RUN   TestHigressConformanceTests/ConfigMapMcpRedisSecret
+    suite.go:241: 🏊🏼 Skipping ConfigMapMcpRedisSecret: suite does not support envoy-config
+=== RUN   TestHigressConformanceTests/CPPWasmPluginsBasicAuth
+    suite.go:241: 🏊🏼 Skipping CPPWasmPluginsBasicAuth: suite does not support wasm-cpp
+=== RUN   TestHigressConformanceTests/CPPWasmPluginsKeyAuth
+    suite.go:241: 🏊🏼 Skipping CPPWasmPluginsKeyAuth: suite does not support wasm-cpp
+=== RUN   TestHigressConformanceTests/CPPWasmPluginsRequestBlock
+    suite.go:241: 🏊🏼 Skipping CPPWasmPluginsRequestBlock: suite does not support wasm-cpp
+=== RUN   TestHigressConformanceTests/WasmPluginAiCache
+    suite.go:251: 🏊🏼 Skipping WasmPluginAiCache: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginAiProxy
+    suite.go:251: 🏊🏼 Skipping WasmPluginAiProxy: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsBasicAuthTemplate
+    suite.go:251: 🏊🏼 Skipping WasmPluginsBasicAuthTemplate: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsBasicAuth
+    suite.go:251: 🏊🏼 Skipping WasmPluginsBasicAuth: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsBotDetect
+    suite.go:251: 🏊🏼 Skipping WasmPluginsBotDetect: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginCacheControl
+    suite.go:251: 🏊🏼 Skipping WasmPluginCacheControl: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsCustomResponse
+    suite.go:251: 🏊🏼 Skipping WasmPluginsCustomResponse: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsGeoIPPlugin
+    suite.go:251: 🏊🏼 Skipping WasmPluginsGeoIPPlugin: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsIPRestrictionAllow
+    suite.go:251: 🏊🏼 Skipping WasmPluginsIPRestrictionAllow: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsIPRestrictionDeny
+    suite.go:251: 🏊🏼 Skipping WasmPluginsIPRestrictionDeny: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsJWTAuth
+    suite.go:251: 🏊🏼 Skipping WasmPluginsJWTAuth: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsJWTAuthExpried
+    suite.go:251: 🏊🏼 Skipping WasmPluginsJWTAuthExpried: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsJWTAuthDeny
+    suite.go:251: 🏊🏼 Skipping WasmPluginsJWTAuthDeny: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsJWTAuthSingleConsumer
+    suite.go:251: 🏊🏼 Skipping WasmPluginsJWTAuthSingleConsumer: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsKeyAuth
+    suite.go:251: 🏊🏼 Skipping WasmPluginsKeyAuth: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728
+    suite.go:254: 🔥 Running Conformance Test: WasmPluginsMCP20260728
+    suite.go:268: 🧳 Applying Manifests: tests/go-wasm-mcp-2026-07-28.yaml
+    apply.go:149: 🏗 Creating wasmplugin-mcp-2026-07-28 Ingress
+    apply.go:149: 🏗 Creating mcp-server-2026-07-28 WasmPlugin
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728/modern_discovery
+    go-wasm-mcp-2026-07-28.go:80: Making POST request to http://localhost/mcp
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 1.791µs)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 1.002476908s)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 2.004155983s)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 3.008096269s)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 4.011074886s)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+    http.go:305: Request failed, not ready yet: Post "http://localhost/mcp": dial tcp [::1]:80: connect: connection refused (after 5.01434588s)
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 297
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"discover-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","capabilities":{"tools":{}},"resultType":"complete","supportedVersions":["2024-11-05","2025-03-26","2025-06-18","2026-07-28"],"ttlMs":0}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 297
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"discover-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","capabilities":{"tools":{}},"resultType":"complete","supportedVersions":["2024-11-05","2025-03-26","2025-06-18","2026-07-28"],"ttlMs":0}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: server/discover
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 10a
+< {"jsonrpc":"2.0","id":"discover-e2e","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 297
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"discover-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","capabilities":{"tools":{}},"resultType":"complete","supportedVersions":["2024-11-05","2025-03-26","2025-06-18","2026-07-28"],"ttlMs":0}}
+
+    http.go:343: Request passed
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/list
+    go-wasm-mcp-2026-07-28.go:80: Making POST request to http://localhost/mcp
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 101
+< {"jsonrpc":"2.0","id":"list-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 403
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"list-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","resultType":"complete","tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}],"ttlMs":0}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 101
+< {"jsonrpc":"2.0","id":"list-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 403
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"list-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","resultType":"complete","tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}],"ttlMs":0}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 101
+< {"jsonrpc":"2.0","id":"list-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 403
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"list-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"cacheScope":"private","resultType":"complete","tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}],"ttlMs":0}}
+
+    http.go:343: Request passed
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/call
+    go-wasm-mcp-2026-07-28.go:80: Making POST request to http://localhost/mcp
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/call
+< Mcp-Name: get_weather
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 13a
+< {"jsonrpc":"2.0","id":"call-e2e","method":"tools/call","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}},"name":"get_weather","arguments":{"location":"Shanghai"}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 232
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"call-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"content":[{"text":"weather for Shanghai","type":"text"}],"isError":false,"resultType":"complete"}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/call
+< Mcp-Name: get_weather
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 13a
+< {"jsonrpc":"2.0","id":"call-e2e","method":"tools/call","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}},"name":"get_weather","arguments":{"location":"Shanghai"}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 232
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"call-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"content":[{"text":"weather for Shanghai","type":"text"}],"isError":false,"resultType":"complete"}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/call
+< Mcp-Name: get_weather
+< Mcp-Protocol-Version: 2026-07-28
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 13a
+< {"jsonrpc":"2.0","id":"call-e2e","method":"tools/call","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}},"name":"get_weather","arguments":{"location":"Shanghai"}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 232
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"call-e2e","result":{"_meta":{"io.modelcontextprotocol/serverInfo":{"name":"e2e-mcp-2026","version":"1.0.0"}},"content":[{"text":"weather for Shanghai","type":"text"}],"isError":false,"resultType":"complete"}}
+
+    http.go:343: Request passed
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728/legacy_tools/list_remains_unshaped
+    go-wasm-mcp-2026-07-28.go:80: Making POST request to http://localhost/mcp
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 46
+< {"jsonrpc":"2.0","id":"legacy-list","method":"tools/list","params":{}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 260
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"legacy-list","result":{"tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}]}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 46
+< {"jsonrpc":"2.0","id":"legacy-list","method":"tools/list","params":{}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 260
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"legacy-list","result":{"tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}]}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 46
+< {"jsonrpc":"2.0","id":"legacy-list","method":"tools/list","params":{}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 200 OK
+< Content-Length: 260
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc": "2.0","id":"legacy-list","result":{"tools":[{"description":"Return deterministic fixture weather","inputSchema":{"properties":{"location":{"description":"City name","type":"string"}},"required":["location"],"type":"object"},"name":"get_weather"}]}}
+
+    http.go:343: Request passed
+=== RUN   TestHigressConformanceTests/WasmPluginsMCP20260728/cross-origin_request_rejected
+    go-wasm-mcp-2026-07-28.go:80: Making POST request to http://localhost/mcp
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< Origin: https://evil.example
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 103
+< {"jsonrpc":"2.0","id":"origin-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 403 Forbidden
+< Connection: close
+< Content-Length: 80
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc":"2.0","id":null,"error":{"code":-32600,"message":"untrusted Origin"}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< Origin: https://evil.example
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 103
+< {"jsonrpc":"2.0","id":"origin-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 403 Forbidden
+< Connection: close
+< Content-Length: 80
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc":"2.0","id":null,"error":{"code":-32600,"message":"untrusted Origin"}}
+
+Sending Request:
+< POST /mcp HTTP/1.1
+< Host: mcp-2026.example.com
+< User-Agent: Go-http-client/1.1
+< Transfer-Encoding: chunked
+< Accept: application/json
+< Accept: text/event-stream
+< Content-Type: application/json
+< Mcp-Method: tools/list
+< Mcp-Protocol-Version: 2026-07-28
+< Origin: https://evil.example
+< X-Echo-Set-Header: 
+< Accept-Encoding: gzip
+< 
+< 103
+< {"jsonrpc":"2.0","id":"origin-e2e","method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientInfo":{"name":"higress-e2e","version":"1.0.0"},"io.modelcontextprotocol/clientCapabilities":{}}}}
+< 0
+< 
+< 
+
+Received Response:
+< HTTP/1.1 403 Forbidden
+< Connection: close
+< Content-Length: 80
+< Content-Type: application/json; charset=utf-8
+< Date: Fri, 11 Sep 2026 08:39:03 GMT
+< Server: istio-envoy
+< 
+< {"jsonrpc":"2.0","id":null,"error":{"code":-32600,"message":"untrusted Origin"}}
+
+    http.go:343: Request passed
+=== NAME  TestHigressConformanceTests/WasmPluginsMCP20260728
+    apply.go:157: 🚮 Deleting mcp-server-2026-07-28 WasmPlugin
+    apply.go:157: 🚮 Deleting wasmplugin-mcp-2026-07-28 Ingress
+=== RUN   TestHigressConformanceTests/WasmPluginsOpa
+    suite.go:251: 🏊🏼 Skipping WasmPluginsOpa: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsReplayProtection
+    suite.go:251: 🏊🏼 Skipping WasmPluginsReplayProtection: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsRequestBlock
+    suite.go:251: 🏊🏼 Skipping WasmPluginsRequestBlock: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsRequestValidation
+    suite.go:251: 🏊🏼 Skipping WasmPluginsRequestValidation: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsRerouteMatchRule
+    suite.go:251: 🏊🏼 Skipping WasmPluginsRerouteMatchRule: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsSimpleJwtAuth
+    suite.go:251: 🏊🏼 Skipping WasmPluginsSimpleJwtAuth: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsSniMisdirect
+    suite.go:251: 🏊🏼 Skipping WasmPluginsSniMisdirect: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginsRedisInjectSpin
+    suite.go:251: 🏊🏼 Skipping WasmPluginsRedisInjectSpin: test explicitly skipped
+=== RUN   TestHigressConformanceTests/WasmPluginTransformer
+    suite.go:251: 🏊🏼 Skipping WasmPluginTransformer: test explicitly skipped
+=== RUN   TestHigressConformanceTests/HTTPRouteAppRoot
+    suite.go:241: 🏊🏼 Skipping HTTPRouteAppRoot: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteCanaryHeaderWithCustomizedHeader
+    suite.go:241: 🏊🏼 Skipping HTTPRouteCanaryHeaderWithCustomizedHeader: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteCanaryHeader
+    suite.go:241: 🏊🏼 Skipping HTTPRouteCanaryHeader: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteCanaryWeight
+    suite.go:241: 🏊🏼 Skipping HTTPRouteCanaryWeight: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteConsulHttpBin
+    suite.go:241: 🏊🏼 Skipping HTTPRouteConsulHttpBin: suite does not support consul
+=== RUN   TestHigressConformanceTests/HTTPRouteDefaultBackend
+    suite.go:241: 🏊🏼 Skipping HTTPRouteDefaultBackend: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteDNSRegistry
+    suite.go:241: 🏊🏼 Skipping HTTPRouteDNSRegistry: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteDownstreamEncryption
+    suite.go:241: 🏊🏼 Skipping HTTPRouteDownstreamEncryption: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteEnableCors
+    suite.go:241: 🏊🏼 Skipping HTTPRouteEnableCors: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteEnableIgnoreCase
+    suite.go:241: 🏊🏼 Skipping HTTPRouteEnableIgnoreCase: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteEurekaRegistry
+    suite.go:241: 🏊🏼 Skipping HTTPRouteEurekaRegistry: suite does not support eureka
+=== RUN   TestHigressConformanceTests/HTTPRouteExactDomainFallback
+    suite.go:241: 🏊🏼 Skipping HTTPRouteExactDomainFallback: suite does not support http
+=== RUN   TestHigressConformanceTests/HttpForceRedirectHttps
+    suite.go:241: 🏊🏼 Skipping HttpForceRedirectHttps: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteFullPathRegex
+    suite.go:241: 🏊🏼 Skipping HTTPRouteFullPathRegex: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteHostNameSameNamespace
+    suite.go:241: 🏊🏼 Skipping HTTPRouteHostNameSameNamespace: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteHttp2RpcCreate
+    suite.go:241: 🏊🏼 Skipping HTTPRouteHttp2RpcCreate: suite does not support dubbo
+=== RUN   TestHigressConformanceTests/HTTPRouteHttp2RpcUpdate
+    suite.go:241: 🏊🏼 Skipping HTTPRouteHttp2RpcUpdate: suite does not support dubbo
+=== RUN   TestHigressConformanceTests/HTTPHttpsWithoutSni
+    suite.go:241: 🏊🏼 Skipping HTTPHttpsWithoutSni: suite does not support http
+=== RUN   TestHigressConformanceTests/HttpRouteLimiter
+    suite.go:241: 🏊🏼 Skipping HttpRouteLimiter: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMatchHeaders
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMatchHeaders: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMatchMethods
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMatchMethods: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMatchPath
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMatchPath: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMatchPseudoHeaders
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMatchPseudoHeaders: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMatchQueryParams
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMatchQueryParams: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteMirrorTargetService
+    suite.go:241: 🏊🏼 Skipping HTTPRouteMirrorTargetService: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRoutePermanentRedirectCode
+    suite.go:241: 🏊🏼 Skipping HTTPRoutePermanentRedirectCode: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRoutePermanentRedirect
+    suite.go:241: 🏊🏼 Skipping HTTPRoutePermanentRedirect: suite does not support http
+=== RUN   TestHigressConformanceTests/HttpRedirectAsHttps
+    suite.go:241: 🏊🏼 Skipping HttpRedirectAsHttps: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteRequestHeaderControl
+    suite.go:241: 🏊🏼 Skipping HTTPRouteRequestHeaderControl: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteResponseHeaderControl
+    suite.go:241: 🏊🏼 Skipping HTTPRouteResponseHeaderControl: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteRewriteHost
+    suite.go:241: 🏊🏼 Skipping HTTPRouteRewriteHost: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteRewritePath
+    suite.go:241: 🏊🏼 Skipping HTTPRouteRewritePath: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteSameHostAndPath
+    suite.go:241: 🏊🏼 Skipping HTTPRouteSameHostAndPath: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteSimpleSameNamespace
+    suite.go:241: 🏊🏼 Skipping HTTPRouteSimpleSameNamespace: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteStaticRegistry
+    suite.go:241: 🏊🏼 Skipping HTTPRouteStaticRegistry: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteTemporalRedirect
+    suite.go:241: 🏊🏼 Skipping HTTPRouteTemporalRedirect: suite does not support http
+=== RUN   TestHigressConformanceTests/HttpTimeout
+    suite.go:241: 🏊🏼 Skipping HttpTimeout: suite does not support http
+=== RUN   TestHigressConformanceTests/HTTPRouteWhitelistSourceRange
+    suite.go:241: 🏊🏼 Skipping HTTPRouteWhitelistSourceRange: suite does not support http
+=== RUN   TestHigressConformanceTests/IngressLoadBalanceMcpSse
+    suite.go:241: 🏊🏼 Skipping IngressLoadBalanceMcpSse: suite does not support envoy-config
+=== RUN   TestHigressConformanceTests/RustWasmPluginsAiDataMasking
+    suite.go:241: 🏊🏼 Skipping RustWasmPluginsAiDataMasking: suite does not support wasm-rust
+--- PASS: TestHigressConformanceTests (6.20s)
+    --- SKIP: TestHigressConformanceTests/ConfigMapGlobalEnvoy (0.00s)
+    --- SKIP: TestHigressConformanceTests/ConfigmapGzip (0.00s)
+    --- SKIP: TestHigressConformanceTests/ConfigMapGzipEnvoy (0.00s)
+    --- SKIP: TestHigressConformanceTests/ConfigmapHttps (0.00s)
+    --- SKIP: TestHigressConformanceTests/ConfigMapMcpRedisSecret (0.00s)
+    --- SKIP: TestHigressConformanceTests/CPPWasmPluginsBasicAuth (0.00s)
+    --- SKIP: TestHigressConformanceTests/CPPWasmPluginsKeyAuth (0.00s)
+    --- SKIP: TestHigressConformanceTests/CPPWasmPluginsRequestBlock (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginAiCache (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginAiProxy (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsBasicAuthTemplate (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsBasicAuth (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsBotDetect (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginCacheControl (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsCustomResponse (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsGeoIPPlugin (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsIPRestrictionAllow (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsIPRestrictionDeny (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsJWTAuth (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsJWTAuthExpried (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsJWTAuthDeny (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsJWTAuthSingleConsumer (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsKeyAuth (0.00s)
+    --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728 (6.20s)
+        --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728/modern_discovery (6.03s)
+        --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/list (0.01s)
+        --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/call (0.01s)
+        --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728/legacy_tools/list_remains_unshaped (0.00s)
+        --- PASS: TestHigressConformanceTests/WasmPluginsMCP20260728/cross-origin_request_rejected (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsOpa (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsReplayProtection (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsRequestBlock (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsRequestValidation (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsRerouteMatchRule (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsSimpleJwtAuth (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsSniMisdirect (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginsRedisInjectSpin (0.00s)
+    --- SKIP: TestHigressConformanceTests/WasmPluginTransformer (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteAppRoot (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteCanaryHeaderWithCustomizedHeader (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteCanaryHeader (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteCanaryWeight (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteConsulHttpBin (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteDefaultBackend (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteDNSRegistry (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteDownstreamEncryption (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteEnableCors (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteEnableIgnoreCase (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteEurekaRegistry (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteExactDomainFallback (0.00s)
+    --- SKIP: TestHigressConformanceTests/HttpForceRedirectHttps (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteFullPathRegex (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteHostNameSameNamespace (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteHttp2RpcCreate (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteHttp2RpcUpdate (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPHttpsWithoutSni (0.00s)
+    --- SKIP: TestHigressConformanceTests/HttpRouteLimiter (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMatchHeaders (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMatchMethods (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMatchPath (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMatchPseudoHeaders (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMatchQueryParams (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteMirrorTargetService (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRoutePermanentRedirectCode (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRoutePermanentRedirect (0.00s)
+    --- SKIP: TestHigressConformanceTests/HttpRedirectAsHttps (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteRequestHeaderControl (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteResponseHeaderControl (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteRewriteHost (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteRewritePath (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteSameHostAndPath (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteSimpleSameNamespace (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteStaticRegistry (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteTemporalRedirect (0.00s)
+    --- SKIP: TestHigressConformanceTests/HttpTimeout (0.00s)
+    --- SKIP: TestHigressConformanceTests/HTTPRouteWhitelistSourceRange (0.00s)
+    --- SKIP: TestHigressConformanceTests/IngressLoadBalanceMcpSse (0.00s)
+    --- SKIP: TestHigressConformanceTests/RustWasmPluginsAiDataMasking (0.00s)
+PASS

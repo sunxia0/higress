@@ -1,0 +1,205 @@
+{
+  "fixtures": [
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "unsupported-semantics",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "contradictory-semantics",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "byte-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "depth-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "node-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "collection-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "enum-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "mixed-valid-invalid",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "rule-level",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": true,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "fixture_tool",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    },
+    {
+      "actualAcceptance": false,
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "expectedAcceptance": false,
+      "fixture": "numeric-comparison-limit",
+      "globalList": false,
+      "legacyDescriptorSha256": null,
+      "legacyList": false,
+      "legacyMappingExpected": false,
+      "legacyRESTMapping": false,
+      "modernCallBlocked": false,
+      "modernDescriptorSha256": null,
+      "modernList": false,
+      "tool": "numeric_comparison",
+      "validSiblingBackendEvents": [],
+      "validSiblingCallable": false,
+      "validSiblingResultContract": false
+    }
+  ],
+  "revision": "affected"
+}

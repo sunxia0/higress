@@ -1,0 +1,41 @@
+{
+  "cleanup": [
+    {
+      "hostExited": true,
+      "scenario": "unchanged-fixture"
+    },
+    {
+      "hostExited": true,
+      "scenario": "extra-business-sequence-fault"
+    }
+  ],
+  "originalFixtureSha256": "3456c47a83f4d10082a1a23d3ea37906a3a432eef8abaf945d94be4667fb6e94",
+  "overlayFixtureSha256": "5ac3ac4aa1d27c53326953dd449ccc20f005137f1b5eb33a7b6543235ae63819",
+  "productionSourcesUnchanged": true,
+  "scenarios": [
+    {
+      "accepted": true,
+      "binarySha256": "3a6d805d36c3b7ac78fd67883ad3cac4a9c2fd5450f1f02dc16f2d228589cacf",
+      "expected": true,
+      "fixtureSequenceFailure": false,
+      "httpStatus": 400,
+      "idMatches": true,
+      "oracleExit": 0,
+      "rpcErrorCode": -32020,
+      "scenario": "unchanged-fixture"
+    },
+    {
+      "accepted": false,
+      "binarySha256": "f8d9c63bd8866e8994eefc4e32620a7201d0ae575c379610d94072a783999337",
+      "expected": true,
+      "fixtureSequenceFailure": true,
+      "httpStatus": 500,
+      "idMatches": false,
+      "oracleExit": 42,
+      "rpcErrorCode": null,
+      "scenario": "extra-business-sequence-fault"
+    }
+  ],
+  "sourceSha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "status": "PASS"
+}

@@ -1,0 +1,1 @@
+PASS no containers remain for compose project mcp-auto-session-supplement-54805

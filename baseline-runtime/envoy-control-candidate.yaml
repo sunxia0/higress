@@ -1,0 +1,60 @@
+admin:
+  address:
+    socket_address: {address: 0.0.0.0, port_value: 9951}
+static_resources:
+  listeners:
+  - name: malformed-control-candidate
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 13108}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: malformed-control-candidate
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=malformed-control-candidate method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-malformed-control-candidate
+                virtual_hosts:
+                  - name: local-malformed-control-candidate
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: malformed-control-candidate
+                      root_id: malformed-control-candidate
+                      vm_config:
+                        vm_id: malformed-control-candidate
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"malformed-non-schema","type":"rest"},"tools":[{"args":[{"name":"value","type":"string"}],"description":"Independent historical configuration error control","name":"malformed_template","requestTemplate":{"method":"GET","url":"{{"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  clusters:
+  - name: backend-primary
+    connect_timeout: 5s
+    type: STRICT_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: backend-primary
+      endpoints:
+        - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address: {address: backend-primary, port_value: 8080}

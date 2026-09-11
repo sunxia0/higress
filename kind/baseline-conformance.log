@@ -1,0 +1,543 @@
+=== RUN   TestHigressConformanceTests
+    suite.go:156: 📦 Test Setup: Ensuring IngressClass has been accepted
+    suite.go:160: 📦 Test Setup: Applying base manifests
+    apply.go:149: 🏗 Creating higress-conformance-infra Namespace
+    apply.go:149: 🏗 Creating infra-backend-v1 Service
+    apply.go:149: 🏗 Creating infra-backend-v1 Deployment
+    apply.go:149: 🏗 Creating infra-backend-v1-ip Service
+    apply.go:149: 🏗 Creating infra-backend-v1-ip Deployment
+    apply.go:149: 🏗 Creating infra-backend-v2 Service
+    apply.go:149: 🏗 Creating infra-backend-v2 Deployment
+    apply.go:149: 🏗 Creating infra-backend-v3 Service
+    apply.go:149: 🏗 Creating infra-backend-v3 Deployment
+    apply.go:149: 🏗 Creating infra-backend-mirror Service
+    apply.go:149: 🏗 Creating infra-backend-mirror Deployment
+    apply.go:149: 🏗 Creating infra-backend-echo-body-v1 Service
+    apply.go:149: 🏗 Creating infra-backend-echo-body-v1 Deployment
+    apply.go:149: 🏗 Creating infra-backend-echo-body-v2 Service
+    apply.go:149: 🏗 Creating infra-backend-echo-body-v2 Deployment
+    apply.go:149: 🏗 Creating higress-conformance-app-backend Namespace
+    apply.go:149: 🏗 Creating app-backend-v1 Service
+    apply.go:149: 🏗 Creating app-backend-v1 Deployment
+    apply.go:149: 🏗 Creating app-backend-v2 Service
+    apply.go:149: 🏗 Creating app-backend-v2 Deployment
+    apply.go:149: 🏗 Creating higress-conformance-web-backend Namespace
+    apply.go:149: 🏗 Creating web-backend Service
+    apply.go:149: 🏗 Creating web-backend Deployment
+    apply.go:149: 🏗 Creating consul-standalone Pod
+    apply.go:149: 🏗 Creating consul-service Service
+    apply.go:149: 🏗 Creating httpbin Pod
+    apply.go:149: 🏗 Creating eureka-cm ConfigMap
+    apply.go:149: 🏗 Creating eureka Service
+    apply.go:149: 🏗 Creating eureka StatefulSet
+    apply.go:149: 🏗 Creating eureka-registry-provider Pod
+    apply.go:149: 🏗 Creating nacos-standlone-rc3 Pod
+    apply.go:149: 🏗 Creating nacos-standlone-rc3-service Service
+    apply.go:149: 🏗 Creating dubbo-demo-provider Pod
+    apply.go:149: 🏗 Creating opa Deployment
+    apply.go:149: 🏗 Creating opa Service
+    apply.go:149: 🏗 Creating curl-opa Pod
+    apply.go:149: 🏗 Creating higress-conformance-ai-backend Namespace
+    apply.go:149: 🏗 Creating llm-mock Pod
+    apply.go:149: 🏗 Creating llm-mock-service Service
+    suite.go:166: 📦 Test Setup: Applying programmatic resources
+    apply.go:100: 🏗 Creating certificate 
+2026-09-11T08:28:42.581211Z	info	controlleruntime	tls: failed to find any PEM data in certificate input
+    apply.go:100: 🏗 Creating tls-validity-checks-certificate 
+2026-09-11T08:28:42.776801Z	info	controlleruntime	tls: failed to find any PEM data in certificate input
+    suite.go:172: 📦 Test Setup: Ensuring Pods from base manifests are ready
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v1-7568795c88-cnfkk Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet
+    helpers.go:118: ⌛️ Ready condition set to False, expected True
+    helpers.go:122: ⌛️ Ready was not in conditions list
+    helpers.go:64: higress-conformance-infra/infra-backend-echo-body-v2-795f794775-m6vzx Pod not ready yet

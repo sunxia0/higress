@@ -1,0 +1,9 @@
+{
+  "host": "macOS arm64 with Podman, no Docker CLI",
+  "kind": "mcp-auto-4684",
+  "gateway": "v2.2.3",
+  "standard_all_attempt": "incomplete; interrupted during unrelated base backend image pulls; no conformance assertions executed",
+  "macos_port_80": "bind permission denied",
+  "equivalent_targeted_execution": "exact-source conformance test binary compiled linux/arm64, executed inside owned kind node using /etc/kubernetes/admin.conf and localhost:80; original paired test manifests and assertions; --test-area=run with only required namespace/service/deployment from exact base manifests",
+  "not_claimed": "standard make orchestration pass or unrelated suites"
+}

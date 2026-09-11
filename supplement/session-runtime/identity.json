@@ -1,0 +1,18 @@
+{
+  "envoyConfigSha256": "24d213bd6edc83405368c5d1eba327fd2cf91020bfb069f2de0b6b8135656124",
+  "originalEvidence": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-3966c7e6-e/runtime",
+  "pluginSha256": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9",
+  "sourceSha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "supplementScripts": {
+    "README.md": "775b4252877e406ce3acb9f82fdbc5ab105235d83ca362d4dcc18beec30a90c8",
+    "compose-config-check.json": "be3160c3db06f50ea72553f0edd869d1d1a55773f503404903c30472eed2c580",
+    "compose.override.yaml": "39358b06cd71577510038aa216b9f9397dc8c0151ae4c14350e763768f38adeb",
+    "finalize_session.py": "1b8fe659f2c51cbf4edcd37cab803b397b4e41d58603f329a88f0e1982b5d3b9",
+    "raw_probe_oracle.py": "d824da77ca98e34b2ae1853f6b6e5963cee9b094396333166c8811e59cadd34e",
+    "run_probe_supplement.py": "454d9bf0190905781689e9e2575416487ce036e06e765ab60e520608110803ac",
+    "run_session_supplement.sh": "9d1e34764e70a1aa891136055ae83c1f7754790ed1f13c75255d1610472c0422",
+    "session-command.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "session_backend.py": "e5cdd8344358a498b7a00fd37989d150d6801dec382ca11bcf4bec930287ddec",
+    "verify_session.py": "8ae3e469674d193be8a5250686a30715e0ea2fdaeb71c7306a4c9da8d6d6e93e"
+  }
+}

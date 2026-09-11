@@ -1,0 +1,9 @@
+services:
+  backend-primary:
+    command: ["python", "/supplement/session_backend.py"]
+    volumes:
+      - ${MCP_SUPPLEMENT_DIR:?set MCP_SUPPLEMENT_DIR}:/supplement:ro
+  verifier:
+    command: ["python", "/supplement/verify_session.py"]
+    volumes:
+      - ${MCP_SUPPLEMENT_DIR:?set MCP_SUPPLEMENT_DIR}:/supplement:ro

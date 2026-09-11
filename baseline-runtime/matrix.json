@@ -1,0 +1,5266 @@
+{
+  "cases": [
+    {
+      "case": "registered-modern-discover-list-call",
+      "detail": {
+        "backendCalls": 1,
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/v3/weather/weatherInfo",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10000-discover-10000",
+            "case": "registered-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10000,
+              "mcpMethod": "server/discover",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "discover-10000",
+              "rpcMethod": "server/discover",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "discover-10000",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "amap-tools",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "resultType": "complete",
+                  "supportedVersions": [
+                    "2024-11-05",
+                    "2025-03-26",
+                    "2025-06-18",
+                    "2026-07-28"
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "4cc00cb8792f12e9f23e86a8e730d3c0c779516750e7434f8fd53516ac6cee63",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10000-list-10000",
+            "case": "registered-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10000,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "list-10000",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "list-10000",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "amap-tools",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "\u5468\u8fb9\u641c\uff0c\u6839\u636e\u7528\u6237\u4f20\u5165\u5173\u952e\u8bcd\u4ee5\u53ca\u5750\u6807location\uff0c\u641c\u7d22\u51faradius\u534a\u5f84\u8303\u56f4\u7684POI",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "keywords": {
+                            "description": "\u641c\u7d22\u5173\u952e\u8bcd",
+                            "type": "string"
+                          },
+                          "location": {
+                            "description": "\u4e2d\u5fc3\u70b9\u7ecf\u5ea6\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "radius": {
+                            "description": "\u641c\u7d22\u534a\u5f84",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "location",
+                          "radius",
+                          "keywords"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_around_search"
+                    },
+                    {
+                      "description": "\u9a91\u884c\u8def\u5f84\u89c4\u5212\u7528\u4e8e\u89c4\u5212\u9a91\u884c\u901a\u52e4\u65b9\u6848\uff0c\u89c4\u5212\u65f6\u4f1a\u8003\u8651\u5929\u6865\u3001\u5355\u884c\u7ebf\u3001\u5c01\u8def\u7b49\u60c5\u51b5\u3002\u6700\u5927\u652f\u6301 500km \u7684\u9a91\u884c\u8def\u7ebf\u89c4\u5212",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "destination": {
+                            "description": "\u76ee\u7684\u5730\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "origin": {
+                            "description": "\u51fa\u53d1\u70b9\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "origin",
+                          "destination"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_bicycling"
+                    },
+                    {
+                      "description": "\u9a7e\u8f66\u8def\u5f84\u89c4\u5212 API \u53ef\u4ee5\u6839\u636e\u7528\u6237\u8d77\u7ec8\u70b9\u7ecf\u7eac\u5ea6\u5750\u6807\u89c4\u5212\u4ee5\u5c0f\u5ba2\u8f66\u3001\u8f7f\u8f66\u901a\u52e4\u51fa\u884c\u7684\u65b9\u6848\uff0c\u5e76\u4e14\u8fd4\u56de\u901a\u52e4\u65b9\u6848\u7684\u6570\u636e",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "destination": {
+                            "description": "\u76ee\u7684\u5730\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "origin": {
+                            "description": "\u51fa\u53d1\u70b9\u7ecf\u5ea6\uff0c\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "origin",
+                          "destination"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_direction_driving"
+                    },
+                    {
+                      "description": "\u516c\u4ea4\u8def\u5f84\u89c4\u5212 API \u53ef\u4ee5\u6839\u636e\u7528\u6237\u8d77\u7ec8\u70b9\u7ecf\u7eac\u5ea6\u5750\u6807\u89c4\u5212\u7efc\u5408\u5404\u7c7b\u516c\u5171\uff08\u706b\u8f66\u3001\u516c\u4ea4\u3001\u5730\u94c1\uff09\u4ea4\u901a\u65b9\u5f0f\u7684\u901a\u52e4\u65b9\u6848\uff0c\u5e76\u4e14\u8fd4\u56de\u901a\u52e4\u65b9\u6848\u7684\u6570\u636e\uff0c\u8de8\u57ce\u573a\u666f\u4e0b\u5fc5\u987b\u4f20\u8d77\u70b9\u57ce\u5e02\u4e0e\u7ec8\u70b9\u57ce\u5e02, \u8d77\u70b9\u57ce\u5e02\u540d\u79f0\u53ef\u4ee5\u901a\u8fc7\u57fa\u4e8eip\u5b9a\u4f4d\u4f4d\u7f6e\u7684mcp\u5de5\u5177\u83b7\u53d6",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "city": {
+                            "description": "\u516c\u5171\u4ea4\u901a\u89c4\u5212\u8d77\u70b9\u57ce\u5e02",
+                            "type": "string"
+                          },
+                          "cityd": {
+                            "description": "\u516c\u5171\u4ea4\u901a\u89c4\u5212\u7ec8\u70b9\u57ce\u5e02",
+                            "type": "string"
+                          },
+                          "destination": {
+                            "description": "\u76ee\u7684\u5730\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "origin": {
+                            "description": "\u51fa\u53d1\u70b9\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "origin",
+                          "destination",
+                          "city",
+                          "cityd"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_direction_transit_integrated"
+                    },
+                    {
+                      "description": "\u6b65\u884c\u8def\u5f84\u89c4\u5212 API \u53ef\u4ee5\u6839\u636e\u8f93\u5165\u8d77\u70b9\u7ec8\u70b9\u7ecf\u7eac\u5ea6\u5750\u6807\u89c4\u5212100km \u4ee5\u5185\u7684\u6b65\u884c\u901a\u52e4\u65b9\u6848\uff0c\u5e76\u4e14\u8fd4\u56de\u901a\u52e4\u65b9\u6848\u7684\u6570\u636e",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "destination": {
+                            "description": "\u76ee\u7684\u5730\u7ecf\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "origin": {
+                            "description": "\u51fa\u53d1\u70b9\u7ecf\u5ea6\uff0c\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "origin",
+                          "destination"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_direction_walking"
+                    },
+                    {
+                      "description": "\u8ddd\u79bb\u6d4b\u91cf API \u53ef\u4ee5\u6d4b\u91cf\u4e24\u4e2a\u7ecf\u7eac\u5ea6\u5750\u6807\u4e4b\u95f4\u7684\u8ddd\u79bb,\u652f\u6301\u9a7e\u8f66\u3001\u6b65\u884c\u4ee5\u53ca\u7403\u9762\u8ddd\u79bb\u6d4b\u91cf",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "destination": {
+                            "description": "\u7ec8\u70b9\u7ecf\u5ea6\uff0c\u7eac\u5ea6\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "origins": {
+                            "description": "\u8d77\u70b9\u7ecf\u5ea6\uff0c\u7eac\u5ea6\uff0c\u53ef\u4ee5\u4f20\u591a\u4e2a\u5750\u6807\uff0c\u4f7f\u7528\u5206\u53f7\u9694\u79bb\uff0c\u6bd4\u5982120,30;120,31\uff0c\u5750\u6807\u683c\u5f0f\u4e3a\uff1a\u7ecf\u5ea6\uff0c\u7eac\u5ea6",
+                            "type": "string"
+                          },
+                          "type": {
+                            "description": "\u8ddd\u79bb\u6d4b\u91cf\u7c7b\u578b,1\u4ee3\u8868\u9a7e\u8f66\u8ddd\u79bb\u6d4b\u91cf\uff0c0\u4ee3\u8868\u76f4\u7ebf\u8ddd\u79bb\u6d4b\u91cf\uff0c3\u6b65\u884c\u8ddd\u79bb\u6d4b\u91cf",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "origins",
+                          "destination",
+                          "type"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_distance"
+                    },
+                    {
+                      "description": "\u5c06\u8be6\u7ec6\u7684\u7ed3\u6784\u5316\u5730\u5740\u8f6c\u6362\u4e3a\u7ecf\u7eac\u5ea6\u5750\u6807\u3002\u652f\u6301\u5bf9\u5730\u6807\u6027\u540d\u80dc\u666f\u533a\u3001\u5efa\u7b51\u7269\u540d\u79f0\u89e3\u6790\u4e3a\u7ecf\u7eac\u5ea6\u5750\u6807, \u57ce\u5e02\u540d\u79f0\u53ef\u4ee5\u901a\u8fc7\u57fa\u4e8eip\u5b9a\u4f4d\u4f4d\u7f6e\u7684mcp\u5de5\u5177\u83b7\u53d6",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "address": {
+                            "description": "\u5f85\u89e3\u6790\u7684\u7ed3\u6784\u5316\u5730\u5740\u4fe1\u606f",
+                            "type": "string"
+                          },
+                          "city": {
+                            "description": "\u6307\u5b9a\u67e5\u8be2\u7684\u57ce\u5e02",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "address",
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_geo"
+                    },
+                    {
+                      "description": "\u901a\u8fc7IP\u5b9a\u4f4d\u6240\u5728\u7684\u56fd\u5bb6\u548c\u57ce\u5e02\u7b49\u4f4d\u7f6e\u4fe1\u606f",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "ip": {
+                            "description": "IP\u5730\u5740,\u83b7\u53d6\u4e0d\u5230\u5219\u586b\u5199unknow,\u670d\u52a1\u7aef\u5c06\u6839\u636esocket\u5730\u5740\u6765\u83b7\u53d6IP",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "ip"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_ip_location"
+                    },
+                    {
+                      "description": "\u5c06\u4e00\u4e2a\u9ad8\u5fb7\u7ecf\u7eac\u5ea6\u5750\u6807\u8f6c\u6362\u4e3a\u884c\u653f\u533a\u5212\u5730\u5740\u4fe1\u606f",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "location": {
+                            "description": "\u7ecf\u7eac\u5ea6",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "location"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_regeocode"
+                    },
+                    {
+                      "description": "\u67e5\u8be2\u5173\u952e\u8bcd\u641c\u6216\u8005\u5468\u8fb9\u641c\u83b7\u53d6\u5230\u7684POI ID\u7684\u8be6\u7ec6\u4fe1\u606f",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "description": "\u5173\u952e\u8bcd\u641c\u6216\u8005\u5468\u8fb9\u641c\u83b7\u53d6\u5230\u7684POI ID",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "id"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_search_detail"
+                    },
+                    {
+                      "description": "\u5173\u952e\u8bcd\u641c\uff0c\u6839\u636e\u7528\u6237\u4f20\u5165\u5173\u952e\u8bcd\uff0c\u641c\u7d22\u51fa\u76f8\u5173\u7684POI\uff0c\u57ce\u5e02\u540d\u79f0\u53ef\u4ee5\u901a\u8fc7\u57fa\u4e8eip\u5b9a\u4f4d\u4f4d\u7f6e\u7684mcp\u5de5\u5177\u83b7\u53d6",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "city": {
+                            "description": "\u67e5\u8be2\u57ce\u5e02",
+                            "type": "string"
+                          },
+                          "citylimit": {
+                            "description": "\u662f\u5426\u5f3a\u5236\u9650\u5236\u5728\u8bbe\u7f6e\u7684\u57ce\u5e02\u5185\u641c\u7d22\uff0c\u9ed8\u8ba4\u503c\u4e3afalse",
+                            "type": "string"
+                          },
+                          "keywords": {
+                            "description": "\u641c\u7d22\u5173\u952e\u8bcd",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "keywords",
+                          "city",
+                          "citylimit"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_text_search"
+                    },
+                    {
+                      "description": "\u6839\u636e\u57ce\u5e02\u540d\u79f0\u6216\u8005\u6807\u51c6adcode\u67e5\u8be2\u6307\u5b9a\u57ce\u5e02\u7684\u5929\u6c14\uff0c\u57ce\u5e02\u540d\u79f0\u53ef\u4ee5\u901a\u8fc7\u57fa\u4e8eip\u5b9a\u4f4d\u4f4d\u7f6e\u7684mcp\u5de5\u5177\u83b7\u53d6",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "city": {
+                            "description": "\u57ce\u5e02\u540d\u79f0\u6216\u8005adcode",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "maps_weather"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "0827d5039d72dfec3164b9d32c41dc9e89b4e11734668cbfc84bad219c0b3806",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10000-call-10000",
+            "case": "registered-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10000,
+              "mcpMethod": "tools/call",
+              "mcpName": "maps_weather",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "call-10000",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "maps_weather"
+            },
+            "response": {
+              "body": {
+                "id": "call-10000",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "amap-tools",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"Hangzhou\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "962933f5bec7b6a496f825e098744823904eebd4ceed582a4288b20d19cac4f1",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "toolCount": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "rest-modern-discover-list-call",
+      "detail": {
+        "backendCalls": 1,
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/rest/weather",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10001-discover-10001",
+            "case": "rest-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": "server/discover",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "discover-10001",
+              "rpcMethod": "server/discover",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "discover-10001",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "runtime-rest",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "resultType": "complete",
+                  "supportedVersions": [
+                    "2024-11-05",
+                    "2025-03-26",
+                    "2025-06-18",
+                    "2026-07-28"
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "e58fde8300ef87ad4c8c9ec9826992f28d23473890dc2607314528c79a16e5bf",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-list-10001",
+            "case": "rest-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "list-10001",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "list-10001",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "runtime-rest",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "Query deterministic weather",
+                      "inputSchema": {
+                        "properties": {
+                          "city": {
+                            "description": "City",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "get_weather"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "17fcf175fcb5229cd2030454f902bdfa25ae9631135743d2333d852bccd5abae",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-call-10001",
+            "case": "rest-modern-discover-list-call",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": "tools/call",
+              "mcpName": "get_weather",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "call-10001",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "get_weather"
+            },
+            "response": {
+              "body": {
+                "id": "call-10001",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "runtime-rest",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"Hangzhou\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "7b2e98f1da6b2f1c408aaa55aa5657b2cb369d40f64908eb81722f1a4f6a5065",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "toolCount": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "rest-invalid-args-and-hostile-origin",
+      "detail": {
+        "backendCalls": 0,
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10001-invalid-rest",
+            "case": "rest-invalid-args-and-hostile-origin",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": "tools/call",
+              "mcpName": "get_weather",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "invalid-rest",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "get_weather"
+            },
+            "response": {
+              "body": {
+                "id": "invalid-rest",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "runtime-rest",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "invalid arguments for tool \"get_weather\": $: required property \"city\" is missing",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": true,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "1f21ce5057cf3c65c76ea79c56f3c6f583b7aa90230ea403869cd171168c811b",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-hostile-origin",
+            "case": "rest-invalid-args-and-hostile-origin",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "https://hostile.invalid",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "hostile-origin",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32600,
+                  "message": "untrusted Origin"
+                },
+                "id": null,
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "cde8b21fdd553d4cbd6dab51f867741705854fa212e70ad9db29258d3b607d0d",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 403
+            }
+          }
+        ],
+        "hostileOriginStatus": 403,
+        "invalidArgsStatus": 200,
+        "toolExecutionError": true
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "composed-list-and-router-call-boundary",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "call": "requires mcp-router",
+        "callStatus": 404,
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10002-composed-list",
+            "case": "composed-list-and-router-call-boundary",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10002,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "composed-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "composed-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "runtime-composed",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "\u6839\u636e\u57ce\u5e02\u540d\u79f0\u6216\u8005\u6807\u51c6adcode\u67e5\u8be2\u6307\u5b9a\u57ce\u5e02\u7684\u5929\u6c14\uff0c\u57ce\u5e02\u540d\u79f0\u53ef\u4ee5\u901a\u8fc7\u57fa\u4e8eip\u5b9a\u4f4d\u4f4d\u7f6e\u7684mcp\u5de5\u5177\u83b7\u53d6",
+                      "inputSchema": {
+                        "additionalProperties": false,
+                        "properties": {
+                          "city": {
+                            "description": "\u57ce\u5e02\u540d\u79f0\u6216\u8005adcode",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "amap-tools___maps_weather"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "af5affe37a37b7c332b4ac90a876662af1bf019a563b2f9801c3712fafd3e6a9",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10002-composed-call",
+            "case": "composed-list-and-router-call-boundary",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10002,
+              "mcpMethod": "tools/call",
+              "mcpName": "amap-tools___maps_weather",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "composed-call",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "amap-tools___maps_weather"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32601,
+                  "message": "method not found"
+                },
+                "id": "composed-call",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "1ed46551964c22cfa8c2fd93eaa06e04c5e1f0a5e7f7e1446fd5d208cea9f9cc",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 404
+            }
+          }
+        ],
+        "list": "supported",
+        "publishedTool": "amap-tools___maps_weather"
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "rest-three-legacy-versions",
+      "detail": {
+        "backendCalls": 3,
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/rest/weather",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/rest/weather",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/rest/weather",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 3,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10001-init-0",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "init-0",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "init-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2024-11-05",
+                  "serverInfo": {
+                    "name": "runtime-rest",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "80e45e596f9612e2f7228fe7a866b2b2243f01a7248365c817d9792f93c66330",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-initialized-0",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-list-0",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "list-0",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "list-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Query deterministic weather",
+                      "inputSchema": {
+                        "properties": {
+                          "city": {
+                            "description": "City",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "get_weather"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "bd275e737e0ecb9166838d1dbf7e380fa1023c9ced696d8ef2d5787cdcf1d68d",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-call-0",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "call-0",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "get_weather"
+            },
+            "response": {
+              "body": {
+                "id": "call-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"Hangzhou\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "5cc896430323c6ff739e1648a90625d005ce85a5a2f42cb7137217b37e6eac94",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-init-1",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "init-1",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "init-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-03-26",
+                  "serverInfo": {
+                    "name": "runtime-rest",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "35adc8c07d6f8fec7d2f77c320789c44d12eba3a08dbe6de14fb41e9e012ae72",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-initialized-1",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-list-1",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "list-1",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "list-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Query deterministic weather",
+                      "inputSchema": {
+                        "properties": {
+                          "city": {
+                            "description": "City",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "get_weather"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "9a9ba70920251cdea1cf40bdf0beb2a69050d0f61f7171766833f105c145eb55",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-call-1",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "call-1",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "get_weather"
+            },
+            "response": {
+              "body": {
+                "id": "call-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"Hangzhou\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "11f8f79c2f047661cdac19ec81a39ac102bc9b90d11d96f93854e1110cf9d695",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-init-2",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "init-2",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "init-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-06-18",
+                  "serverInfo": {
+                    "name": "runtime-rest",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "442281703837acdab8db5eb985b87de96acdcf58c792410b60753a3cde3ae77b",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-initialized-2",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-list-2",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "list-2",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "list-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Query deterministic weather",
+                      "inputSchema": {
+                        "properties": {
+                          "city": {
+                            "description": "City",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "city"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "get_weather"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "615916acaaf7ef78a7c05bb1ef33add107c759fadc7f30a998a8789e751a887e",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10001-call-2",
+            "case": "rest-three-legacy-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10001,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "call-2",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "get_weather"
+            },
+            "response": {
+              "body": {
+                "id": "call-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"Hangzhou\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "cf821ac13ffd97c8b4bf463b5b12a11834e34b35ef65884b1e87d0e9bcaa643e",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "flow": "initialize/initialized/list/call",
+        "versions": [
+          "2024-11-05",
+          "2025-03-26",
+          "2025-06-18"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": null,
+                "jsonBody": {},
+                "query": {}
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/health",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": null,
+                "jsonBody": {},
+                "query": {}
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "GET",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/health",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "businessType": [
+                    "SALE",
+                    "REFUND"
+                  ],
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/tx-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 3,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "businessType": [
+                    "SALE",
+                    "REFUND"
+                  ],
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/tx-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 4,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "businessType": [
+                    "SALE",
+                    "REFUND"
+                  ],
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/tx-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 5,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10008-compat-modern-list",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "compat-modern-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "compat-modern-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "schema-compatibility",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "Unrelated valid compatibility tool",
+                      "inputSchema": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "name": "compat_health"
+                    },
+                    {
+                      "description": "Pinned schema compatibility fixture",
+                      "inputSchema": {
+                        "properties": {
+                          "X-Compat-Flag": {
+                            "default": false,
+                            "description": "Compatibility flag",
+                            "type": "boolean"
+                          },
+                          "businessType": {
+                            "description": "Business types",
+                            "enum": [
+                              "SALE",
+                              "REFUND"
+                            ],
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "page": {
+                            "default": 10,
+                            "description": "Page number",
+                            "type": "integer"
+                          },
+                          "payload": {
+                            "description": "Deterministic payload",
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "transactionId": {
+                            "description": "Transaction identifier",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "transactionId"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "getTransactionRecordListV2"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "b14d44f932617ede58301a5649797cc621292cbc5fdb7e7bccf111aac312686e",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-valid-before",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": "tools/call",
+              "mcpName": "compat_health",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "compat-valid-before",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "compat_health"
+            },
+            "response": {
+              "body": {
+                "id": "compat-valid-before",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "schema-compatibility",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"unknown\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "cdd8b9d8da00071155abcb84f473e2743b81610a2f94bf7452e5ddc271c665dd",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-blocked",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": "tools/call",
+              "mcpName": "getTransactionRecordListV2",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "compat-blocked",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "getTransactionRecordListV2"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32603,
+                  "data": {
+                    "reason": "schema_validation_unavailable"
+                  },
+                  "message": "tool input schema validation is unavailable"
+                },
+                "id": "compat-blocked",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "bb9d38cdc6345ac71a2bb4dc0447e942def4f878938ccc3557c947f9af538ee2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-valid-after",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": "tools/call",
+              "mcpName": "compat_health",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "compat-valid-after",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "compat_health"
+            },
+            "response": {
+              "body": {
+                "id": "compat-valid-after",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "schema-compatibility",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "{\"origin\":\"primary\",\"city\":\"unknown\",\"weather\":\"sunny\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "6c77269df219cdb8fee983376693a8892beab2437b716afb9bd7a14edfbda8f2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-list-0",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "compat-list-0",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "compat-list-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Unrelated valid compatibility tool",
+                      "inputSchema": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "name": "compat_health"
+                    },
+                    {
+                      "description": "Pinned schema compatibility fixture",
+                      "inputSchema": {
+                        "properties": {
+                          "X-Compat-Flag": {
+                            "default": false,
+                            "description": "Compatibility flag",
+                            "type": "boolean"
+                          },
+                          "businessType": {
+                            "description": "Business types",
+                            "enum": [
+                              "SALE",
+                              "REFUND"
+                            ],
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "page": {
+                            "default": 10,
+                            "description": "Page number",
+                            "type": "integer"
+                          },
+                          "payload": {
+                            "description": "Deterministic payload",
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "transactionId": {
+                            "description": "Transaction identifier",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "transactionId"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "getTransactionRecordListV2"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "71d0fdf1f6b20d1164a1481549823488a3bf296a8b97beaac168003ce507945d",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-call-0",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "compat-call-0",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "getTransactionRecordListV2"
+            },
+            "response": {
+              "body": {
+                "id": "compat-call-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"ok\":true,\"path\":\"/compat/tx-42\",\"origin\":\"primary\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "a132e5c9f4b79d111e9b4561defe30fd0b7457387e2bf66807081f3a16f84847",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-list-1",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "compat-list-1",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "compat-list-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Unrelated valid compatibility tool",
+                      "inputSchema": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "name": "compat_health"
+                    },
+                    {
+                      "description": "Pinned schema compatibility fixture",
+                      "inputSchema": {
+                        "properties": {
+                          "X-Compat-Flag": {
+                            "default": false,
+                            "description": "Compatibility flag",
+                            "type": "boolean"
+                          },
+                          "businessType": {
+                            "description": "Business types",
+                            "enum": [
+                              "SALE",
+                              "REFUND"
+                            ],
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "page": {
+                            "default": 10,
+                            "description": "Page number",
+                            "type": "integer"
+                          },
+                          "payload": {
+                            "description": "Deterministic payload",
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "transactionId": {
+                            "description": "Transaction identifier",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "transactionId"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "getTransactionRecordListV2"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "885936da29fb24b54db81724cb017fee447fdfc55ab96a2800de81b040f13e79",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-call-1",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "compat-call-1",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "getTransactionRecordListV2"
+            },
+            "response": {
+              "body": {
+                "id": "compat-call-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"ok\":true,\"path\":\"/compat/tx-42\",\"origin\":\"primary\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "01e45eb209cceb0b26e5cfc0145462970b2d30dceaf3ef816f2d0d195c419387",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-list-2",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "compat-list-2",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "compat-list-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "Unrelated valid compatibility tool",
+                      "inputSchema": {
+                        "properties": {},
+                        "type": "object"
+                      },
+                      "name": "compat_health"
+                    },
+                    {
+                      "description": "Pinned schema compatibility fixture",
+                      "inputSchema": {
+                        "properties": {
+                          "X-Compat-Flag": {
+                            "default": false,
+                            "description": "Compatibility flag",
+                            "type": "boolean"
+                          },
+                          "businessType": {
+                            "description": "Business types",
+                            "enum": [
+                              "SALE",
+                              "REFUND"
+                            ],
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "page": {
+                            "default": 10,
+                            "description": "Page number",
+                            "type": "integer"
+                          },
+                          "payload": {
+                            "description": "Deterministic payload",
+                            "properties": {
+                              "amount": {
+                                "type": "integer"
+                              }
+                            },
+                            "type": "object"
+                          },
+                          "transactionId": {
+                            "description": "Transaction identifier",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "transactionId"
+                        ],
+                        "type": "object"
+                      },
+                      "name": "getTransactionRecordListV2"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "1476bb32962d5bd9967c20282eedb1567363101d0890ee4ea51d1d2ffc543319",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10008-compat-call-2",
+            "case": "rest-schema-compatibility-modern-block-and-legacy-pass-through",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10008,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "compat-call-2",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "getTransactionRecordListV2"
+            },
+            "response": {
+              "body": {
+                "id": "compat-call-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "{\"ok\":true,\"path\":\"/compat/tx-42\",\"origin\":\"primary\"}",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "d4aae07cc2131fb9f79fdadc50aa25b2ca3b9887d41210911c1a3bd0ca3b2aa4",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "legacyBackendCalls": 3,
+        "legacyVersions": [
+          "2024-11-05",
+          "2025-03-26",
+          "2025-06-18"
+        ],
+        "modernBlockedBackendCalls": 0,
+        "modernBlockedError": "schema_validation_unavailable",
+        "modernDescriptorPreserved": true,
+        "validCallsBeforeAndAfter": 2
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-modern-stateless-and-header-isolation",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-list",
+              "rpcMethod": "tools/list",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": "opaque-current-call",
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-call",
+              "rpcMethod": "tools/call",
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10003-proxy-modern-list",
+            "case": "proxy-modern-stateless-and-header-isolation",
+            "request": {
+              "authorizationPresent": true,
+              "cookiePresent": true,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": true,
+              "listenerPort": 10003,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": true,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "proxy-modern-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "e869ea2c5e055c6b9959687aafd555b447afbf1d8e900588da45438b22be885f",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-proxy-modern-call",
+            "case": "proxy-modern-stateless-and-header-isolation",
+            "request": {
+              "authorizationPresent": true,
+              "cookiePresent": true,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": true,
+              "listenerPort": 10003,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "proxy-modern-call",
+              "rpcMethod": "tools/call",
+              "sessionPresent": true,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "proxy-modern-call",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:modern",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "7fca380c4f7cf891e4a6d07a4484e59dbe79f7c0ea4408dbc78059be47fb261a",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "singleStatelessRPC": true,
+        "upstreamSequence": [
+          "tools/list",
+          "tools/call"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-modern-to-legacy-isolated-handshakes",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 2,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 3,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 4,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 5,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 6,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10004-bridge-list",
+            "case": "proxy-modern-to-legacy-isolated-handshakes",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10004,
+              "mcpMethod": "tools/list",
+              "mcpName": null,
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "bridge-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "bridge-list",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "proxy-legacy",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "cacheScope": "private",
+                  "resultType": "complete",
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ],
+                  "ttlMs": 0
+                }
+              },
+              "bodySha256": "2ff607ecb253cc52767f126135addba83b756bdba2ba9760b2692faf2ad9ec42",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10004-bridge-call",
+            "case": "proxy-modern-to-legacy-isolated-handshakes",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": true,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10004,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "bridge-call",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "bridge-call",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "mcp-proxy",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:bridge",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "44152dcfcb23cc36bcb2549c19042be604923fcf947b22e37c7e72efe59439ff",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "isolatedHandshakes": 2,
+        "upstreamSequence": [
+          "initialize",
+          "notifications/initialized",
+          "tools/list",
+          "initialize",
+          "notifications/initialized",
+          "tools/call"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-default-is-legacy-for-three-versions",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 2,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 3,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 4,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 5,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 6,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 7,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 8,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 9,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 10,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 11,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 12,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 13,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 14,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 2,
+              "rpcMethod": "tools/list",
+              "seq": 15,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 1,
+              "rpcMethod": "initialize",
+              "seq": 16,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "seq": 17,
+              "sessionPresent": true,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/legacy",
+              "protocolVersion": null,
+              "rpcId": 3,
+              "rpcMethod": "tools/call",
+              "seq": 18,
+              "sessionPresent": true,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10005-default-init-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-0",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2024-11-05",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "7ea213d63b4acb07732f43d23f1e3a3ea614b3659a5a88083016c0f2e040ad08",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "default-list-0",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "962b8e59bae6af19084531d5b1f35cf3b9609330caffa4153291b8a4b11ce2a2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-0",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2024-11-05",
+              "rpcId": "default-call-0",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-0",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2024-11-05",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "03cba3632bb211b7473ddc54d028c917731dadfeb64bd4d098c61d20a44586cb",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-init-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-1",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-03-26",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "782f1792d0d9a74f79eb72099b3db85da981e479c77cd51fb43e6b1eb60599d7",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "default-list-1",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "5ac952f25a6d9540e47b515ca524c22bedaa1011f7c35d8e1e2ae4b3363edfa2",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-1",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-03-26",
+              "rpcId": "default-call-1",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-1",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2025-03-26",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "382f83953835d8fac0543c56d6315adeaa9694804c57dfcb68ddebfb94fda856",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-init-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "default-init-2",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-init-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-06-18",
+                  "serverInfo": {
+                    "name": "proxy-default-legacy",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "2ace9e26920ff110f603ef6e090b89580f07f65f40ed2c2eb67968785fc732a0",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-initialized-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-list-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "default-list-2",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "default-list-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "tools": [
+                    {
+                      "description": "fixture echo",
+                      "inputSchema": {
+                        "type": "object"
+                      },
+                      "name": "proxy_echo"
+                    }
+                  ]
+                }
+              },
+              "bodySha256": "5e2445a756d45e12142ec277540ff2ee75ccc2e899e5b694dae7ab28f0ef45b0",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10005-default-call-2",
+            "case": "proxy-default-is-legacy-for-three-versions",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10005,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "default-call-2",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "default-call-2",
+                "jsonrpc": "2.0",
+                "result": {
+                  "content": [
+                    {
+                      "text": "echo:2025-06-18",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false
+                }
+              },
+              "bodySha256": "8ed9d18a6466bac921c8ec6476c3fd5a5f0e4f4be71f5873bb176fc6cf916811",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "upstreamInitializeCount": 6,
+        "versions": [
+          "2024-11-05",
+          "2025-03-26",
+          "2025-06-18"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+      "detail": {
+        "autoDetection": false,
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10003-unsupported",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": null,
+              "rpcId": "unsupported",
+              "rpcMethod": "initialize",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "id": "unsupported",
+                "jsonrpc": "2.0",
+                "result": {
+                  "capabilities": {
+                    "tools": {}
+                  },
+                  "protocolVersion": "2025-06-18",
+                  "serverInfo": {
+                    "name": "proxy-modern",
+                    "version": "1.0.0"
+                  }
+                }
+              },
+              "bodySha256": "dc47c2e2fc7840e0cd0ea0c5009952862b9dd5233dbcb821b8ce344bcab0e183",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-unsupported-initialized",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": null,
+              "rpcMethod": "notifications/initialized",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": null,
+              "bodySha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "headers": {
+                "mcp-session-id-present": false
+              },
+              "status": 202
+            }
+          },
+          {
+            "accessRequestId": "rv-10003-unsupported-list",
+            "case": "proxy-legacy-to-modern-is-explicitly-unsupported",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10003,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": null,
+              "path": "/mcp",
+              "protocolVersion": "2025-06-18",
+              "rpcId": "unsupported-list",
+              "rpcMethod": "tools/list",
+              "sessionPresent": false,
+              "toolName": null
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32601,
+                  "message": "legacy downstream is unsupported by a modern-only upstream"
+                },
+                "id": "unsupported-list",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "87867b4bafe0230294383a013dffd2831b75684d35290b248b022ca2443cc643",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "status": 200,
+        "upstreamCalls": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-auth-errors-and-cross-origin-isolation",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth-ok",
+              "rpcMethod": "tools/call",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth401",
+              "rpcMethod": "tools/call",
+              "seq": 2,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            },
+            {
+              "authorizationMatchesExplicitPolicy": true,
+              "authorizationPresent": true,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "primary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth403",
+              "rpcMethod": "tools/call",
+              "seq": 3,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "backend-secondary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "secondary",
+              "path": "/modern",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "after-failure",
+              "rpcMethod": "tools/call",
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": "proxy_echo",
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "clientExchanges": [
+          {
+            "accessRequestId": "rv-10006-auth-ok",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth-ok",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "auth-ok",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:authorized",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "393bc6360a607e4c814645193cd0367e2166f64a79f378d67f5eee4abdd12f5b",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          },
+          {
+            "accessRequestId": "rv-10006-auth401",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth401",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32603,
+                  "message": "upstream authorization failed"
+                },
+                "id": "auth401",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "d0668740a978e8b71f3a26fd315de22160f5fb6b6ea61a3ec38b16d97a8097cb",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false,
+                "www-authenticate": "Bearer realm=\"runtime-fixture\""
+              },
+              "status": 401
+            }
+          },
+          {
+            "accessRequestId": "rv-10006-auth403",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10006,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "auth403",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "error": {
+                  "code": -32603,
+                  "message": "upstream authorization failed"
+                },
+                "id": "auth403",
+                "jsonrpc": "2.0"
+              },
+              "bodySha256": "9b339ef3ca891290db29c9a3b72bb6744bb2f79574bb6fc7216d9ff669410598",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false,
+                "www-authenticate": "Bearer error=\"insufficient_scope\""
+              },
+              "status": 403
+            }
+          },
+          {
+            "accessRequestId": "rv-10007-after-failure",
+            "case": "proxy-auth-errors-and-cross-origin-isolation",
+            "request": {
+              "authorizationPresent": false,
+              "cookiePresent": false,
+              "futureParamPresent": false,
+              "httpMethod": "POST",
+              "lastEventIDPresent": false,
+              "listenerPort": 10007,
+              "mcpMethod": "tools/call",
+              "mcpName": "proxy_echo",
+              "origin": "http://mcp.runtime.test",
+              "path": "/mcp",
+              "protocolVersion": "2026-07-28",
+              "rpcId": "after-failure",
+              "rpcMethod": "tools/call",
+              "sessionPresent": false,
+              "toolName": "proxy_echo"
+            },
+            "response": {
+              "body": {
+                "id": "after-failure",
+                "jsonrpc": "2.0",
+                "result": {
+                  "_meta": {
+                    "io.modelcontextprotocol/serverInfo": {
+                      "name": "fixture-modern",
+                      "version": "1.0.0"
+                    }
+                  },
+                  "content": [
+                    {
+                      "text": "echo:secondary",
+                      "type": "text"
+                    }
+                  ],
+                  "isError": false,
+                  "resultType": "complete"
+                }
+              },
+              "bodySha256": "eadee874b63906e136d94bdb8b679b081ec5c481ebd2797b73df7376e9d51e03",
+              "headers": {
+                "content-type": "application/json; charset=utf-8",
+                "mcp-session-id-present": false
+              },
+              "status": 200
+            }
+          }
+        ],
+        "explicitAuth": true,
+        "postFailureOrigin": "secondary",
+        "preservedStatuses": [
+          401,
+          403
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-pinned-baseline-is-rejected",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "compilerRejection": "enum requires a primitive type",
+        "configurationAccepted": false,
+        "pluginSha256": "c0a940d58c862f3e19ac2d54b76b6d624fd319c4977705e22d908911b51b8ebe",
+        "sourceSha": "c55d9825c90868f50edbff9764a6b3cf2eb13162",
+        "upstreamCalls": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-unsupported-semantics",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/unsupported-semantics/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/unsupported-semantics/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "9e4033c79a1bea94f527346c7c2f6b9f2f517e461fa689dade199cf012d3d8ca",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "9e4033c79a1bea94f527346c7c2f6b9f2f517e461fa689dade199cf012d3d8ca",
+          "oracle": "9e4033c79a1bea94f527346c7c2f6b9f2f517e461fa689dade199cf012d3d8ca"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "9e4033c79a1bea94f527346c7c2f6b9f2f517e461fa689dade199cf012d3d8ca",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-contradictory-semantics",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/contradictory-semantics/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/contradictory-semantics/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "678012238a7e4c772687249995ed2957c9edd6d08624b581a802817751d87164",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "678012238a7e4c772687249995ed2957c9edd6d08624b581a802817751d87164",
+          "oracle": "678012238a7e4c772687249995ed2957c9edd6d08624b581a802817751d87164"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "678012238a7e4c772687249995ed2957c9edd6d08624b581a802817751d87164",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-byte-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/byte-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/byte-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "032d98b3206182d8d9241f41a6a442734b88b7cdb7792eb247991b4a7752a731",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "032d98b3206182d8d9241f41a6a442734b88b7cdb7792eb247991b4a7752a731",
+          "oracle": "032d98b3206182d8d9241f41a6a442734b88b7cdb7792eb247991b4a7752a731"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "032d98b3206182d8d9241f41a6a442734b88b7cdb7792eb247991b4a7752a731",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-depth-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/depth-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/depth-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "f2e76ff654cd5de5dfc3e9d21a3301bb71fb567dcb70149b1a2e4c37d2f3b554",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "f2e76ff654cd5de5dfc3e9d21a3301bb71fb567dcb70149b1a2e4c37d2f3b554",
+          "oracle": "f2e76ff654cd5de5dfc3e9d21a3301bb71fb567dcb70149b1a2e4c37d2f3b554"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "f2e76ff654cd5de5dfc3e9d21a3301bb71fb567dcb70149b1a2e4c37d2f3b554",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-node-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/node-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/node-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "389a2afdd4bea90691e73ee6b8dc27e1df132e5d292c5ccf9a0a8f9d3c9b077c",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "389a2afdd4bea90691e73ee6b8dc27e1df132e5d292c5ccf9a0a8f9d3c9b077c",
+          "oracle": "389a2afdd4bea90691e73ee6b8dc27e1df132e5d292c5ccf9a0a8f9d3c9b077c"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "389a2afdd4bea90691e73ee6b8dc27e1df132e5d292c5ccf9a0a8f9d3c9b077c",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-collection-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/collection-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/collection-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "f7ab76dc708aea4c43a1840f6dfaeb422b7f6a09114dbceb6bf51fff5e7718e6",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "f7ab76dc708aea4c43a1840f6dfaeb422b7f6a09114dbceb6bf51fff5e7718e6",
+          "oracle": "f7ab76dc708aea4c43a1840f6dfaeb422b7f6a09114dbceb6bf51fff5e7718e6"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "f7ab76dc708aea4c43a1840f6dfaeb422b7f6a09114dbceb6bf51fff5e7718e6",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-enum-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/enum-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/enum-limit/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "fb5e6c85e8612ce22f96bacbaa10307c1277d4906cadfb96d0a955df4e6efdb4",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "fb5e6c85e8612ce22f96bacbaa10307c1277d4906cadfb96d0a955df4e6efdb4",
+          "oracle": "fb5e6c85e8612ce22f96bacbaa10307c1277d4906cadfb96d0a955df4e6efdb4"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "fb5e6c85e8612ce22f96bacbaa10307c1277d4906cadfb96d0a955df4e6efdb4",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-mixed-valid-invalid",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/mixed-valid-invalid/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/mixed-valid-invalid/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+          "oracle": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+        "validSiblingBackendEvents": [
+          {
+            "authorizationMatchesExplicitPolicy": false,
+            "authorizationPresent": false,
+            "compatibilityRequest": {
+              "flag": null,
+              "jsonBody": {},
+              "query": {}
+            },
+            "cookiePresent": false,
+            "futureParam": null,
+            "httpMethod": "GET",
+            "internalRoutePresent": false,
+            "lastEventIDPresent": false,
+            "mcpMethod": null,
+            "mcpName": null,
+            "origin": "primary",
+            "path": "/corpus/valid",
+            "protocolVersion": null,
+            "rpcId": null,
+            "rpcMethod": null,
+            "seq": 1,
+            "sessionPresent": false,
+            "toolName": null,
+            "unrelatedCredentialPresent": false
+          }
+        ],
+        "validSiblingCallable": true,
+        "validSiblingResultContract": true
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-rule-level",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/rule-level/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ],
+          "oracle": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/corpus/rule-level/record-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+        "globalList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+          "oracle": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "f8958d2c10b293bd952a21d4812faf68c0d68d50f97b9befe20b6b2cc8a72e13",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-corpus-numeric-comparison-limit",
+      "detail": {
+        "actualAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "affectedRejectionLogged": true,
+        "backendEvents": {
+          "affected": [],
+          "candidate": [],
+          "oracle": []
+        },
+        "expectedAcceptance": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "expectedInputSchemaSha256": "ac94cfd01fb8a4bbd929b8a05de157c5e2d727983bfcd345a952bfa3a950dd60",
+        "globalList": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "legacyDescriptorSha256": {
+          "affected": null,
+          "candidate": "ac94cfd01fb8a4bbd929b8a05de157c5e2d727983bfcd345a952bfa3a950dd60",
+          "oracle": "ac94cfd01fb8a4bbd929b8a05de157c5e2d727983bfcd345a952bfa3a950dd60"
+        },
+        "legacyList": {
+          "affected": false,
+          "candidate": true,
+          "oracle": true
+        },
+        "legacyRESTMapping": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "modernCandidate": {
+          "callBlocked": true,
+          "listed": true
+        },
+        "modernDescriptorSha256": "ac94cfd01fb8a4bbd929b8a05de157c5e2d727983bfcd345a952bfa3a950dd60",
+        "validSiblingBackendEvents": [],
+        "validSiblingCallable": false,
+        "validSiblingResultContract": false
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-v2.0.0-oracle-accepts-and-invokes",
+      "detail": {
+        "backendEvents": {
+          "backend-primary": [
+            {
+              "authorizationMatchesExplicitPolicy": false,
+              "authorizationPresent": false,
+              "compatibilityRequest": {
+                "flag": "true",
+                "jsonBody": {
+                  "businessType": [
+                    "SALE",
+                    "REFUND"
+                  ],
+                  "payload": {
+                    "amount": 12
+                  }
+                },
+                "query": {
+                  "fixed": [
+                    "yes"
+                  ],
+                  "page": [
+                    "7"
+                  ]
+                }
+              },
+              "cookiePresent": false,
+              "futureParam": null,
+              "httpMethod": "POST",
+              "internalRoutePresent": false,
+              "lastEventIDPresent": false,
+              "mcpMethod": null,
+              "mcpName": null,
+              "origin": "primary",
+              "path": "/compat/tx-42",
+              "protocolVersion": null,
+              "rpcId": null,
+              "rpcMethod": null,
+              "seq": 1,
+              "sessionPresent": false,
+              "toolName": null,
+              "unrelatedCredentialPresent": false
+            }
+          ]
+        },
+        "configurationAccepted": true,
+        "descriptorPreserved": true,
+        "legacyRESTMapping": true,
+        "oracleEvidence": "oracle-verification.json",
+        "pluginSha256": "03c92357d405c2ce56d1a4c200901878c3ba809e174d304aafde4bb81eb10692",
+        "sourceSha": "39ec41aab6eb1d40499bed2847085696de0ebb96",
+        "upstreamCalls": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "malformed-non-schema-control-is-rejected-by-all-revisions",
+      "detail": {
+        "backendEvents": {
+          "affected": {
+            "backend-primary": []
+          },
+          "candidate": {
+            "backend-primary": []
+          },
+          "oracle": {
+            "backend-primary": []
+          }
+        },
+        "configurationAccepted": {
+          "affected": false,
+          "candidate": false,
+          "oracle": false
+        },
+        "rejection": "error parsing URL template",
+        "revisions": {
+          "affected": "c55d9825c90868f50edbff9764a6b3cf2eb13162",
+          "candidate": "dc0999326b1a8df4269c13d0cf6ee2b725259f6e",
+          "oracle": "39ec41aab6eb1d40499bed2847085696de0ebb96"
+        },
+        "upstreamCalls": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "schema-compatibility-same-process-dynamic-generation-transition",
+      "detail": {
+        "backendCallsByGeneration": [
+          1,
+          0,
+          1
+        ],
+        "generationEvidence": "generation-transition.json",
+        "processIdentity": "ba99750e20230e03c27b6606ee6692caa5fe1b39444609cde21e38da49c0e2e5|1788919|2026-09-11 16:14:48.537138018 +0800 CST",
+        "runtimeBoundary": "same Envoy process and Wasm, file-backed LDS config generations",
+        "sequence": [
+          "validated",
+          "validation-unavailable",
+          "validated"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "proxy-auto-configuration-is-rejected",
+      "detail": {
+        "accepted": false,
+        "backendEvents": {
+          "backend-primary": []
+        },
+        "configuredValue": "auto",
+        "upstreamCalls": 0
+      },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "fail": 0,
+    "pass": 26
+  }
+}

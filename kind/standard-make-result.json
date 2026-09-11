@@ -1,0 +1,19 @@
+{
+  "source_sha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "command": "PLUGIN_TYPE=GO PLUGIN_NAME=mcp-server TEST_SHORTNAME=WasmPluginsMCP20260728 make higress-wasmplugin-test",
+  "timestamp": "2026-09-11T09:22:17.688430+00:00",
+  "outcome": "interrupted during kindest/node:v1.25.3 image acquisition; no product conformance assertions ran; standard make is not claimed PASS",
+  "actions": [
+    {
+      "pid": 32471,
+      "command": "podman pull docker.io/kindest/node:v1.25.3",
+      "signal": "SIGINT"
+    },
+    {
+      "pid": 32438,
+      "command": "tools/bin/kind create cluster --image kindest/node:v1.25.3 --name higress --config=tools/hack/cluster.conf",
+      "signal": "SIGINT"
+    }
+  ],
+  "replacement": "same-source original conformance binary in existing owned Podman kind with unchanged paired assertions"
+}

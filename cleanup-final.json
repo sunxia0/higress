@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-09-11T09:35:31.722763+00:00",
+  "containers_remaining": [],
+  "owned_interop_processes_remaining": [],
+  "supplement_port_checks": [
+    {
+      "port": 63699,
+      "no_listener": true,
+      "command": [
+        "lsof",
+        "-nP",
+        "-iTCP:63699",
+        "-sTCP:LISTEN"
+      ]
+    },
+    {
+      "port": 63603,
+      "no_listener": true,
+      "command": [
+        "lsof",
+        "-nP",
+        "-iTCP:63603",
+        "-sTCP:LISTEN"
+      ]
+    }
+  ],
+  "kind_delete_exit_code": 0,
+  "baseline_worktree_removed": true,
+  "head": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "status": "",
+  "pass": true
+}

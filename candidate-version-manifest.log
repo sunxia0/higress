@@ -1,0 +1,1 @@
+Error: getting content of manifest list or image higress-registry.cn-hangzhou.cr.aliyuncs.com/plugins/mcp-server:2.0.3-alpha: reading image "docker://higress-registry.cn-hangzhou.cr.aliyuncs.com/plugins/mcp-server:2.0.3-alpha": reading manifest 2.0.3-alpha in higress-registry.cn-hangzhou.cr.aliyuncs.com/plugins/mcp-server: manifest unknown

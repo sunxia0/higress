@@ -1,0 +1,185 @@
+{
+  "backendEvents": {
+    "backend-primary": [
+      {
+        "authorizationMatchesExplicitPolicy": false,
+        "authorizationPresent": false,
+        "compatibilityRequest": {
+          "flag": "true",
+          "jsonBody": {
+            "businessType": [
+              "SALE",
+              "REFUND"
+            ],
+            "payload": {
+              "amount": 12
+            }
+          },
+          "query": {
+            "fixed": [
+              "yes"
+            ],
+            "page": [
+              "7"
+            ]
+          }
+        },
+        "cookiePresent": false,
+        "futureParam": null,
+        "httpMethod": "POST",
+        "internalRoutePresent": false,
+        "lastEventIDPresent": false,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": "primary",
+        "path": "/compat/tx-42",
+        "protocolVersion": null,
+        "rpcId": null,
+        "rpcMethod": null,
+        "seq": 1,
+        "sessionPresent": false,
+        "toolName": null,
+        "unrelatedCredentialPresent": false
+      }
+    ]
+  },
+  "clientExchanges": [
+    {
+      "accessRequestId": "rv-13018-oracle-list",
+      "case": null,
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 13018,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": "oracle-list",
+        "rpcMethod": "tools/list",
+        "sessionPresent": false,
+        "toolName": null
+      },
+      "response": {
+        "body": {
+          "id": "oracle-list",
+          "jsonrpc": "2.0",
+          "result": {
+            "tools": [
+              {
+                "description": "Pinned schema compatibility fixture",
+                "inputSchema": {
+                  "properties": {
+                    "X-Compat-Flag": {
+                      "default": false,
+                      "description": "Compatibility flag",
+                      "type": "boolean"
+                    },
+                    "businessType": {
+                      "description": "Business types",
+                      "enum": [
+                        "SALE",
+                        "REFUND"
+                      ],
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "page": {
+                      "default": 10,
+                      "description": "Page number",
+                      "type": "integer"
+                    },
+                    "payload": {
+                      "description": "Deterministic payload",
+                      "properties": {
+                        "amount": {
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "transactionId": {
+                      "description": "Transaction identifier",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "transactionId"
+                  ],
+                  "type": "object"
+                },
+                "name": "getTransactionRecordListV2"
+              },
+              {
+                "description": "Unrelated valid compatibility tool",
+                "inputSchema": {
+                  "properties": {},
+                  "type": "object"
+                },
+                "name": "compat_health"
+              }
+            ]
+          }
+        },
+        "bodySha256": "87d1b27edc7a7cf7957921ffbe4a3c4c7a7af991d4d04c78889dfaadde6fdee2",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    },
+    {
+      "accessRequestId": "rv-13018-oracle-call",
+      "case": null,
+      "request": {
+        "authorizationPresent": false,
+        "cookiePresent": false,
+        "futureParamPresent": false,
+        "httpMethod": "POST",
+        "lastEventIDPresent": false,
+        "listenerPort": 13018,
+        "mcpMethod": null,
+        "mcpName": null,
+        "origin": null,
+        "path": "/mcp",
+        "protocolVersion": "2025-06-18",
+        "rpcId": "oracle-call",
+        "rpcMethod": "tools/call",
+        "sessionPresent": false,
+        "toolName": "getTransactionRecordListV2"
+      },
+      "response": {
+        "body": {
+          "id": "oracle-call",
+          "jsonrpc": "2.0",
+          "result": {
+            "content": [
+              {
+                "text": "{\"ok\":true,\"path\":\"/compat/tx-42\",\"origin\":\"primary\"}",
+                "type": "text"
+              }
+            ],
+            "isError": false
+          }
+        },
+        "bodySha256": "fe97e4b1e4e02490b09738c8b942fcb8f9c477e12657b2817f55a685827cf456",
+        "headers": {
+          "content-type": "application/json; charset=utf-8",
+          "mcp-session-id-present": false
+        },
+        "status": 200
+      }
+    }
+  ],
+  "configurationAccepted": true,
+  "descriptorPreserved": true,
+  "legacyRESTMapping": true,
+  "legacyVersion": "2025-06-18"
+}

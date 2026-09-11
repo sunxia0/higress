@@ -1,0 +1,1401 @@
+=== RUN   TestOfficial20260728FixturesArePinned
+--- PASS: TestOfficial20260728FixturesArePinned (0.01s)
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty
+[WASM_PATH] Auto-compiling wasm binary...
+[WASM_COMPILE] Successfully compiled wasm binary to: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go
+    test.go:158: go mode test start
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/discover-request.json
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[server/discover] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/list-tools-request.json
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/call-tool-request.json
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [fixture-server/get_weather] [test-request-id-default] Modern tool call [get_weather] on server [fixture-server]
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/same-origin
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/integer-jsonrpc-id
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/notification-without-id
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/optional-client-info-omitted
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== NAME  TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go
+    test.go:162: go mode test end
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/call-tool-request.json
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [fixture-server/get_weather] [test-request-id-default] Modern tool call [get_weather] on server [fixture-server]
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/discover-request.json
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[server/discover] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/list-tools-request.json
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/same-origin
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/integer-jsonrpc-id
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/notification-without-id
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/optional-client-info-omitted
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== NAME  TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty (6.86s)
+    --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go (0.01s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/discover-request.json (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/list-tools-request.json (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/call-tool-request.json (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/same-origin (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/integer-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/notification-without-id (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/go/optional-client-info-omitted (0.00s)
+    --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm (6.63s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/call-tool-request.json (0.01s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/discover-request.json (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/list-tools-request.json (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/same-origin (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/integer-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/notification-without-id (0.00s)
+        --- PASS: TestOfficial20260728PositiveRequestsAndCapabilityHonesty/wasm/optional-client-info-omitted (0.00s)
+=== RUN   TestOfficial20260728MissingRequiredClientCapabilityPolicy
+--- PASS: TestOfficial20260728MissingRequiredClientCapabilityPolicy (0.00s)
+=== RUN   TestOfficial20260728NegativeContracts
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestOfficial20260728NegativeContracts/go
+    test.go:158: go mode test start
+=== RUN   TestOfficial20260728NegativeContracts/go/unsupported-content-type
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/unacceptable-accept
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/hostile-origin
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+=== RUN   TestOfficial20260728NegativeContracts/go/batch-envelope
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/response-envelope
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/trailing-json
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/malformed-json
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/duplicate-protocol-version-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/duplicate-method-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/duplicate-name-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-protocol-version-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-method-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-name-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/mismatched-method-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/mismatched-name-header
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/mismatched-body-version
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/unsupported-header-version
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/null-jsonrpc-id
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/fractional-jsonrpc-id
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/boolean-jsonrpc-id
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-meta
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-protocol-version-meta
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/missing-client-capabilities-meta
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/modern-cancelled-notification
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/oversized-request-body
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/oversized-tool-name
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/invalid-tool-name-type
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/go/method-not-found
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:17:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:17:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== NAME  TestOfficial20260728NegativeContracts/go
+    test.go:162: go mode test end
+=== RUN   TestOfficial20260728NegativeContracts/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestOfficial20260728NegativeContracts/wasm/unsupported-content-type
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/unacceptable-accept
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/hostile-origin
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+=== RUN   TestOfficial20260728NegativeContracts/wasm/batch-envelope
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/response-envelope
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/trailing-json
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/malformed-json
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/duplicate-protocol-version-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/duplicate-method-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/duplicate-name-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-protocol-version-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-method-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-name-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/mismatched-method-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/mismatched-name-header
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/mismatched-body-version
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/unsupported-header-version
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/null-jsonrpc-id
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/fractional-jsonrpc-id
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/boolean-jsonrpc-id
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-meta
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-protocol-version-meta
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/missing-client-capabilities-meta
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/modern-cancelled-notification
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/oversized-request-body
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/oversized-tool-name
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/invalid-tool-name-type
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== RUN   TestOfficial20260728NegativeContracts/wasm/method-not-found
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+=== NAME  TestOfficial20260728NegativeContracts/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestOfficial20260728NegativeContracts (6.79s)
+    --- PASS: TestOfficial20260728NegativeContracts/go (0.01s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/unsupported-content-type (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/unacceptable-accept (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/hostile-origin (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/batch-envelope (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/response-envelope (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/trailing-json (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/malformed-json (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/duplicate-protocol-version-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/duplicate-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/duplicate-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-protocol-version-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/mismatched-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/mismatched-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/mismatched-body-version (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/unsupported-header-version (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/null-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/fractional-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/boolean-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-protocol-version-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/missing-client-capabilities-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/modern-cancelled-notification (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/oversized-request-body (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/oversized-tool-name (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/invalid-tool-name-type (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/go/method-not-found (0.00s)
+    --- PASS: TestOfficial20260728NegativeContracts/wasm (6.78s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/unsupported-content-type (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/unacceptable-accept (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/hostile-origin (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/batch-envelope (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/response-envelope (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/trailing-json (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/malformed-json (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/duplicate-protocol-version-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/duplicate-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/duplicate-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-protocol-version-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/mismatched-method-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/mismatched-name-header (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/mismatched-body-version (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/unsupported-header-version (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/null-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/fractional-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/boolean-jsonrpc-id (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-protocol-version-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/missing-client-capabilities-meta (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/modern-cancelled-notification (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/oversized-request-body (0.01s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/oversized-tool-name (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/invalid-tool-name-type (0.00s)
+        --- PASS: TestOfficial20260728NegativeContracts/wasm/method-not-found (0.00s)
+=== RUN   TestOfficial20260728RequestAndResponseBufferBounds
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestOfficial20260728RequestAndResponseBufferBounds/go
+    test.go:158: go mode test start
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+    test.go:162: go mode test end
+=== RUN   TestOfficial20260728RequestAndResponseBufferBounds/wasm
+    test.go:166: wasm mode test start
+2026/09/11 17:18:12 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: fixture-server
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [nil] Registered tool fixture-server/get_weather
+2026/09/11 17:18:12 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+    test.go:177: wasm mode test end
+--- PASS: TestOfficial20260728RequestAndResponseBufferBounds (6.86s)
+    --- PASS: TestOfficial20260728RequestAndResponseBufferBounds/go (0.00s)
+    --- PASS: TestOfficial20260728RequestAndResponseBufferBounds/wasm (6.86s)
+=== RUN   TestRestMCPServerConfig
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestRestMCPServerConfig/go
+    test.go:158: go mode test start
+=== RUN   TestRestMCPServerConfig/go/valid_rest_mcp_server_config
+2026/09/11 17:18:12 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:12 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:12 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestRestMCPServerConfig/go
+    test.go:162: go mode test end
+=== RUN   TestRestMCPServerConfig/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestRestMCPServerConfig/wasm/valid_rest_mcp_server_config
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestRestMCPServerConfig/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestRestMCPServerConfig (6.71s)
+    --- PASS: TestRestMCPServerConfig/go (0.00s)
+        --- PASS: TestRestMCPServerConfig/go/valid_rest_mcp_server_config (0.00s)
+    --- PASS: TestRestMCPServerConfig/wasm (6.71s)
+        --- PASS: TestRestMCPServerConfig/wasm/valid_rest_mcp_server_config (0.00s)
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go
+    test.go:158: go mode test start
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go/global
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:19 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go/rule-level
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:19 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:compat.example.com]
+2026/09/11 17:18:19 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:19 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go
+    test.go:162: go mode test end
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm/global
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:26 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== RUN   TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm/rule-level
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:26 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:compat.example.com]
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel (6.62s)
+    --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go (0.00s)
+        --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go/global (0.00s)
+        --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/go/rule-level (0.00s)
+    --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm (6.62s)
+        --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm/global (0.00s)
+        --- PASS: TestSchemaCompatibilityConfigurationLoadsGloballyAndAtRuleLevel/wasm/rule-level (0.00s)
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go
+    test.go:158: go mode test start
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go/global
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-resource-compat
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-resource-compat/large_enum
+2026/09/11 17:18:26 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-resource-compat" total=1 records=[{tool="large_enum" reason=resource_limit detail="$.properties.value.enum: exceeds 256 values"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go/rule-level
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-resource-compat
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-resource-compat/large_enum
+2026/09/11 17:18:26 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-resource-compat" total=1 records=[{tool="large_enum" reason=resource_limit detail="$.properties.value.enum: exceeds 256 values"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["resource.example.com"],"server":{"name":"schema-resource-compat","type":"rest"},"tools":[{"args":[{"description":"value","enum":["value-000","value-001","value-002","value-003","value-004","value-005","value-006","value-007","value-008","value-009","value-010","value-011","value-012","value-013","value-014","value-015","value-016","value-017","value-018","value-019","value-020","value-021","value-022","value-023","value-024","value-025","value-026","value-027","value-028","value-029","value-030","value-031","value-032","value-033","value-034","value-035","value-036","value-037","value-038","value-039","value-040","value-041","value-042","value-043","value-044","value-045","value-046","value-047","value-048","value-049","value-050","value-051","value-052","value-053","value-054","value-055","value-056","value-057","value-058","value-059","value-060","value-061","value-062","value-063","value-064","value-065","value-066","value-067","value-068","value-069","value-070","value-071","value-072","value-073","value-074","value-075","value-076","value-077","value-078","value-079","value-080","value-081","value-082","value-083","value-084","value-085","value-086","value-087","value-088","value-089","value-090","value-091","value-092","value-093","value-094","value-095","value-096","value-097","value-098","value-099","value-100","value-101","value-102","value-103","value-104","value-105","value-106","value-107","value-108","value-109","value-110","value-111","value-112","value-113","value-114","value-115","value-116","value-117","value-118","value-119","value-120","value-121","value-122","value-123","value-124","value-125","value-126","value-127","value-128","value-129","value-130","value-131","value-132","value-133","value-134","value-135","value-136","value-137","value-138","value-139","value-140","value-141","value-142","value-143","value-144","value-145","value-146","value-147","value-148","value-149","value-150","value-151","value-152","value-153","value-154","value-155","value-156","value-157","value-158","value-159","value-160","value-161","value-162","value-163","value-164","value-165","value-166","value-167","value-168","value-169","value-170","value-171","value-172","value-173","value-174","value-175","value-176","value-177","value-178","value-179","value-180","value-181","value-182","value-183","value-184","value-185","value-186","value-187","value-188","value-189","value-190","value-191","value-192","value-193","value-194","value-195","value-196","value-197","value-198","value-199","value-200","value-201","value-202","value-203","value-204","value-205","value-206","value-207","value-208","value-209","value-210","value-211","value-212","value-213","value-214","value-215","value-216","value-217","value-218","value-219","value-220","value-221","value-222","value-223","value-224","value-225","value-226","value-227","value-228","value-229","value-230","value-231","value-232","value-233","value-234","value-235","value-236","value-237","value-238","value-239","value-240","value-241","value-242","value-243","value-244","value-245","value-246","value-247","value-248","value-249","value-250","value-251","value-252","value-253","value-254","value-255","value-256"],"name":"value","type":"string"}],"description":"2.0.0-compatible resource fixture","name":"large_enum","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/resource"}}]}
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:resource.example.com]
+2026/09/11 17:18:26 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["resource.example.com"],"server":{"name":"schema-resource-compat","type":"rest"},"tools":[{"args":[{"description":"value","enum":["value-000","value-001","value-002","value-003","value-004","value-005","value-006","value-007","value-008","value-009","value-010","value-011","value-012","value-013","value-014","value-015","value-016","value-017","value-018","value-019","value-020","value-021","value-022","value-023","value-024","value-025","value-026","value-027","value-028","value-029","value-030","value-031","value-032","value-033","value-034","value-035","value-036","value-037","value-038","value-039","value-040","value-041","value-042","value-043","value-044","value-045","value-046","value-047","value-048","value-049","value-050","value-051","value-052","value-053","value-054","value-055","value-056","value-057","value-058","value-059","value-060","value-061","value-062","value-063","value-064","value-065","value-066","value-067","value-068","value-069","value-070","value-071","value-072","value-073","value-074","value-075","value-076","value-077","value-078","value-079","value-080","value-081","value-082","value-083","value-084","value-085","value-086","value-087","value-088","value-089","value-090","value-091","value-092","value-093","value-094","value-095","value-096","value-097","value-098","value-099","value-100","value-101","value-102","value-103","value-104","value-105","value-106","value-107","value-108","value-109","value-110","value-111","value-112","value-113","value-114","value-115","value-116","value-117","value-118","value-119","value-120","value-121","value-122","value-123","value-124","value-125","value-126","value-127","value-128","value-129","value-130","value-131","value-132","value-133","value-134","value-135","value-136","value-137","value-138","value-139","value-140","value-141","value-142","value-143","value-144","value-145","value-146","value-147","value-148","value-149","value-150","value-151","value-152","value-153","value-154","value-155","value-156","value-157","value-158","value-159","value-160","value-161","value-162","value-163","value-164","value-165","value-166","value-167","value-168","value-169","value-170","value-171","value-172","value-173","value-174","value-175","value-176","value-177","value-178","value-179","value-180","value-181","value-182","value-183","value-184","value-185","value-186","value-187","value-188","value-189","value-190","value-191","value-192","value-193","value-194","value-195","value-196","value-197","value-198","value-199","value-200","value-201","value-202","value-203","value-204","value-205","value-206","value-207","value-208","value-209","value-210","value-211","value-212","value-213","value-214","value-215","value-216","value-217","value-218","value-219","value-220","value-221","value-222","value-223","value-224","value-225","value-226","value-227","value-228","value-229","value-230","value-231","value-232","value-233","value-234","value-235","value-236","value-237","value-238","value-239","value-240","value-241","value-242","value-243","value-244","value-245","value-246","value-247","value-248","value-249","value-250","value-251","value-252","value-253","value-254","value-255","value-256"],"name":"value","type":"string"}],"description":"2.0.0-compatible resource fixture","name":"large_enum","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/resource"}}]}
+2026/09/11 17:18:26 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go
+    test.go:162: go mode test end
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm/global
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-resource-compat
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-resource-compat/large_enum
+2026/09/11 17:18:33 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-resource-compat" total=1 records=[{tool="large_enum" reason=resource_limit detail="$.properties.value.enum: exceeds 256 values"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== RUN   TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm/rule-level
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-resource-compat
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-resource-compat/large_enum
+2026/09/11 17:18:33 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-resource-compat" total=1 records=[{tool="large_enum" reason=resource_limit detail="$.properties.value.enum: exceeds 256 values"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["resource.example.com"],"server":{"name":"schema-resource-compat","type":"rest"},"tools":[{"args":[{"description":"value","enum":["value-000","value-001","value-002","value-003","value-004","value-005","value-006","value-007","value-008","value-009","value-010","value-011","value-012","value-013","value-014","value-015","value-016","value-017","value-018","value-019","value-020","value-021","value-022","value-023","value-024","value-025","value-026","value-027","value-028","value-029","value-030","value-031","value-032","value-033","value-034","value-035","value-036","value-037","value-038","value-039","value-040","value-041","value-042","value-043","value-044","value-045","value-046","value-047","value-048","value-049","value-050","value-051","value-052","value-053","value-054","value-055","value-056","value-057","value-058","value-059","value-060","value-061","value-062","value-063","value-064","value-065","value-066","value-067","value-068","value-069","value-070","value-071","value-072","value-073","value-074","value-075","value-076","value-077","value-078","value-079","value-080","value-081","value-082","value-083","value-084","value-085","value-086","value-087","value-088","value-089","value-090","value-091","value-092","value-093","value-094","value-095","value-096","value-097","value-098","value-099","value-100","value-101","value-102","value-103","value-104","value-105","value-106","value-107","value-108","value-109","value-110","value-111","value-112","value-113","value-114","value-115","value-116","value-117","value-118","value-119","value-120","value-121","value-122","value-123","value-124","value-125","value-126","value-127","value-128","value-129","value-130","value-131","value-132","value-133","value-134","value-135","value-136","value-137","value-138","value-139","value-140","value-141","value-142","value-143","value-144","value-145","value-146","value-147","value-148","value-149","value-150","value-151","value-152","value-153","value-154","value-155","value-156","value-157","value-158","value-159","value-160","value-161","value-162","value-163","value-164","value-165","value-166","value-167","value-168","value-169","value-170","value-171","value-172","value-173","value-174","value-175","value-176","value-177","value-178","value-179","value-180","value-181","value-182","value-183","value-184","value-185","value-186","value-187","value-188","value-189","value-190","value-191","value-192","value-193","value-194","value-195","value-196","value-197","value-198","value-199","value-200","value-201","value-202","value-203","value-204","value-205","value-206","value-207","value-208","value-209","value-210","value-211","value-212","value-213","value-214","value-215","value-216","value-217","value-218","value-219","value-220","value-221","value-222","value-223","value-224","value-225","value-226","value-227","value-228","value-229","value-230","value-231","value-232","value-233","value-234","value-235","value-236","value-237","value-238","value-239","value-240","value-241","value-242","value-243","value-244","value-245","value-246","value-247","value-248","value-249","value-250","value-251","value-252","value-253","value-254","value-255","value-256"],"name":"value","type":"string"}],"description":"2.0.0-compatible resource fixture","name":"large_enum","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/resource"}}]}
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:resource.example.com]
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["resource.example.com"],"server":{"name":"schema-resource-compat","type":"rest"},"tools":[{"args":[{"description":"value","enum":["value-000","value-001","value-002","value-003","value-004","value-005","value-006","value-007","value-008","value-009","value-010","value-011","value-012","value-013","value-014","value-015","value-016","value-017","value-018","value-019","value-020","value-021","value-022","value-023","value-024","value-025","value-026","value-027","value-028","value-029","value-030","value-031","value-032","value-033","value-034","value-035","value-036","value-037","value-038","value-039","value-040","value-041","value-042","value-043","value-044","value-045","value-046","value-047","value-048","value-049","value-050","value-051","value-052","value-053","value-054","value-055","value-056","value-057","value-058","value-059","value-060","value-061","value-062","value-063","value-064","value-065","value-066","value-067","value-068","value-069","value-070","value-071","value-072","value-073","value-074","value-075","value-076","value-077","value-078","value-079","value-080","value-081","value-082","value-083","value-084","value-085","value-086","value-087","value-088","value-089","value-090","value-091","value-092","value-093","value-094","value-095","value-096","value-097","value-098","value-099","value-100","value-101","value-102","value-103","value-104","value-105","value-106","value-107","value-108","value-109","value-110","value-111","value-112","value-113","value-114","value-115","value-116","value-117","value-118","value-119","value-120","value-121","value-122","value-123","value-124","value-125","value-126","value-127","value-128","value-129","value-130","value-131","value-132","value-133","value-134","value-135","value-136","value-137","value-138","value-139","value-140","value-141","value-142","value-143","value-144","value-145","value-146","value-147","value-148","value-149","value-150","value-151","value-152","value-153","value-154","value-155","value-156","value-157","value-158","value-159","value-160","value-161","value-162","value-163","value-164","value-165","value-166","value-167","value-168","value-169","value-170","value-171","value-172","value-173","value-174","value-175","value-176","value-177","value-178","value-179","value-180","value-181","value-182","value-183","value-184","value-185","value-186","value-187","value-188","value-189","value-190","value-191","value-192","value-193","value-194","value-195","value-196","value-197","value-198","value-199","value-200","value-201","value-202","value-203","value-204","value-205","value-206","value-207","value-208","value-209","value-210","value-211","value-212","value-213","value-214","value-215","value-216","value-217","value-218","value-219","value-220","value-221","value-222","value-223","value-224","value-225","value-226","value-227","value-228","value-229","value-230","value-231","value-232","value-233","value-234","value-235","value-236","value-237","value-238","value-239","value-240","value-241","value-242","value-243","value-244","value-245","value-246","value-247","value-248","value-249","value-250","value-251","value-252","value-253","value-254","value-255","value-256"],"name":"value","type":"string"}],"description":"2.0.0-compatible resource fixture","name":"large_enum","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/resource"}}]}
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel (6.99s)
+    --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go (0.00s)
+        --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go/global (0.00s)
+        --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/go/rule-level (0.00s)
+    --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm (6.99s)
+        --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm/global (0.01s)
+        --- PASS: TestSchemaPreparationResourceLimitLoadsGloballyAndAtRuleLevel/wasm/rule-level (0.00s)
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/go
+    test.go:158: go mode test start
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/go/modern_list_preserves_degraded_and_valid_descriptors
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:33 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/go/modern_degraded_call_returns_exact_server_error_without_routing
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:33 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/go/unrelated_valid_modern_tool_reaches_routing_path
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:33 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:33 proxy_debug_log: [mcp-server] [schema-compat/health] [test-request-id-default] Modern tool call [health] on server [schema-compat]
+2026/09/11 17:18:33 proxy_info_log: [mcp-server] [schema-compat/health] [test-request-id-default] route call start, id:3d91f249-5f16-4097-8400-360c776ebddf, method:GET, url:http://backend.example/health, cluster:test-cluster-default, headers:[][2]string{[2]string{":authority", "backend.example"}, [2]string{":method", "GET"}, [2]string{":path", "/health"}, [2]string{"content-type", "application/json"}, [2]string{"origin", "http://compat.example.com"}, [2]string{"x-envoy-original-method", "POST"}, [2]string{"x-envoy-original-path", "/mcp"}, [2]string{"x-envoy-original-host", "compat.example.com"}, [2]string{"accept", "*/*"}}, body:
+=== NAME  TestSchemaCompatibilityModernListAndCallBehavior/go
+    test.go:162: go mode test end
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/wasm/modern_list_preserves_degraded_and_valid_descriptors
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:39 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/list] passed protocol validation
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/wasm/modern_degraded_call_returns_exact_server_error_without_routing
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:39 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== RUN   TestSchemaCompatibilityModernListAndCallBehavior/wasm/unrelated_valid_modern_tool_reaches_routing_path
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:39 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [schema-compat/health] [test-request-id-default] Modern tool call [health] on server [schema-compat]
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [schema-compat/health] [test-request-id-default] route call start, id:0cc0d614-4c88-4535-841a-cbe0709b0758, method:GET, url:http://backend.example/health, cluster:test-cluster-default, headers:[][2]string{[2]string{":authority", "backend.example"}, [2]string{":method", "GET"}, [2]string{":path", "/health"}, [2]string{"content-type", "application/json"}, [2]string{"origin", "http://compat.example.com"}, [2]string{"x-envoy-original-method", "POST"}, [2]string{"x-envoy-original-path", "/mcp"}, [2]string{"x-envoy-original-host", "compat.example.com"}, [2]string{"accept", "*/*"}}, body:
+=== NAME  TestSchemaCompatibilityModernListAndCallBehavior/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestSchemaCompatibilityModernListAndCallBehavior (6.90s)
+    --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/go (0.00s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/go/modern_list_preserves_degraded_and_valid_descriptors (0.00s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/go/modern_degraded_call_returns_exact_server_error_without_routing (0.00s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/go/unrelated_valid_modern_tool_reaches_routing_path (0.00s)
+    --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/wasm (6.89s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/wasm/modern_list_preserves_degraded_and_valid_descriptors (0.01s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/wasm/modern_degraded_call_returns_exact_server_error_without_routing (0.00s)
+        --- PASS: TestSchemaCompatibilityModernListAndCallBehavior/wasm/unrelated_valid_modern_tool_reaches_routing_path (0.00s)
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go
+    test.go:158: go mode test start
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go/global
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:39 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go/rule-level
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:39 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:compat.example.com]
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:39 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:39 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== NAME  TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go
+    test.go:162: go mode test end
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm/global
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:46 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== RUN   TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm/rule-level
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: global-valid
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool global-valid/global_health
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: schema-compat
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/getTransactionRecordListV2
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool schema-compat/health
+2026/09/11 17:18:46 proxy_warn_log: [mcp-server] [] [nil] Direct tools published without local schema validation: server="schema-compat" total=1 records=[{tool="getTransactionRecordListV2" reason=contradictory_constraint detail="$.properties[\"businessType\"].enum: requires a primitive type"}] omitted=0; modern tools/call will be rejected; legacy calls remain available
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] storing rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] store rule to backup, key[cat:1|hosts:1:compat.example.com]
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] successfully stored rule to backup: {"_match_domain_":["compat.example.com"],"server":{"name":"schema-compat","type":"rest"},"tools":[{"args":[{"description":"Business types","enum":["SALE","REFUND"],"items":{"type":"string"},"name":"businessType","type":"array"}],"description":"Compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend.example/compat"}},{"description":"Unrelated valid tool","name":"health","requestTemplate":{"method":"GET","url":"http://backend.example/health"}}]}
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+=== NAME  TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel (6.42s)
+    --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go (0.00s)
+        --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go/global (0.00s)
+        --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/go/rule-level (0.00s)
+    --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm (6.42s)
+        --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm/global (0.01s)
+        --- PASS: TestSchemaCompatibilityMetricsGlobalAndRuleLevel/wasm/rule-level (0.00s)
+=== RUN   TestMcpProxyServerConfig
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestMcpProxyServerConfig/go
+    test.go:158: go mode test start
+=== RUN   TestMcpProxyServerConfig/go/valid_mcp_proxy_server_config
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:18:46 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:18:46 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestMcpProxyServerConfig/go
+    test.go:162: go mode test end
+=== RUN   TestMcpProxyServerConfig/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestMcpProxyServerConfig/wasm/valid_mcp_proxy_server_config
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+=== NAME  TestMcpProxyServerConfig/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestMcpProxyServerConfig (6.51s)
+    --- PASS: TestMcpProxyServerConfig/go (0.00s)
+        --- PASS: TestMcpProxyServerConfig/go/valid_mcp_proxy_server_config (0.00s)
+    --- PASS: TestMcpProxyServerConfig/wasm (6.51s)
+        --- PASS: TestMcpProxyServerConfig/wasm/valid_mcp_proxy_server_config (0.00s)
+=== RUN   TestRestMCPServerBasicFlow
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestRestMCPServerBasicFlow/go
+    test.go:158: go mode test start
+=== RUN   TestRestMCPServerBasicFlow/go/initialize_returns_configured_server_version
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[initialize] with params[{
+					"protocolVersion": "2025-03-26"
+				}]
+=== RUN   TestRestMCPServerBasicFlow/go/tools/list_request
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:52 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:52 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/list] with params[{}]
+=== NAME  TestRestMCPServerBasicFlow/go
+    test.go:162: go mode test end
+=== RUN   TestRestMCPServerBasicFlow/wasm
+    test.go:166: wasm mode test start
+=== RUN   TestRestMCPServerBasicFlow/wasm/initialize_returns_configured_server_version
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[initialize] with params[{
+					"protocolVersion": "2025-03-26"
+				}]
+=== RUN   TestRestMCPServerBasicFlow/wasm/tools/list_request
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/list] with params[{}]
+=== NAME  TestRestMCPServerBasicFlow/wasm
+    test.go:177: wasm mode test end
+--- PASS: TestRestMCPServerBasicFlow (6.56s)
+    --- PASS: TestRestMCPServerBasicFlow/go (0.00s)
+        --- PASS: TestRestMCPServerBasicFlow/go/initialize_returns_configured_server_version (0.00s)
+        --- PASS: TestRestMCPServerBasicFlow/go/tools/list_request (0.00s)
+    --- PASS: TestRestMCPServerBasicFlow/wasm (6.56s)
+        --- PASS: TestRestMCPServerBasicFlow/wasm/initialize_returns_configured_server_version (0.02s)
+        --- PASS: TestRestMCPServerBasicFlow/wasm/tools/list_request (0.00s)
+=== RUN   TestRestMCPServerToolsCall
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestRestMCPServerToolsCall/go
+    test.go:158: go mode test start
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/call] with params[{
+				"name": "get_weather",
+				"arguments": {
+					"location": "北京"
+				}
+			}]
+2026/09/11 17:18:59 proxy_debug_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] Tool call [get_weather] on server [rest-test-server] with arguments[{
+					"location": "北京"
+				}]
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] route call start, id:f56c8870-6991-4d1d-9e53-b22f0555e1fc, method:GET, url:https://httpbin.org/get?city=, cluster:test-cluster-default, headers:[][2]string{[2]string{":authority", "httpbin.org"}, [2]string{":method", "GET"}, [2]string{":path", "/get?city="}, [2]string{"content-type", "application/json"}, [2]string{"x-envoy-original-method", "POST"}, [2]string{"x-envoy-original-path", "/mcp"}, [2]string{"x-envoy-original-host", "mcp-server.example.com"}, [2]string{"accept", "*/*"}}, body:
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] response detail info:mcp:tools/call:rest-test-server/get_weather:result
+2026/09/11 17:18:59 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] route call end, id:f56c8870-6991-4d1d-9e53-b22f0555e1fc, code:200, headers:[][2]string{[2]string{":status", "200"}, [2]string{"content-type", "application/json"}}, body:{\n			"args": {"city": "北京"},\n			"url": "https://httpbin.org/get?city=北京",\n			"headers": {\n				"Host": "httpbin.org"\n			}\n		}
+    test.go:162: go mode test end
+=== RUN   TestRestMCPServerToolsCall/wasm
+    test.go:166: wasm mode test start
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: rest-test-server
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool rest-test-server/get_weather
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/call] with params[{
+				"name": "get_weather",
+				"arguments": {
+					"location": "北京"
+				}
+			}]
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] Tool call [get_weather] on server [rest-test-server] with arguments[{
+					"location": "北京"
+				}]
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] route call start, id:0cc0d614-4c88-4535-841a-cbe0709b0758, method:GET, url:https://httpbin.org/get?city=, cluster:test-cluster-default, headers:[][2]string{[2]string{":authority", "httpbin.org"}, [2]string{":method", "GET"}, [2]string{":path", "/get?city="}, [2]string{"content-type", "application/json"}, [2]string{"x-envoy-original-method", "POST"}, [2]string{"x-envoy-original-path", "/mcp"}, [2]string{"x-envoy-original-host", "mcp-server.example.com"}, [2]string{"accept", "*/*"}}, body:
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] response detail info:mcp:tools/call:rest-test-server/get_weather:result
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [rest-test-server/get_weather] [test-request-id-default] route call end, id:0cc0d614-4c88-4535-841a-cbe0709b0758, code:200, headers:[][2]string{[2]string{":status", "200"}, [2]string{"content-type", "application/json"}}, body:{\n			"args": {"city": "北京"},\n			"url": "https://httpbin.org/get?city=北京",\n			"headers": {\n				"Host": "httpbin.org"\n			}\n		}
+    test.go:177: wasm mode test end
+--- PASS: TestRestMCPServerToolsCall (6.57s)
+    --- PASS: TestRestMCPServerToolsCall/go (0.01s)
+    --- PASS: TestRestMCPServerToolsCall/wasm (6.56s)
+=== RUN   TestMcpProxyServerToolsList
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestMcpProxyServerToolsList/go
+    test.go:158: go mode test start
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/list] with params[{}]
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Forwarding tools/list request
+2026/09/11 17:19:05 proxy_info_log: [mcp-server] [] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:05 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:05 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:05 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:05 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:05 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:05 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-123] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:05 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:05 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:05 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:05 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-123] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:05 [http callout to test-cluster-default] body: {"id":2,"jsonrpc":"2.0","method":"tools/list","params":{}}
+2026/09/11 17:19:05 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:05 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for tools/list request
+    test.go:162: go mode test end
+=== RUN   TestMcpProxyServerToolsList/wasm
+    test.go:166: wasm mode test start
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/list] with params[{}]
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Forwarding tools/list request
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-123] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-123] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"id":2,"jsonrpc":"2.0","method":"tools/list","params":{}}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for tools/list request
+    test.go:177: wasm mode test end
+--- PASS: TestMcpProxyServerToolsList (6.51s)
+    --- PASS: TestMcpProxyServerToolsList/go (0.00s)
+    --- PASS: TestMcpProxyServerToolsList/wasm (6.50s)
+=== RUN   TestMcpProxyServerToolsCall
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestMcpProxyServerToolsCall/go
+    test.go:158: go mode test start
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/call] with params[{
+				"name": "get_product",
+				"arguments": {
+					"product_id": "12345"
+				}
+			}]
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Tool call [get_product] on proxy server [proxy-test-server]
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Forwarding tools/call request for tool get_product
+2026/09/11 17:19:12 proxy_info_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-456] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:12 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:12 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-456] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:12 [http callout to test-cluster-default] body: {"id":3,"jsonrpc":"2.0","method":"tools/call","params":{"arguments":{"product_id":"12345"},"name":"get_product"}}
+2026/09/11 17:19:12 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:12 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Processing JSON response for tools/call request
+    test.go:162: go mode test end
+=== RUN   TestMcpProxyServerToolsCall/wasm
+    test.go:166: wasm mode test start
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-test-server
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-test-server/get_product
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/call] with params[{
+				"name": "get_product",
+				"arguments": {
+					"product_id": "12345"
+				}
+			}]
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Tool call [get_product] on proxy server [proxy-test-server]
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Forwarding tools/call request for tool get_product
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-456] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id test-session-456] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":3,"jsonrpc":"2.0","method":"tools/call","params":{"arguments":{"product_id":"12345"},"name":"get_product"}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-test-server/get_product] [test-request-id-default] Processing JSON response for tools/call request
+    test.go:177: wasm mode test end
+--- PASS: TestMcpProxyServerToolsCall (6.35s)
+    --- PASS: TestMcpProxyServerToolsCall/go (0.00s)
+    --- PASS: TestMcpProxyServerToolsCall/wasm (6.35s)
+=== RUN   TestMcpProxyServerAuthentication
+[WASM_PATH] Using cached wasm file: /Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/wasm-unit-test.wasm
+=== RUN   TestMcpProxyServerAuthentication/go
+    test.go:158: go mode test start
+=== RUN   TestMcpProxyServerAuthentication/go/tools/list_authentication_headers
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-auth-test-server
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-auth-test-server/get_secure_product
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/list] with params[{}]
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Forwarding tools/list request
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id secure-session-list-123] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id secure-session-list-123] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":2,"jsonrpc":"2.0","method":"tools/list","params":{}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Processing JSON response for tools/list request
+=== RUN   TestMcpProxyServerAuthentication/go/tools/call_authentication_headers
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: proxy-auth-test-server
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [nil] Registered tool proxy-auth-test-server/get_secure_product
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [] [test-request-id-default] json rpc call method[tools/call] with params[{
+					"name": "get_secure_product",
+					"arguments": {
+						"product_id": "secure-123"
+					}
+				}]
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Tool call [get_secure_product] on proxy server [proxy-auth-test-server]
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Using tool-level upstream security for tool get_secure_product: BackendApiKey
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Forwarding tools/call request for tool get_secure_product
+2026/09/11 17:19:18 proxy_info_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Starting request-scoped MCP protocol initialization
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":1,"jsonrpc":"2.0","method":"initialize","params":{"capabilities":{},"clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"protocolVersion":"2025-03-26"}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Processing JSON response for initialize request
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Received request-scoped MCP session identifier
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id secure-session-call-456] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"jsonrpc":"2.0","method":"notifications/initialized"}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] MCP initialization completed successfully
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Using configured credential for upstream request with scheme BackendApiKey.
+2026/09/11 17:19:18 [http callout to test-cluster-default] timeout: 5000
+2026/09/11 17:19:18 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [Mcp-Session-Id secure-session-call-456] [X-API-Key test-default-key] [:method POST] [:path /mcp] [:authority backend-mcp.example.com]]
+2026/09/11 17:19:18 [http callout to test-cluster-default] body: {"id":3,"jsonrpc":"2.0","method":"tools/call","params":{"arguments":{"product_id":"secure-123"},"name":"get_secure_product"}}
+2026/09/11 17:19:18 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:19:18 proxy_debug_log: [mcp-server] [proxy-auth-test-server/get_secure_product] [test-request-id-default] Processing JSON response for tools/call request
+=== NAME  TestMcpProxyServerAuthentication/go
+    test.go:162: go mode test end
+=== RUN   TestMcpProxyServerAuthentication/wasm
+    test.go:166: wasm mode test start
+panic: test timed out after 1m30s
+	running tests:
+		TestMcpProxyServerAuthentication (3s)
+		TestMcpProxyServerAuthentication/wasm (3s)
+
+goroutine 209 [running]:
+testing.(*M).startAlarm.func1()
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:2484 +0x308
+created by time.goFunc
+	/Users/xiao/sdk/go1.24.4/src/time/sleep.go:215 +0x38
+
+goroutine 1 [chan receive]:
+testing.(*T).Run(0x14000126700, {0x104c911d1?, 0x14000189b38?}, 0x104eda3d8)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1859 +0x388
+testing.runTests.func1(0x14000126700)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:2279 +0x40
+testing.tRunner(0x14000126700, 0x14000189c68)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1792 +0xe4
+testing.runTests(0x14000166630, {0x1052a5040, 0x27, 0x27}, {0x14000115520?, 0x7?, 0x1052af2c0?})
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:2277 +0x3ec
+testing.(*M).Run(0x14000218820)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:2142 +0x588
+main.main()
+	_testmain.go:123 +0x90
+
+goroutine 183 [chan receive]:
+testing.(*T).Run(0x1400d603880, {0x104c78ddc?, 0x140000b2f38?}, 0x14003e44280)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1859 +0x388
+github.com/higress-group/wasm-go/pkg/test.RunTestWithPath(0x1400d603880, {0x140001001c0, 0x68}, 0x104eda5b8)
+	/Users/xiao/go/pkg/mod/github.com/higress-group/wasm-go@v1.0.10-0.20260115123534-84ef43c39dc9/pkg/test/test.go:165 +0xf0
+github.com/higress-group/wasm-go/pkg/test.RunTest(0x1400d603880, 0x104eda5b8)
+	/Users/xiao/go/pkg/mod/github.com/higress-group/wasm-go@v1.0.10-0.20260115123534-84ef43c39dc9/pkg/test/test.go:184 +0x38
+mcp-server.TestMcpProxyServerAuthentication(0x1400d603880?)
+	/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/main_test.go:868 +0x24
+testing.tRunner(0x1400d603880, 0x104eda3d8)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1792 +0xe4
+created by testing.(*T).Run in goroutine 1
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1851 +0x374
+
+goroutine 187 [runnable]:
+github.com/tetratelabs/wazero/internal/engine/wazevo/ssa.(*builder).resolveAlias(...)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/ssa/builder.go:683
+github.com/tetratelabs/wazero/internal/engine/wazevo/ssa.(*builder).resolveArgumentAlias(0x1400a4c6008, 0x1400a4d0680)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/ssa/builder.go:675 +0xf8
+github.com/tetratelabs/wazero/internal/engine/wazevo/ssa.passRedundantPhiEliminationOpt(0x1400a4c6008)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/ssa/pass.go:136 +0x704
+github.com/tetratelabs/wazero/internal/engine/wazevo/ssa.(*builder).runPreBlockLayoutPasses(0x1400a4c6008)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/ssa/pass.go:25 +0x30
+github.com/tetratelabs/wazero/internal/engine/wazevo/ssa.(*builder).RunPasses(0x1400a4c6008)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/ssa/pass.go:16 +0x20
+github.com/tetratelabs/wazero/internal/engine/wazevo.(*engine).compileLocalWasmFunction(0x14002780000?, {0x104ee48b8, 0x1052d6c80}, 0x1400a150e08?, 0x4ef0948?, 0x14007058008, {0x104ef3608, 0x1400a4c6008}, {0x104ef0948, 0x1400016b680}, ...)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/engine.go:359 +0xfc
+github.com/tetratelabs/wazero/internal/engine/wazevo.(*engine).compileModule(0x140040b2360, {0x104ee48b8, 0x1052d6c80}, 0x1400a096540, {0x0, 0x0, 0x0}, 0x0)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/engine.go:247 +0x444
+github.com/tetratelabs/wazero/internal/engine/wazevo.(*engine).CompileModule(0x140040b2360, {0x104ee48b8, 0x1052d6c80}, 0x1400a096540, {0x0, 0x0, 0x0}, 0x0)
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/internal/engine/wazevo/engine.go:135 +0x7c
+github.com/tetratelabs/wazero.(*runtime).CompileModule(0x14005fe86c0, {0x104ee48b8, 0x1052d6c80}, {0x1400d606000, 0xf7760e, 0xf7760f})
+	/Users/xiao/go/pkg/mod/github.com/tetratelabs/wazero@v1.7.2/runtime.go:237 +0x1a4
+github.com/higress-group/proxy-wasm-go-sdk/proxywasm/proxytest.NewWasmVMContext({0x1400d606000, 0xf7760e, 0xf7760f})
+	/Users/xiao/go/pkg/mod/github.com/higress-group/proxy-wasm-go-sdk@v0.0.0-20251103120604-77e9cce339d2/proxywasm/proxytest/wasmwrapper.go:98 +0xb4
+github.com/higress-group/wasm-go/pkg/test.RunTestWithPath.func2(0x1400a096000)
+	/Users/xiao/go/pkg/mod/github.com/higress-group/wasm-go@v1.0.10-0.20260115123534-84ef43c39dc9/pkg/test/test.go:171 +0xdc
+testing.tRunner(0x1400a096000, 0x14003e44280)
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1792 +0xe4
+created by testing.(*T).Run in goroutine 183
+	/Users/xiao/sdk/go1.24.4/src/testing/testing.go:1851 +0x374
+FAIL	mcp-server	90.368s
+FAIL

@@ -1,0 +1,20 @@
+{
+  "source_sha": "dc0999326b1a8df4269c13d0cf6ee2b725259f6e",
+  "plugin_sha256": "536c5b75b75f27e26a6e154e9ef9c3d6a86e60896c6d619ce61a426358a149ec",
+  "test_sha256": "773f39b01e697b3f61454f17e773a8f978a5484637fbc03dfd6176133eb2d8b4",
+  "exit_code": 0,
+  "suite": "WasmPluginsMCP20260728",
+  "passed": [
+    "TestHigressConformanceTests/WasmPluginsMCP20260728",
+    "TestHigressConformanceTests/WasmPluginsMCP20260728/modern_discovery",
+    "TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/list",
+    "TestHigressConformanceTests/WasmPluginsMCP20260728/modern_tools/call",
+    "TestHigressConformanceTests/WasmPluginsMCP20260728/legacy_tools/list_remains_unshaped",
+    "TestHigressConformanceTests/WasmPluginsMCP20260728/cross-origin_request_rejected"
+  ],
+  "case_count": 5,
+  "verified_at": "2026-09-11T08:41:45.040746+00:00",
+  "execution": "podman exec -e KUBECONFIG=/etc/kubernetes/admin.conf mcp-auto-4684-control-plane /conformance-baseline.test -test.v -test.timeout=8m -isWasmPluginTest=true -wasmPluginType=GO -wasmPluginName=mcp-server --ingress-class=higress --debug=true --test-area=run --execute-tests=WasmPluginsMCP20260728",
+  "environment_adaptation": "environment-adaptation.json",
+  "logs": "baseline-conformance-targeted.log"
+}

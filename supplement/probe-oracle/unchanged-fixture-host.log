@@ -1,0 +1,18 @@
+2026/09/11 17:29:19 MCP interoperability host listening on http://127.0.0.1:63603
+2026/09/11 17:29:20 proxy_info_log: [mcp-server] [] [nil] Parsing single server configuration: interop-auto
+2026/09/11 17:29:20 proxy_info_log: [mcp-server] [] [nil] plugin start successfully
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [] [test-request-id-default] Failed to get VM memory: error status returned by host: not found
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 104857600
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetResponseBodyBufferLimit: 104857600
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [] [test-request-id-default] SetRequestBodyBufferLimit: 1048576
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [] [test-request-id-default] modern JSON-RPC method[tools/call] passed protocol validation
+2026/09/11 17:29:20 proxy_warn_log: [mcp-server] [interop-auto/get_weather] [test-request-id-default] tool not found: get_weather, will not use tool specifiy security config
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [interop-auto/get_weather] [test-request-id-default] Tool call [get_weather] on proxy server [interop-auto]
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [interop-auto/get_weather] [test-request-id-default] Forwarding tools/call request for tool get_weather
+2026/09/11 17:29:20 [http callout to test-cluster-default] timeout: 1000
+2026/09/11 17:29:20 [http callout to test-cluster-default] headers: [[Content-Type application/json] [Accept application/json,text/event-stream] [MCP-Protocol-Version 2026-07-28] [Mcp-Method server/discover] [:method POST] [:path /mcp] [:authority fixture.invalid]]
+2026/09/11 17:29:20 [http callout to test-cluster-default] body: {"id":"higress-auto-discover","jsonrpc":"2.0","method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/clientCapabilities":{},"io.modelcontextprotocol/clientInfo":{"name":"Higress-mcp-proxy","version":"1.0.0"},"io.modelcontextprotocol/protocolVersion":"2026-07-28"}}}
+2026/09/11 17:29:20 [http callout to test-cluster-default] trailers: []
+2026/09/11 17:29:20 POST /proxy-auto-error method=tools/call protocol=2026-07-28
+2026/09/11 17:29:20 proxy_debug_log: [mcp-server] [interop-auto/get_weather] [test-request-id-default] MCP auto phase=probe_received profile= outcome=failed reason=upstream_protocol_error
+2026/09/11 17:29:20 plugin response status=400 body={"error":{"code":-32020,"message":"MCP upstream probe_received: upstream_protocol_error"},"id":"supplement-probe-error","jsonrpc":"2.0"}

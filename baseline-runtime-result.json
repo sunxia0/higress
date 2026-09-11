@@ -1,0 +1,10 @@
+{
+  "command": [
+    "bash",
+    "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/baseline/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/run.sh"
+  ],
+  "started_at": "2026-09-11T08:11:38.312181+00:00",
+  "finished_at": "2026-09-11T08:15:19.563788+00:00",
+  "exit_code": 0,
+  "log": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/baseline-runtime-command.log"
+}

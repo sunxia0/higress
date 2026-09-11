@@ -1,0 +1,107 @@
+{
+  "source_sha": "3966c7e6c189fa1007fdca0386ad9a8f4291e953",
+  "source_tree_clean": true,
+  "started_at": "2026-09-11T09:14:26.740406+00:00",
+  "commands": [
+    {
+      "name": "unit",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/pkg/mcp",
+        "test",
+        "-count=1",
+        "./..."
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-11T09:14:27.494915+00:00",
+      "log": "unit.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:14:31.494405+00:00"
+    },
+    {
+      "name": "race",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/pkg/mcp",
+        "test",
+        "-race",
+        "-count=1",
+        "./server",
+        "./protocol"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-11T09:14:31.494929+00:00",
+      "log": "race.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:14:37.222481+00:00"
+    },
+    {
+      "name": "extension",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server",
+        "test",
+        "-count=1",
+        "./..."
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-11T09:14:37.222909+00:00",
+      "log": "extension.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:18:46.167659+00:00"
+    },
+    {
+      "name": "interop",
+      "command": [
+        "bash",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/interop/run.sh"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-11T09:18:46.171840+00:00",
+      "log": "interop.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:18:52.039217+00:00"
+    },
+    {
+      "name": "wasm",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server",
+        "build",
+        "-trimpath",
+        "-buildmode=c-shared",
+        "-o",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-tuaqf6zu/candidate-3966c7e6-d/plugin.wasm",
+        "."
+      ],
+      "environment_overrides": {
+        "GOOS": "wasip1",
+        "GOARCH": "wasm"
+      },
+      "started_at": "2026-09-11T09:18:52.039671+00:00",
+      "log": "wasm.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-11T09:18:53.426625+00:00"
+    }
+  ],
+  "toolchain": {
+    "go": "go version go1.26.0 darwin/arm64",
+    "node": "v22.19.0"
+  },
+  "finished_at": "2026-09-11T09:18:53.427242+00:00",
+  "unchanged_head": true,
+  "final_status": "",
+  "sha256": {
+    "plugin.wasm": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9",
+    "unit.log": "bcd38af956b00f9b1caf8e6a6caf21678f316a73f859dfce16c539125f946236",
+    "race.log": "6548d2545a240132b3c68d77d12edd69278afd6350ddcee7a6d8fbf9dbd522ff",
+    "extension.log": "9135e88d756e984eb94c42aa909b09e9ee7f9856dd52a063fdf29349079f35e1",
+    "interop.log": "b1e6f09febd2b609fea831472beafb2eae73f771d2d5ba06935d4d437d410264",
+    "wasm.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pass": true
+}
