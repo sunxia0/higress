@@ -1,6 +1,15 @@
 [
   {
     "conclusion": "success",
+    "databaseId": 35838916454,
+    "headSha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+    "name": "Translate GitHub content into English",
+    "status": "completed",
+    "updatedAt": "2026-09-23T08:45:25Z",
+    "url": "https://github.com/higress-group/higress/actions/runs/35838916454"
+  },
+  {
+    "conclusion": "success",
     "databaseId": 35835940611,
     "headSha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
     "name": "Translate GitHub content into English",
@@ -81,15 +90,6 @@
     "url": "https://github.com/higress-group/higress/actions/runs/35834596650"
   },
   {
-    "conclusion": "",
-    "databaseId": 35834596638,
-    "headSha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
-    "name": "Build and Test Plugins",
-    "status": "in_progress",
-    "updatedAt": "2026-09-23T08:35:55Z",
-    "url": "https://github.com/higress-group/higress/actions/runs/35834596638"
-  },
-  {
     "conclusion": "success",
     "databaseId": 35834596714,
     "headSha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
@@ -97,5 +97,14 @@
     "status": "completed",
     "updatedAt": "2026-09-23T08:36:35Z",
     "url": "https://github.com/higress-group/higress/actions/runs/35834596714"
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 35834596638,
+    "headSha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+    "name": "Build and Test Plugins",
+    "status": "completed",
+    "updatedAt": "2026-09-23T09:08:57Z",
+    "url": "https://github.com/higress-group/higress/actions/runs/35834596638"
   }
 ]

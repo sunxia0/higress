@@ -18,11 +18,6 @@
     "go": "cancelled by matrix fail-fast",
     "log": "ci-plugins-attempt2-rust.log"
   },
-  "next_action": {
-    "action": "one final full matrix rerun on fresh runners",
-    "requested_at": "2026-09-23T08:35:42.538364+00:00",
-    "reason": "single-job retry immediately cancelled against inherited failed matrix sibling"
-  },
   "attempt3": {
     "requested_job": 107100106017,
     "result": "selected Go job cancelled immediately without executing steps; previous Rust failure inherited into matrix",
@@ -30,5 +25,47 @@
     "retained_rust_job": 107104596230,
     "new_test_execution": false,
     "log": "ci-plugins-attempt3-rust.log"
+  },
+  "upstream_main_comparison": {
+    "source_sha": "a42482341eb199b2c1553a560c81137ebad14441",
+    "run_id": 35598586052,
+    "url": "https://github.com/higress-group/higress/actions/runs/35598586052",
+    "date": "2026-09-21",
+    "first_failure": "registry auth connection reset pulling nacos-standlone-rc3:1.0.0-RC3",
+    "in_job_retry_failure": "permission denied deleting root-owned pilot outputs",
+    "rust": "failure",
+    "go": "cancelled by matrix fail-fast",
+    "log": "ci-upstream-main-failure.log"
+  },
+  "attempt4": {
+    "source_unchanged": true,
+    "rust": {
+      "job": 107106028494,
+      "conclusion": "success",
+      "completed_at": "2026-09-23T08:55:50Z",
+      "log": "ci-plugins-attempt4-rust.log"
+    },
+    "go": {
+      "job": 107106028193,
+      "conclusion": "success",
+      "completed_at": "2026-09-23T09:08:49Z",
+      "log": "ci-plugins-attempt4-go.log",
+      "mcp_target_group": "WasmPluginsMCP20260728",
+      "mcp_target_subtests_passed": 7
+    }
+  },
+  "attempt4_request": {
+    "action": "one final full matrix rerun on fresh runners",
+    "requested_at": "2026-09-23T08:35:42.538364+00:00",
+    "reason": "single-job retry immediately cancelled against inherited failed matrix sibling"
+  },
+  "final_outcome": {
+    "run_attempt": 4,
+    "conclusion": "success",
+    "source_unchanged": true,
+    "all_checks_pass": 25,
+    "pending": 0,
+    "failed": 0,
+    "cancelled": 0
   }
 }

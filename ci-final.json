@@ -1,21 +1,33 @@
 [
   {
     "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596638/job/107116426944",
+    "name": "publish",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35838916454/job/107109015898",
+    "name": "translate",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
     "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107106240729",
     "name": "publish",
     "state": "SUCCESS"
   },
   {
-    "bucket": "pending",
+    "bucket": "pass",
     "link": "https://github.com/higress-group/higress/actions/runs/35834596638/job/107106028193",
     "name": "higress-wasmplugin-test (GO)",
-    "state": "IN_PROGRESS"
+    "state": "SUCCESS"
   },
   {
-    "bucket": "pending",
+    "bucket": "pass",
     "link": "https://github.com/higress-group/higress/actions/runs/35834596638/job/107106028494",
     "name": "higress-wasmplugin-test (RUST)",
-    "state": "IN_PROGRESS"
+    "state": "SUCCESS"
   },
   {
     "bucket": "pass",
@@ -43,14 +55,14 @@
   },
   {
     "bucket": "pass",
-    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095177888",
-    "name": "inference-extension-conformance-test (v1.4.0)",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095178039",
+    "name": "gateway-conformance-test (v1.4.0)",
     "state": "SUCCESS"
   },
   {
     "bucket": "pass",
-    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095178039",
-    "name": "gateway-conformance-test (v1.4.0)",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095177888",
+    "name": "inference-extension-conformance-test (v1.4.0)",
     "state": "SUCCESS"
   },
   {
@@ -75,6 +87,12 @@
     "bucket": "pass",
     "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927285",
     "name": "coverage-test",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927134",
+    "name": "lint",
     "state": "SUCCESS"
   },
   {
@@ -105,12 +123,6 @@
     "bucket": "pass",
     "link": "https://github.com/higress-group/higress/actions/runs/35834596650/job/107094926688",
     "name": "Analyze (go)",
-    "state": "SUCCESS"
-  },
-  {
-    "bucket": "pass",
-    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927134",
-    "name": "lint",
     "state": "SUCCESS"
   },
   {
