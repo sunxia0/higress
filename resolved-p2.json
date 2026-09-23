@@ -1,0 +1,16 @@
+[
+  {
+    "original_comment_id": 3987928079,
+    "thread_id": "PRRT_kwDOIUVIVM6haye_",
+    "reply_url": "https://github.com/higress-group/higress/pull/4685#discussion_r4080350498",
+    "body": "Fixed in 9113d0469393df84bb04801176c44492e6e58975; integrated and verified at 06f864dc1eba5fbb8bf42a54c938c74abcb4ee88.\n\nThe tracked fixture now compares each session with the exact value issued to its request and records only safe presence/match booleans. The real Envoy case holds Alice and Bob together at the initialized barrier, then requires separate four-stage exchanges and exactly one business execution each. The same checker is exercised by HTTP negative self-tests with swapped sessions and an extra business request.\n\nFinal-head Python self-tests and the full real Envoy run passed (69/0, access114/114). Independent read-only review confirms this P2 is resolved; the final PR verification summary will carry the immutable evidence index.",
+    "resolved": true
+  },
+  {
+    "original_comment_id": 3987928319,
+    "thread_id": "PRRT_kwDOIUVIVM6hayhb",
+    "reply_url": "https://github.com/higress-group/higress/pull/4685#discussion_r4080350874",
+    "body": "Fixed in 9113d0469393df84bb04801176c44492e6e58975; integrated and verified at 06f864dc1eba5fbb8bf42a54c938c74abcb4ee88.\n\nBoth SDK clients now require JSON-RPC -32020. The normal interop entrypoint also runs an independent checker for HTTP400, matching RPC ID and zero accumulated fixture failures. Sequence failures remain sticky across later requests. The negative Go test changes the fixture discovery response so the unchanged plugin actually emits a tools/call hostcall, verifies HTTP500, restores a valid response, and requires that same checker to reject the retained failure with exit42.\n\nFinal-head host tests/race, official Go/TypeScript SDK interoperability and the independent checker passed. Independent read-only review confirms this P2 is resolved; the final PR verification summary will carry the immutable evidence index.",
+    "resolved": true
+  }
+]

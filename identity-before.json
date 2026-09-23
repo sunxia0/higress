@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-23T07:55:21.500773+00:00",
+  "token_overrides_unset": true,
+  "login": "sunxia0",
+  "role_name": "admin",
+  "pr": {
+    "author": {
+      "id": "MDQ6VXNlcjI3NjU4MjY3",
+      "is_bot": false,
+      "login": "sunxia0",
+      "name": ""
+    },
+    "headRefOid": "53587de46153829d05130649aa132e45885c77f6",
+    "url": "https://github.com/higress-group/higress/pull/4685"
+  }
+}

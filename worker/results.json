@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-09-23T07:58:18.255619+00:00",
+  "sourceCommit": "9113d0469393df84bb04801176c44492e6e58975",
+  "verificationScope": "Focused working-tree checks committed as this SHA; final clean integrated-head runtime and kind verification remain coordinator-owned",
+  "tokenOverrides": "GH_TOKEN and GITHUB_TOKEN unset by env -u for every verification command",
+  "commands": [
+    {
+      "command": "env -u GH_TOKEN -u GITHUB_TOKEN python3 plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/auto_self_test.py",
+      "exitCode": 0,
+      "result": "6 tests PASS; includes positive and swapped-notify/swapped-call/replayed-call negative oracle subcases",
+      "log": "auto-self-test-final.log",
+      "logSha256": "daec9fe83313e80bef57d92d611d3bb25fc564c69ecd0347b4dfd43bc28c9be1"
+    },
+    {
+      "command": "env -u GH_TOKEN -u GITHUB_TOKEN go -C plugins/wasm-go/extensions/mcp-server test -count=1 ./testdata/interop/host",
+      "exitCode": 0,
+      "result": "2 tests PASS; strict wire oracle accepts expected error and rejects a sticky failure after a real extra business callout",
+      "log": "host-test.log",
+      "logSha256": "65dc7e852f3cb78db21afc13c86689b56387a9dde07bb494c2e5bc5c8458260a"
+    },
+    {
+      "command": "env -u GH_TOKEN -u GITHUB_TOKEN go -C plugins/wasm-go/extensions/mcp-server test -race -count=1 ./testdata/interop/host",
+      "exitCode": 0,
+      "result": "PASS",
+      "log": "host-race.log",
+      "logSha256": "d901dabec8887a5e6f85aa61b6172dcd80b6b68d292c5a77054c59c945dfa56c"
+    },
+    {
+      "command": "env -u GH_TOKEN -u GITHUB_TOKEN bash plugins/wasm-go/extensions/mcp-server/testdata/interop/run.sh",
+      "exitCode": 0,
+      "result": "PASS: host self-tests, all 7 endpoint scenarios for each official SDK, strict HTTP400/-32020/ID check, sticky fixture verdict, direct host cleanup",
+      "log": "interop.log",
+      "logSha256": "cc3a4ed3a94aedc196dbbfd35993d209cb951e3c08061a5eb015e030bd46b679"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "source_sha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "source_tree_clean": true,
+  "started_at": "2026-09-23T07:59:09.965517+00:00",
+  "commands": [
+    {
+      "name": "auto-self-tests",
+      "command": [
+        "python3",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/auto_self_test.py"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T07:59:10.719324+00:00",
+      "log": "auto-self-tests.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T07:59:11.558231+00:00"
+    },
+    {
+      "name": "orchestration-self-tests",
+      "command": [
+        "python3",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/orchestration_self_test.py"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T07:59:11.558950+00:00",
+      "log": "orchestration-self-tests.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T07:59:13.502398+00:00"
+    },
+    {
+      "name": "lifecycle-self-tests",
+      "command": [
+        "bash",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/lifecycle_self_test.sh"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T07:59:13.503761+00:00",
+      "log": "lifecycle-self-tests.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T07:59:13.582227+00:00"
+    },
+    {
+      "name": "release-unit",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/tools/plugin-release",
+        "test",
+        "-run",
+        "TestFirstManagedRelease",
+        "-count=1",
+        "./..."
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T07:59:13.583449+00:00",
+      "log": "release-unit.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:24.832150+00:00"
+    },
+    {
+      "name": "catalog",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/tools/plugin-release",
+        "run",
+        ".",
+        "validate-catalog",
+        "--root",
+        "../..",
+        "--catalog",
+        "../../plugins/release/catalog.json"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T08:01:24.833184+00:00",
+      "log": "catalog.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:27.108873+00:00"
+    },
+    {
+      "name": "unit",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/pkg/mcp",
+        "test",
+        "-count=1",
+        "./..."
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T08:01:27.109351+00:00",
+      "log": "unit.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:30.473805+00:00"
+    },
+    {
+      "name": "race",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/pkg/mcp",
+        "test",
+        "-race",
+        "-count=1",
+        "./server",
+        "./protocol"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T08:01:30.474318+00:00",
+      "log": "race.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:36.031259+00:00"
+    },
+    {
+      "name": "extension",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server",
+        "test",
+        "-count=1",
+        "./..."
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T08:01:36.032320+00:00",
+      "log": "extension.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:06:06.989083+00:00"
+    },
+    {
+      "name": "interop",
+      "command": [
+        "bash",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/interop/run.sh"
+      ],
+      "environment_overrides": {},
+      "started_at": "2026-09-23T08:06:06.990369+00:00",
+      "log": "interop.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:06:15.185862+00:00"
+    },
+    {
+      "name": "wasm",
+      "command": [
+        "go",
+        "-C",
+        "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server",
+        "build",
+        "-trimpath",
+        "-buildmode=c-shared",
+        "-o",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-d/plugin.wasm",
+        "."
+      ],
+      "environment_overrides": {
+        "GOOS": "wasip1",
+        "GOARCH": "wasm"
+      },
+      "started_at": "2026-09-23T08:06:15.187280+00:00",
+      "log": "wasm.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:06:22.621455+00:00"
+    }
+  ],
+  "toolchain": {
+    "go": "go version go1.26.0 darwin/arm64",
+    "node": "v22.19.0"
+  },
+  "token_overrides_unset": true,
+  "finished_at": "2026-09-23T08:06:22.622044+00:00",
+  "unchanged_head": true,
+  "final_status": "",
+  "sha256": {
+    "plugin.wasm": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9",
+    "auto-self-tests.log": "cd1207e522f4932fd85ada41564d0dfd29668585c26023f1e48ddba2f89041df",
+    "orchestration-self-tests.log": "aebe91c911a67510b70c304515b8ba374abb74b0e601a2e4e63e514cc27b6956",
+    "lifecycle-self-tests.log": "4c49ac22ed607b149038388707a439b9e8afb3e58bd2bb154a8b5df7c52eebd0",
+    "release-unit.log": "d0a451af305df8901bbc300746b423b6b8d1d8925dedab0d6336156ce442e4ec",
+    "catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unit.log": "f279fd3ddca5eece022c54dbd4c763104bed41a0ace0f6fbe05a96e1ba04c528",
+    "race.log": "5ed45006f21cdd7ba13f89dd6893c2e894825685d5c436e3baac0af6b0bde1d0",
+    "extension.log": "2e87889dc0622c1a524286f39617ce4df1ac2bf692bce43f7a8e94c6df8ec9c2",
+    "interop.log": "b55ec389de96b14e87dec4df84f41a0c740ae6b25e328cb15ffcfbd2e4fd20a5",
+    "wasm.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pass": true
+}

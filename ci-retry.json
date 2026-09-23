@@ -1,0 +1,34 @@
+{
+  "run_id": 35834596638,
+  "head": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "attempt": 1,
+  "failed_job": 107094926605,
+  "first_failure": "registry auth connection reset while pulling unrelated dubbo-provider-demo:0.0.3-x86 at kube-load-image",
+  "in_job_retry_failure": "permission denied deleting root-owned pilot build outputs",
+  "mcp_assertions_executed": false,
+  "rust": "cancelled by matrix fail-fast",
+  "action": "rerun the full failed/cancelled matrix on fresh runners, without source changes",
+  "rerun_requested_at": "2026-09-23T08:16:26.210502+00:00",
+  "log": "ci-plugins-attempt1.log",
+  "attempt2": {
+    "failed_job": 107100105672,
+    "first_failure": "registry auth connection reset pulling nacos-standlone-rc3:1.0.0-RC3",
+    "in_job_retry_failure": "permission denied deleting root-owned pilot build outputs",
+    "mcp_assertions_executed": false,
+    "go": "cancelled by matrix fail-fast",
+    "log": "ci-plugins-attempt2-rust.log"
+  },
+  "next_action": {
+    "action": "one final full matrix rerun on fresh runners",
+    "requested_at": "2026-09-23T08:35:42.538364+00:00",
+    "reason": "single-job retry immediately cancelled against inherited failed matrix sibling"
+  },
+  "attempt3": {
+    "requested_job": 107100106017,
+    "result": "selected Go job cancelled immediately without executing steps; previous Rust failure inherited into matrix",
+    "go_job": 107104594277,
+    "retained_rust_job": 107104596230,
+    "new_test_execution": false,
+    "log": "ci-plugins-attempt3-rust.log"
+  }
+}

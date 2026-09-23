@@ -1,0 +1,4 @@
+using podman due to KIND_EXPERIMENTAL_PROVIDER
+enabling experimental podman provider
+Deleting cluster "mcp-auto-followup-4685" ...
+Deleted nodes: ["mcp-auto-followup-4685-control-plane"]

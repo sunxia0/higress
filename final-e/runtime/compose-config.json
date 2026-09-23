@@ -1,0 +1,632 @@
+{
+  "name": "mcp-runtime-26429",
+  "networks": {
+    "default": {
+      "name": "mcp-runtime-26429_default",
+      "ipam": {}
+    }
+  },
+  "services": {
+    "backend-primary": {
+      "command": [
+        "python",
+        "/harness/backend.py"
+      ],
+      "entrypoint": null,
+      "environment": {
+        "BACKEND_ORIGIN": "primary"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "wget",
+          "-q",
+          "-O",
+          "-",
+          "http://127.0.0.1:8080/healthz"
+        ],
+        "timeout": "2s",
+        "interval": "1s",
+        "retries": 30
+      },
+      "image": "docker.io/library/python:3.12-alpine",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "backend-secondary": {
+      "command": [
+        "python",
+        "/harness/backend.py"
+      ],
+      "entrypoint": null,
+      "environment": {
+        "BACKEND_ORIGIN": "secondary"
+      },
+      "healthcheck": {
+        "test": [
+          "CMD",
+          "wget",
+          "-q",
+          "-O",
+          "-",
+          "http://127.0.0.1:8080/healthz"
+        ],
+        "timeout": "2s",
+        "interval": "1s",
+        "retries": 30
+      },
+      "image": "docker.io/library/python:3.12-alpine",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway": {
+      "command": [
+        "-c",
+        "/evidence/envoy.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        },
+        "backend-secondary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-auto": {
+      "command": [
+        "-c",
+        "/evidence/envoy-auto.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-auto-baseline": {
+      "command": [
+        "-c",
+        "/evidence/envoy-auto-baseline.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-auto-explicit-baseline": {
+      "command": [
+        "-c",
+        "/evidence/envoy-auto-explicit-baseline.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-baseline": {
+      "command": [
+        "-c",
+        "/evidence/envoy-baseline.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-control-affected": {
+      "command": [
+        "-c",
+        "/evidence/envoy-control-affected.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-control-candidate": {
+      "command": [
+        "-c",
+        "/evidence/envoy-control-candidate.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-control-oracle": {
+      "command": [
+        "-c",
+        "/evidence/envoy-control-oracle.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-corpus-affected": {
+      "command": [
+        "-c",
+        "/evidence/envoy-corpus-affected.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-corpus-candidate": {
+      "command": [
+        "-c",
+        "/evidence/envoy-corpus-candidate.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-corpus-oracle": {
+      "command": [
+        "-c",
+        "/evidence/envoy-corpus-oracle.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-generation": {
+      "command": [
+        "-c",
+        "/evidence/envoy-generation.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "gateway-oracle": {
+      "command": [
+        "-c",
+        "/evidence/envoy-oracle.yaml",
+        "--log-level",
+        "info",
+        "--concurrency",
+        "1"
+      ],
+      "depends_on": {
+        "backend-primary": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "entrypoint": [
+        "/usr/local/bin/envoy"
+      ],
+      "image": "higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/gateway:v2.2.3",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/runtime",
+          "read_only": true,
+          "bind": {}
+        }
+      ]
+    },
+    "verifier": {
+      "profiles": [
+        "verify"
+      ],
+      "command": [
+        "python",
+        "/harness/verify.py"
+      ],
+      "depends_on": {
+        "gateway": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "entrypoint": null,
+      "environment": {
+        "RUNTIME_EVIDENCE": "/evidence"
+      },
+      "image": "docker.io/library/python:3.12-alpine",
+      "networks": {
+        "default": null
+      },
+      "volumes": [
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification",
+          "target": "/harness",
+          "read_only": true,
+          "bind": {}
+        },
+        {
+          "type": "bind",
+          "source": "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-e/runtime",
+          "target": "/evidence",
+          "bind": {}
+        }
+      ]
+    }
+  }
+}

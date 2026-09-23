@@ -1,0 +1,1 @@
+The first generated retry helper had an unterminated Python string literal at line26 and did not start any verification command. The helper was corrected and compiled before execution. The original final-kind/results.json separately retains the actual first-run transient Kubernetes Forbidden failure.

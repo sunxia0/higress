@@ -1,0 +1,32 @@
+{
+  "head": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "previous_head": "53587de46153829d05130649aa132e45885c77f6",
+  "followup_commit": "9113d0469393df84bb04801176c44492e6e58975",
+  "upstream_main": "a42482341eb199b2c1553a560c81137ebad14441",
+  "merge_base": "a42482341eb199b2c1553a560c81137ebad14441",
+  "parents": [
+    "9113d0469393df84bb04801176c44492e6e58975",
+    "a42482341eb199b2c1553a560c81137ebad14441"
+  ],
+  "status": "",
+  "diff_check_exit": 0,
+  "wasm_version": "2.0.3-alpha",
+  "production_mcp_unchanged_since_previous_head": true,
+  "followup_files": [
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/README.md",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/check_probe.py",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/go-client/main.go",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/host/main.go",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/host/main_test.go",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/run.sh",
+    "plugins/wasm-go/extensions/mcp-server/testdata/interop/typescript/client.mjs",
+    "plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/README.md",
+    "plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/auto_backend.py",
+    "plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/auto_self_test.py",
+    "plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/verify_auto.py"
+  ],
+  "repository_crd_sha256": {
+    "helm/core/crds/customresourcedefinitions.gen.yaml": "611f76769f72bbab3675d89ff22ca864c8018426c0dd936431a22a52faa4ef71",
+    "helm/core/crds/istio-envoyfilter.yaml": "2a5d6903947373c5629bc4e7068869662c680ddf983910588d39b64a813cab64"
+  }
+}

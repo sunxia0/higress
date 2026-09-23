@@ -1,0 +1,37 @@
+{
+  "source_sha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "commands": [
+    {
+      "command": [
+        "kind",
+        "delete",
+        "cluster",
+        "--name",
+        "mcp-auto-followup-4685"
+      ],
+      "started_at": "2026-09-23T08:17:08.249381+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:17:20.872137+00:00",
+      "log": "cleanup-kind.log"
+    },
+    {
+      "command": [
+        "podman",
+        "machine",
+        "stop",
+        "podman-machine-default"
+      ],
+      "started_at": "2026-09-23T08:17:21.286860+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:17:23.180794+00:00",
+      "log": "cleanup-machine.log"
+    }
+  ],
+  "token_overrides_unset": true,
+  "owned_containers_remaining": [],
+  "other_container_count": 0,
+  "machine_restored_stopped": true,
+  "source_status": "",
+  "plugin_artifact_absent": true,
+  "pass": true
+}

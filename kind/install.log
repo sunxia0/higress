@@ -1,0 +1,18 @@
+serviceaccount/higress-controller created
+serviceaccount/higress-gateway created
+configmap/higress-config created
+clusterrole.rbac.authorization.k8s.io/higress-gateway-higress-system created
+clusterrole.rbac.authorization.k8s.io/higress-controller-higress-system created
+clusterrolebinding.rbac.authorization.k8s.io/higress-gateway-higress-system created
+clusterrolebinding.rbac.authorization.k8s.io/higress-controller-higress-system created
+role.rbac.authorization.k8s.io/higress-controller created
+role.rbac.authorization.k8s.io/higress-gateway created
+rolebinding.rbac.authorization.k8s.io/higress-controller created
+rolebinding.rbac.authorization.k8s.io/higress-gateway created
+service/higress-controller created
+service/higress-gateway created
+deployment.apps/higress-controller created
+deployment.apps/higress-gateway created
+ingressclass.networking.k8s.io/higress created
+error: resource mapping not found for name: "higress-gateway-global-custom-response" namespace: "higress-system" from "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/kind/manifest.yaml": no matches for kind "EnvoyFilter" in version "networking.istio.io/v1alpha3"
+ensure CRDs are installed first

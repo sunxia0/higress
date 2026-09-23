@@ -1,0 +1,5 @@
+failed to confirm still-running stopped after compose status 1 and 1 inspections
+failed to confirm success-but-running stopped after compose status 0 and 1 inspections
+backend-primary remained unavailable after 2 health probes
+backend-primary was healthy but reset failed after 2 attempts
+runtime lifecycle fault-injection self-tests passed

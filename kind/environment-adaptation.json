@@ -1,0 +1,9 @@
+{
+  "host": "macOS arm64 / Podman",
+  "source": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "cluster": "mcp-auto-followup-4685",
+  "gateway": "v2.2.3 fixed same as runtime",
+  "execution": "exact-source Linux arm64 original conformance test binary inside owned kind node, original paired YAML and unchanged prerequisite namespace/service/deployment",
+  "not_claimed": "standard Make orchestration or unrelated suites",
+  "setup_recovery": "initial template apply missing CRDs; installed repository CRDs and reapplied unchanged template; original failure retained"
+}

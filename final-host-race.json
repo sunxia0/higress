@@ -1,0 +1,17 @@
+{
+  "source_sha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "command": [
+    "go",
+    "-C",
+    "/Users/xiao/.codex/worktrees/8e59/higress-fork/plugins/wasm-go/extensions/mcp-server",
+    "test",
+    "-race",
+    "-count=1",
+    "./testdata/interop/host"
+  ],
+  "token_overrides_unset": true,
+  "started_at": "2026-09-23T08:05:32.036714+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-09-23T08:05:35.593690+00:00",
+  "log_sha256": "8c187eb7d78ea8c64cbd3ee6b5415556a1c1bf6c749d877a3416ea335eb5ce52"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "plugins/wasm-go/extensions/mcp-server/testdata/runtime-verification/auto_backend.py",
+    "line": 59,
+    "body": "Session ownership is compared with the exact value issued to each request, while evidence exposes only a boolean. A valid session belonging to another concurrent request must fail without placing session values in the ledger.",
+    "id": 4080290699,
+    "url": "https://github.com/higress-group/higress/pull/4685#discussion_r4080290699",
+    "commit_id": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88"
+  },
+  {
+    "path": "plugins/wasm-go/extensions/mcp-server/testdata/interop/host/main.go",
+    "line": 171,
+    "body": "Fixture assertion failures remain sticky across subsequent requests. This prevents an SDK expected-error path from converting an HTTP 500 produced by a failed sequence assertion into a passing interoperability run.",
+    "id": 4080290904,
+    "url": "https://github.com/higress-group/higress/pull/4685#discussion_r4080290904",
+    "commit_id": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88"
+  },
+  {
+    "path": "plugins/wasm-go/extensions/mcp-server/testdata/interop/host/main_test.go",
+    "line": 124,
+    "body": "The negative oracle exercises a real business hostcall emitted by the unchanged plugin after an intentionally altered fixture discovery response. It does not insert synthetic ledger entries, and it requires the same checker used by run.sh to reject the retained failure after a later valid probe response.",
+    "id": 4080291139,
+    "url": "https://github.com/higress-group/higress/pull/4685#discussion_r4080291139",
+    "commit_id": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88"
+  }
+]

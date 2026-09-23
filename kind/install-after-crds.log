@@ -1,0 +1,17 @@
+serviceaccount/higress-controller unchanged
+serviceaccount/higress-gateway unchanged
+configmap/higress-config unchanged
+clusterrole.rbac.authorization.k8s.io/higress-gateway-higress-system unchanged
+clusterrole.rbac.authorization.k8s.io/higress-controller-higress-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/higress-gateway-higress-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/higress-controller-higress-system unchanged
+role.rbac.authorization.k8s.io/higress-controller unchanged
+role.rbac.authorization.k8s.io/higress-gateway unchanged
+rolebinding.rbac.authorization.k8s.io/higress-controller unchanged
+rolebinding.rbac.authorization.k8s.io/higress-gateway unchanged
+service/higress-controller unchanged
+service/higress-gateway unchanged
+deployment.apps/higress-controller configured
+deployment.apps/higress-gateway configured
+ingressclass.networking.k8s.io/higress unchanged
+envoyfilter.networking.istio.io/higress-gateway-global-custom-response created

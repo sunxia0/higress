@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-23T08:44:16.749123+00:00",
+  "token_overrides_unset": true,
+  "login": "sunxia0",
+  "role_name": "admin",
+  "pr": {
+    "author": {
+      "id": "MDQ6VXNlcjI3NjU4MjY3",
+      "is_bot": false,
+      "login": "sunxia0",
+      "name": ""
+    },
+    "headRefOid": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+    "mergeStateStatus": "BLOCKED",
+    "mergeable": "MERGEABLE",
+    "reviewDecision": "REVIEW_REQUIRED",
+    "url": "https://github.com/higress-group/higress/pull/4685"
+  },
+  "upstream_main": "a42482341eb199b2c1553a560c81137ebad14441",
+  "main_is_ancestor": true,
+  "source_tree_clean": true
+}

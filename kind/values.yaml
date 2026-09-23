@@ -1,0 +1,20 @@
+global:
+  local: true
+  volumeWasmPlugins: true
+  onlyPushRouteCluster: false
+controller:
+  tag: v2.2.3
+  replicas: 1
+pilot:
+  tag: v2.2.3
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+gateway:
+  tag: v2.2.3
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi

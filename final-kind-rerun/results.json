@@ -1,0 +1,203 @@
+{
+  "source_sha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "started_at": "2026-09-23T08:14:55.392888+00:00",
+  "commands": [
+    {
+      "name": "compile",
+      "command": [
+        "go",
+        "test",
+        "-c",
+        "-tags",
+        "conformance",
+        "-o",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-kind-rerun/conformance.test",
+        "./test/e2e/e2e_test.go"
+      ],
+      "started_at": "2026-09-23T08:14:55.393730+00:00",
+      "log": "compile.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:04.939776+00:00"
+    },
+    {
+      "name": "start-node",
+      "command": [
+        "podman",
+        "start",
+        "mcp-auto-followup-4685-control-plane"
+      ],
+      "started_at": "2026-09-23T08:15:04.967321+00:00",
+      "log": "start-node.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:05.513233+00:00"
+    },
+    {
+      "name": "load-python",
+      "command": [
+        "kind",
+        "load",
+        "image-archive",
+        "--name",
+        "mcp-auto-followup-4685",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/kind/image-3.tar"
+      ],
+      "started_at": "2026-09-23T08:15:05.513817+00:00",
+      "log": "load-python.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:08.170969+00:00"
+    },
+    {
+      "name": "wait-api",
+      "command": [
+        "python3",
+        "-c",
+        "import subprocess,time,sys\ndeadline=time.monotonic()+120\nwhile time.monotonic()<deadline:\n r=subprocess.run(['kubectl','--request-timeout=5s','get','deployment/higress-controller','-n','higress-system'],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)\n if r.returncode==0: print('API and deployment authorization ready');sys.exit(0)\n time.sleep(2)\nraise SystemExit('API/deployment authorization did not become ready')"
+      ],
+      "started_at": "2026-09-23T08:15:08.171434+00:00",
+      "log": "wait-api.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:08.922817+00:00"
+    },
+    {
+      "name": "wait-controller",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-controller",
+        "-n",
+        "higress-system",
+        "--timeout=120s"
+      ],
+      "started_at": "2026-09-23T08:15:08.923273+00:00",
+      "log": "wait-controller.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:09.412965+00:00"
+    },
+    {
+      "name": "restart-gateway",
+      "command": [
+        "kubectl",
+        "rollout",
+        "restart",
+        "deployment/higress-gateway",
+        "-n",
+        "higress-system"
+      ],
+      "started_at": "2026-09-23T08:15:09.413437+00:00",
+      "log": "restart-gateway.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:09.921764+00:00"
+    },
+    {
+      "name": "wait-gateway",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-gateway",
+        "-n",
+        "higress-system",
+        "--timeout=120s"
+      ],
+      "started_at": "2026-09-23T08:15:09.922259+00:00",
+      "log": "wait-gateway.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:15.895213+00:00"
+    },
+    {
+      "name": "copy-test",
+      "command": [
+        "podman",
+        "cp",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-kind-rerun/conformance.test",
+        "mcp-auto-followup-4685-control-plane:/conformance.test"
+      ],
+      "started_at": "2026-09-23T08:15:15.896098+00:00",
+      "log": "copy-test.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:18.395726+00:00"
+    },
+    {
+      "name": "conformance",
+      "command": [
+        "podman",
+        "exec",
+        "-e",
+        "KUBECONFIG=/etc/kubernetes/admin.conf",
+        "mcp-auto-followup-4685-control-plane",
+        "/conformance.test",
+        "-test.v",
+        "-test.timeout=8m",
+        "-isWasmPluginTest=true",
+        "-wasmPluginType=GO",
+        "-wasmPluginName=mcp-server",
+        "--ingress-class=higress",
+        "--debug=true",
+        "--test-area=run",
+        "--execute-tests=WasmPluginsMCP20260728"
+      ],
+      "started_at": "2026-09-23T08:15:18.396307+00:00",
+      "log": "conformance.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:24.128038+00:00"
+    },
+    {
+      "name": "gateway-log",
+      "command": [
+        "kubectl",
+        "logs",
+        "-n",
+        "higress-system",
+        "deployment/higress-gateway"
+      ],
+      "started_at": "2026-09-23T08:15:24.130011+00:00",
+      "log": "gateway-log.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:24.663813+00:00"
+    },
+    {
+      "name": "image-identities",
+      "command": [
+        "podman",
+        "exec",
+        "mcp-auto-followup-4685-control-plane",
+        "ctr",
+        "-n",
+        "k8s.io",
+        "images",
+        "list"
+      ],
+      "started_at": "2026-09-23T08:15:24.664306+00:00",
+      "log": "image-identities.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:15:25.184239+00:00"
+    }
+  ],
+  "adaptation": "../kind/environment-adaptation.json",
+  "token_overrides_unset": true,
+  "expected_cases": [
+    "auto_legacy_discovers_before_direct_call",
+    "auto_modern_discovers_before_direct_call",
+    "cross-origin_request_rejected",
+    "legacy_tools/list_remains_unshaped",
+    "modern_discovery",
+    "modern_tools/call",
+    "modern_tools/list"
+  ],
+  "passed_cases": [
+    "auto_legacy_discovers_before_direct_call",
+    "auto_modern_discovers_before_direct_call",
+    "cross-origin_request_rejected",
+    "legacy_tools/list_remains_unshaped",
+    "modern_discovery",
+    "modern_tools/call",
+    "modern_tools/list"
+  ],
+  "pass_": true,
+  "sha256": {
+    "plugin.wasm": "a7f9dbc38a6789249bd2ee9e1bb5a7bc20c31b6710eed8d02a14623fec5f0fc9",
+    "conformance.test": "9f4ae72ab51c0738f8a53c74123615e59b3f343dc06e7a827a565e2f70ab15e6"
+  },
+  "finished_at": "2026-09-23T08:15:25.288353+00:00"
+}

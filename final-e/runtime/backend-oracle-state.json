@@ -1,0 +1,44 @@
+{
+  "events": [
+    {
+      "authorizationMatchesExplicitPolicy": false,
+      "authorizationPresent": false,
+      "compatibilityRequest": {
+        "flag": "true",
+        "jsonBody": {
+          "businessType": [
+            "SALE",
+            "REFUND"
+          ],
+          "payload": {
+            "amount": 12
+          }
+        },
+        "query": {
+          "fixed": [
+            "yes"
+          ],
+          "page": [
+            "7"
+          ]
+        }
+      },
+      "cookiePresent": false,
+      "futureParam": null,
+      "httpMethod": "POST",
+      "internalRoutePresent": false,
+      "lastEventIDPresent": false,
+      "mcpMethod": null,
+      "mcpName": null,
+      "origin": "primary",
+      "path": "/compat/tx-42",
+      "protocolVersion": null,
+      "rpcId": null,
+      "rpcMethod": null,
+      "seq": 1,
+      "sessionPresent": false,
+      "toolName": null,
+      "unrelatedCredentialPresent": false
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107106240729",
+    "name": "publish",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pending",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596638/job/107106028193",
+    "name": "higress-wasmplugin-test (GO)",
+    "state": "IN_PROGRESS"
+  },
+  {
+    "bucket": "pending",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596638/job/107106028494",
+    "name": "higress-wasmplugin-test (RUST)",
+    "state": "IN_PROGRESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/runs/107098924785",
+    "name": "CodeQL",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107098809560",
+    "name": "higress-conformance-test",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107097191492",
+    "name": "build",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596617/job/107097008118",
+    "name": "Test Summary & Coverage",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095177888",
+    "name": "inference-extension-conformance-test (v1.4.0)",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095178039",
+    "name": "gateway-conformance-test (v1.4.0)",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107095177976",
+    "name": "gateway-conformance-test (v1.6.0)",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596617/job/107094974310",
+    "name": "MCP 2026 Conformance and Official SDK Interop",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596617/job/107094974397",
+    "name": "Test Changed Plugins (mcp-server, extensions/mcp-server)",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927285",
+    "name": "coverage-test",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927304",
+    "name": "hgctl-test",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596617/job/107094926588",
+    "name": "Detect Changed Plugins",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596631/job/107094926800",
+    "name": "validate",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596787/job/107094927603",
+    "name": "check-license",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596650/job/107094926688",
+    "name": "Analyze (go)",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/higress-group/higress/actions/runs/35834596714/job/107094927134",
+    "name": "lint",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://probot.github.io/apps/dco/",
+    "name": "DCO",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://app.fossa.com/projects/git%2Bgithub.com%2Fhigress-group%2Fhigress/refs/branch/main/06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+    "name": "License Compliance",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://cla-assistant.io/higress-group/higress?pullRequest=4685",
+    "name": "license/cla",
+    "state": "SUCCESS"
+  },
+  {
+    "bucket": "pass",
+    "link": "https://github.com/alibaba/PR-description/blob/main/SC.md",
+    "name": "yy-sensitive-scan",
+    "state": "SUCCESS"
+  }
+]

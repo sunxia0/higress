@@ -1,0 +1,721 @@
+{
+  "generations": [
+    {
+      "backendEvents": {
+        "backend-primary": [
+          {
+            "authorizationMatchesExplicitPolicy": false,
+            "authorizationPresent": false,
+            "compatibilityRequest": {
+              "flag": "false",
+              "jsonBody": {
+                "businessType": [
+                  "SALE"
+                ]
+              },
+              "query": {
+                "fixed": [
+                  "yes"
+                ],
+                "page": [
+                  "10"
+                ]
+              }
+            },
+            "cookiePresent": false,
+            "futureParam": null,
+            "httpMethod": "POST",
+            "internalRoutePresent": false,
+            "lastEventIDPresent": false,
+            "mcpMethod": null,
+            "mcpName": null,
+            "origin": "primary",
+            "path": "/compat/transition",
+            "protocolVersion": null,
+            "rpcId": null,
+            "rpcMethod": null,
+            "seq": 1,
+            "sessionPresent": false,
+            "toolName": null,
+            "unrelatedCredentialPresent": false
+          }
+        ]
+      },
+      "clientExchanges": [
+        {
+          "accessRequestId": "rv-12008-generation-list-valid-before",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/list",
+            "mcpName": null,
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-list-valid-before",
+            "rpcMethod": "tools/list",
+            "sessionPresent": false,
+            "toolName": null
+          },
+          "response": {
+            "body": {
+              "id": "generation-list-valid-before",
+              "jsonrpc": "2.0",
+              "result": {
+                "_meta": {
+                  "io.modelcontextprotocol/serverInfo": {
+                    "name": "schema-compatibility",
+                    "version": "1.0.0"
+                  }
+                },
+                "cacheScope": "private",
+                "resultType": "complete",
+                "tools": [
+                  {
+                    "description": "Unrelated valid compatibility tool",
+                    "inputSchema": {
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "name": "compat_health"
+                  },
+                  {
+                    "description": "Pinned schema compatibility fixture",
+                    "inputSchema": {
+                      "properties": {
+                        "X-Compat-Flag": {
+                          "default": false,
+                          "description": "Compatibility flag",
+                          "type": "boolean"
+                        },
+                        "businessType": {
+                          "description": "Business types",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        "page": {
+                          "default": 10,
+                          "description": "Page number",
+                          "type": "integer"
+                        },
+                        "payload": {
+                          "description": "Deterministic payload",
+                          "properties": {
+                            "amount": {
+                              "type": "integer"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "transactionId": {
+                          "description": "Transaction identifier",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "transactionId"
+                      ],
+                      "type": "object"
+                    },
+                    "name": "getTransactionRecordListV2"
+                  }
+                ],
+                "ttlMs": 0
+              }
+            },
+            "bodySha256": "e7a080aae79034cdd71f9185e4bebe1980d18863a4dd3f0b1e5e0416e01dc793",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        },
+        {
+          "accessRequestId": "rv-12008-generation-call-valid-before",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/call",
+            "mcpName": "getTransactionRecordListV2",
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-call-valid-before",
+            "rpcMethod": "tools/call",
+            "sessionPresent": false,
+            "toolName": "getTransactionRecordListV2"
+          },
+          "response": {
+            "body": {
+              "id": "generation-call-valid-before",
+              "jsonrpc": "2.0",
+              "result": {
+                "_meta": {
+                  "io.modelcontextprotocol/serverInfo": {
+                    "name": "schema-compatibility",
+                    "version": "1.0.0"
+                  }
+                },
+                "content": [
+                  {
+                    "text": "{\"ok\":true,\"path\":\"/compat/transition\",\"origin\":\"primary\"}",
+                    "type": "text"
+                  }
+                ],
+                "isError": false,
+                "resultType": "complete"
+              }
+            },
+            "bodySha256": "97ec08132eb8b88ef4f94fc0c244d2f0e2e682f959bf99277c2bc965d59923a3",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        }
+      ],
+      "descriptor": {
+        "description": "Pinned schema compatibility fixture",
+        "inputSchema": {
+          "properties": {
+            "X-Compat-Flag": {
+              "default": false,
+              "description": "Compatibility flag",
+              "type": "boolean"
+            },
+            "businessType": {
+              "description": "Business types",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "default": 10,
+              "description": "Page number",
+              "type": "integer"
+            },
+            "payload": {
+              "description": "Deterministic payload",
+              "properties": {
+                "amount": {
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            },
+            "transactionId": {
+              "description": "Transaction identifier",
+              "type": "string"
+            }
+          },
+          "required": [
+            "transactionId"
+          ],
+          "type": "object"
+        },
+        "name": "getTransactionRecordListV2"
+      },
+      "phase": "valid-before",
+      "response": {
+        "id": "generation-call-valid-before",
+        "jsonrpc": "2.0",
+        "result": {
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "schema-compatibility",
+              "version": "1.0.0"
+            }
+          },
+          "content": [
+            {
+              "text": "{\"ok\":true,\"path\":\"/compat/transition\",\"origin\":\"primary\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "resultType": "complete"
+        }
+      },
+      "schemaState": "validated"
+    },
+    {
+      "backendEvents": {
+        "backend-primary": []
+      },
+      "clientExchanges": [
+        {
+          "accessRequestId": "rv-12008-generation-list-validation-unavailable",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/list",
+            "mcpName": null,
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-list-validation-unavailable",
+            "rpcMethod": "tools/list",
+            "sessionPresent": false,
+            "toolName": null
+          },
+          "response": {
+            "body": {
+              "id": "generation-list-validation-unavailable",
+              "jsonrpc": "2.0",
+              "result": {
+                "_meta": {
+                  "io.modelcontextprotocol/serverInfo": {
+                    "name": "schema-compatibility",
+                    "version": "1.0.0"
+                  }
+                },
+                "cacheScope": "private",
+                "resultType": "complete",
+                "tools": [
+                  {
+                    "description": "Unrelated valid compatibility tool",
+                    "inputSchema": {
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "name": "compat_health"
+                  },
+                  {
+                    "description": "Pinned schema compatibility fixture",
+                    "inputSchema": {
+                      "properties": {
+                        "X-Compat-Flag": {
+                          "default": false,
+                          "description": "Compatibility flag",
+                          "type": "boolean"
+                        },
+                        "businessType": {
+                          "description": "Business types",
+                          "enum": [
+                            "SALE",
+                            "REFUND"
+                          ],
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        "page": {
+                          "default": 10,
+                          "description": "Page number",
+                          "type": "integer"
+                        },
+                        "payload": {
+                          "description": "Deterministic payload",
+                          "properties": {
+                            "amount": {
+                              "type": "integer"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "transactionId": {
+                          "description": "Transaction identifier",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "transactionId"
+                      ],
+                      "type": "object"
+                    },
+                    "name": "getTransactionRecordListV2"
+                  }
+                ],
+                "ttlMs": 0
+              }
+            },
+            "bodySha256": "89a7a1e727549f411e39440a1167b73d3e8e4b5af32ba2d546535abe20b6b449",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        },
+        {
+          "accessRequestId": "rv-12008-generation-call-validation-unavailable",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/call",
+            "mcpName": "getTransactionRecordListV2",
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-call-validation-unavailable",
+            "rpcMethod": "tools/call",
+            "sessionPresent": false,
+            "toolName": "getTransactionRecordListV2"
+          },
+          "response": {
+            "body": {
+              "error": {
+                "code": -32603,
+                "data": {
+                  "reason": "schema_validation_unavailable"
+                },
+                "message": "tool input schema validation is unavailable"
+              },
+              "id": "generation-call-validation-unavailable",
+              "jsonrpc": "2.0"
+            },
+            "bodySha256": "9d611e2fb6b7b569550c446c6195dd0c00f507e5896c39202011358e9a69ee20",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        }
+      ],
+      "descriptor": {
+        "description": "Pinned schema compatibility fixture",
+        "inputSchema": {
+          "properties": {
+            "X-Compat-Flag": {
+              "default": false,
+              "description": "Compatibility flag",
+              "type": "boolean"
+            },
+            "businessType": {
+              "description": "Business types",
+              "enum": [
+                "SALE",
+                "REFUND"
+              ],
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "default": 10,
+              "description": "Page number",
+              "type": "integer"
+            },
+            "payload": {
+              "description": "Deterministic payload",
+              "properties": {
+                "amount": {
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            },
+            "transactionId": {
+              "description": "Transaction identifier",
+              "type": "string"
+            }
+          },
+          "required": [
+            "transactionId"
+          ],
+          "type": "object"
+        },
+        "name": "getTransactionRecordListV2"
+      },
+      "phase": "validation-unavailable",
+      "response": {
+        "error": {
+          "code": -32603,
+          "data": {
+            "reason": "schema_validation_unavailable"
+          },
+          "message": "tool input schema validation is unavailable"
+        },
+        "id": "generation-call-validation-unavailable",
+        "jsonrpc": "2.0"
+      },
+      "schemaState": "validation-unavailable"
+    },
+    {
+      "backendEvents": {
+        "backend-primary": [
+          {
+            "authorizationMatchesExplicitPolicy": false,
+            "authorizationPresent": false,
+            "compatibilityRequest": {
+              "flag": "false",
+              "jsonBody": {
+                "businessType": [
+                  "SALE"
+                ]
+              },
+              "query": {
+                "fixed": [
+                  "yes"
+                ],
+                "page": [
+                  "10"
+                ]
+              }
+            },
+            "cookiePresent": false,
+            "futureParam": null,
+            "httpMethod": "POST",
+            "internalRoutePresent": false,
+            "lastEventIDPresent": false,
+            "mcpMethod": null,
+            "mcpName": null,
+            "origin": "primary",
+            "path": "/compat/transition",
+            "protocolVersion": null,
+            "rpcId": null,
+            "rpcMethod": null,
+            "seq": 1,
+            "sessionPresent": false,
+            "toolName": null,
+            "unrelatedCredentialPresent": false
+          }
+        ]
+      },
+      "clientExchanges": [
+        {
+          "accessRequestId": "rv-12008-generation-list-valid-after",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/list",
+            "mcpName": null,
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-list-valid-after",
+            "rpcMethod": "tools/list",
+            "sessionPresent": false,
+            "toolName": null
+          },
+          "response": {
+            "body": {
+              "id": "generation-list-valid-after",
+              "jsonrpc": "2.0",
+              "result": {
+                "_meta": {
+                  "io.modelcontextprotocol/serverInfo": {
+                    "name": "schema-compatibility",
+                    "version": "1.0.0"
+                  }
+                },
+                "cacheScope": "private",
+                "resultType": "complete",
+                "tools": [
+                  {
+                    "description": "Unrelated valid compatibility tool",
+                    "inputSchema": {
+                      "properties": {},
+                      "type": "object"
+                    },
+                    "name": "compat_health"
+                  },
+                  {
+                    "description": "Pinned schema compatibility fixture",
+                    "inputSchema": {
+                      "properties": {
+                        "X-Compat-Flag": {
+                          "default": false,
+                          "description": "Compatibility flag",
+                          "type": "boolean"
+                        },
+                        "businessType": {
+                          "description": "Business types",
+                          "items": {
+                            "type": "string"
+                          },
+                          "type": "array"
+                        },
+                        "page": {
+                          "default": 10,
+                          "description": "Page number",
+                          "type": "integer"
+                        },
+                        "payload": {
+                          "description": "Deterministic payload",
+                          "properties": {
+                            "amount": {
+                              "type": "integer"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "transactionId": {
+                          "description": "Transaction identifier",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "transactionId"
+                      ],
+                      "type": "object"
+                    },
+                    "name": "getTransactionRecordListV2"
+                  }
+                ],
+                "ttlMs": 0
+              }
+            },
+            "bodySha256": "9f676bc8245b3db43efd3b9d386c902e494bf53b6ee2cdde7f1b6d469ea045c4",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        },
+        {
+          "accessRequestId": "rv-12008-generation-call-valid-after",
+          "case": null,
+          "request": {
+            "authorizationPresent": false,
+            "cookiePresent": false,
+            "futureParamPresent": false,
+            "httpMethod": "POST",
+            "lastEventIDPresent": false,
+            "listenerPort": 12008,
+            "mcpMethod": "tools/call",
+            "mcpName": "getTransactionRecordListV2",
+            "origin": "http://mcp.runtime.test",
+            "path": "/mcp",
+            "protocolVersion": "2026-07-28",
+            "rpcId": "generation-call-valid-after",
+            "rpcMethod": "tools/call",
+            "sessionPresent": false,
+            "toolName": "getTransactionRecordListV2"
+          },
+          "response": {
+            "body": {
+              "id": "generation-call-valid-after",
+              "jsonrpc": "2.0",
+              "result": {
+                "_meta": {
+                  "io.modelcontextprotocol/serverInfo": {
+                    "name": "schema-compatibility",
+                    "version": "1.0.0"
+                  }
+                },
+                "content": [
+                  {
+                    "text": "{\"ok\":true,\"path\":\"/compat/transition\",\"origin\":\"primary\"}",
+                    "type": "text"
+                  }
+                ],
+                "isError": false,
+                "resultType": "complete"
+              }
+            },
+            "bodySha256": "157b474371af018e1d168c9f4ae7478f4fd34ef40817182a605a7206a8be4231",
+            "headers": {
+              "content-type": "application/json; charset=utf-8",
+              "mcp-session-id-present": false
+            },
+            "status": 200
+          }
+        }
+      ],
+      "descriptor": {
+        "description": "Pinned schema compatibility fixture",
+        "inputSchema": {
+          "properties": {
+            "X-Compat-Flag": {
+              "default": false,
+              "description": "Compatibility flag",
+              "type": "boolean"
+            },
+            "businessType": {
+              "description": "Business types",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "default": 10,
+              "description": "Page number",
+              "type": "integer"
+            },
+            "payload": {
+              "description": "Deterministic payload",
+              "properties": {
+                "amount": {
+                  "type": "integer"
+                }
+              },
+              "type": "object"
+            },
+            "transactionId": {
+              "description": "Transaction identifier",
+              "type": "string"
+            }
+          },
+          "required": [
+            "transactionId"
+          ],
+          "type": "object"
+        },
+        "name": "getTransactionRecordListV2"
+      },
+      "phase": "valid-after",
+      "response": {
+        "id": "generation-call-valid-after",
+        "jsonrpc": "2.0",
+        "result": {
+          "_meta": {
+            "io.modelcontextprotocol/serverInfo": {
+              "name": "schema-compatibility",
+              "version": "1.0.0"
+            }
+          },
+          "content": [
+            {
+              "text": "{\"ok\":true,\"path\":\"/compat/transition\",\"origin\":\"primary\"}",
+              "type": "text"
+            }
+          ],
+          "isError": false,
+          "resultType": "complete"
+        }
+      },
+      "schemaState": "validated"
+    }
+  ],
+  "ldsVersions": [
+    "valid-before",
+    "validation-unavailable",
+    "valid-after"
+  ]
+}

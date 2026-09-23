@@ -1,0 +1,25 @@
+admin:
+  address:
+    socket_address: {address: 0.0.0.0, port_value: 9921}
+node:
+  id: schema-compatibility-generation
+  cluster: runtime-verification
+dynamic_resources:
+  lds_config:
+    path_config_source:
+      path: /evidence/lds-generation-current.yaml
+    resource_api_version: V3
+static_resources:
+  clusters:
+  - name: backend-primary
+    connect_timeout: 5s
+    type: STRICT_DNS
+    dns_lookup_family: V4_ONLY
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: backend-primary
+      endpoints:
+        - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address: {address: backend-primary, port_value: 8080}

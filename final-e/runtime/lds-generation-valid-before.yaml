@@ -1,0 +1,47 @@
+version_info: "valid-before"
+resources:
+  - "@type": type.googleapis.com/envoy.config.listener.v3.Listener
+    name: schema-compatibility-generation
+    address:
+      socket_address: {address: 0.0.0.0, port_value: 12008}
+    filter_chains:
+      - filters:
+          - name: envoy.filters.network.http_connection_manager
+            typed_config:
+              "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+              stat_prefix: schema-compatibility-generation
+              access_log:
+                - name: envoy.access_loggers.stdout
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    log_format:
+                      text_format_source:
+                        inline_string: "access request_id=%REQ(X-REQUEST-ID)% listener=schema-compatibility-generation method=%REQ(:METHOD)% path=%REQ(:PATH)% code=%RESPONSE_CODE% flags=%RESPONSE_FLAGS%\n"
+              route_config:
+                name: route-schema-compatibility-generation
+                virtual_hosts:
+                  - name: local-schema-compatibility-generation
+                    domains: ["*"]
+                    routes:
+                      - match: {prefix: "/"}
+                        route: {cluster: backend-primary, timeout: 30s}
+              http_filters:
+                - name: envoy.filters.http.wasm
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.wasm.v3.Wasm
+                    config:
+                      name: schema-compatibility-generation
+                      root_id: schema-compatibility-generation
+                      vm_config:
+                        vm_id: schema-compatibility-generation
+                        runtime: envoy.wasm.runtime.v8
+                        code:
+                          local: {filename: /runtime/plugin.wasm}
+                      configuration:
+                        "@type": type.googleapis.com/google.protobuf.StringValue
+                        value: '{"server":{"name":"schema-compatibility","type":"rest"},"tools":[{"args":[{"description":"Transaction identifier","name":"transactionId","position":"path","required":true,"type":"string"},{"default":10,"description":"Page number","name":"page","position":"query","type":"integer"},{"default":false,"description":"Compatibility flag","name":"X-Compat-Flag","position":"header","type":"boolean"},{"description":"Business types","items":{"type":"string"},"name":"businessType","position":"body","type":"array"},{"description":"Deterministic payload","name":"payload","position":"body","properties":{"amount":{"type":"integer"}},"type":"object"}],"description":"Pinned schema compatibility fixture","name":"getTransactionRecordListV2","requestTemplate":{"argsToJsonBody":true,"method":"POST","url":"http://backend-primary:8080/compat/{transactionId}?fixed=yes"}},{"description":"Unrelated valid compatibility tool","name":"compat_health","requestTemplate":{"method":"GET","url":"http://backend-primary:8080/compat/health"}}]}'
+                - name: envoy.filters.http.router
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+
+type_url: type.googleapis.com/envoy.config.listener.v3.Listener

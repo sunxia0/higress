@@ -1,0 +1,99 @@
+{
+  "token_overrides_unset": true,
+  "cluster": "mcp-auto-followup-4685",
+  "commands": [
+    {
+      "name": "install-crds",
+      "command": [
+        "kubectl",
+        "apply",
+        "--server-side",
+        "-f",
+        "helm/core/crds/customresourcedefinitions.gen.yaml",
+        "-f",
+        "helm/core/crds/istio-envoyfilter.yaml"
+      ],
+      "started_at": "2026-09-23T08:01:01.609704+00:00",
+      "log": "install-crds.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:02.598679+00:00"
+    },
+    {
+      "name": "install-after-crds",
+      "command": [
+        "kubectl",
+        "apply",
+        "-f",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/kind/manifest.yaml"
+      ],
+      "started_at": "2026-09-23T08:01:02.599801+00:00",
+      "log": "install-after-crds.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:04.155098+00:00"
+    },
+    {
+      "name": "base",
+      "command": [
+        "kubectl",
+        "apply",
+        "-f",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/kind/base-mcp-only.yaml"
+      ],
+      "started_at": "2026-09-23T08:01:04.155914+00:00",
+      "log": "base.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:04.997917+00:00"
+    },
+    {
+      "name": "wait-controller",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-controller",
+        "-n",
+        "higress-system",
+        "--timeout=180s"
+      ],
+      "started_at": "2026-09-23T08:01:04.998793+00:00",
+      "log": "wait-controller.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:01:42.421091+00:00"
+    },
+    {
+      "name": "wait-gateway",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-gateway",
+        "-n",
+        "higress-system",
+        "--timeout=180s"
+      ],
+      "started_at": "2026-09-23T08:01:42.422469+00:00",
+      "log": "wait-gateway.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:02:48.337662+00:00"
+    },
+    {
+      "name": "stop-before-runtime",
+      "command": [
+        "podman",
+        "stop",
+        "mcp-auto-followup-4685-control-plane"
+      ],
+      "started_at": "2026-09-23T08:02:48.342019+00:00",
+      "log": "stop-before-runtime.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:03:00.017021+00:00"
+    }
+  ],
+  "pass": true,
+  "config_sha256": {
+    "cluster.yaml": "49620938373b7dbb5b3e75e8fd0db252dfa5f7ab05320641c0890879f391658f",
+    "values.yaml": "16cc1a8b17888f0eaa5f6b25156ab74f8eda026c47b41193885849ee20e9166d",
+    "manifest.yaml": "37e6474a45ddc7a0cb4e4b2ddde757af1b174ed626b3c7080a0bf0f535ee24d4",
+    "base-mcp-only.yaml": "15c2b51be044e6b70cec00b2de4417967b1449ad15304e7088a6b583a1d2197e"
+  }
+}

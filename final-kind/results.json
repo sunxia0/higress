@@ -1,0 +1,71 @@
+{
+  "source_sha": "06f864dc1eba5fbb8bf42a54c938c74abcb4ee88",
+  "started_at": "2026-09-23T08:12:19.851034+00:00",
+  "commands": [
+    {
+      "name": "compile",
+      "command": [
+        "go",
+        "test",
+        "-c",
+        "-tags",
+        "conformance",
+        "-o",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/final-kind/conformance.test",
+        "./test/e2e/e2e_test.go"
+      ],
+      "started_at": "2026-09-23T08:12:19.851751+00:00",
+      "log": "compile.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:13:03.840912+00:00"
+    },
+    {
+      "name": "start-node",
+      "command": [
+        "podman",
+        "start",
+        "mcp-auto-followup-4685-control-plane"
+      ],
+      "started_at": "2026-09-23T08:13:03.864397+00:00",
+      "log": "start-node.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:13:04.538918+00:00"
+    },
+    {
+      "name": "load-python",
+      "command": [
+        "kind",
+        "load",
+        "image-archive",
+        "--name",
+        "mcp-auto-followup-4685",
+        "/Users/xiao/.codex/worktrees/8e59/higress-mcp-auto-followup-20260923.O9asKF/kind/image-3.tar"
+      ],
+      "started_at": "2026-09-23T08:13:04.539401+00:00",
+      "log": "load-python.log",
+      "exit_code": 0,
+      "finished_at": "2026-09-23T08:13:08.303144+00:00"
+    },
+    {
+      "name": "wait-controller",
+      "command": [
+        "kubectl",
+        "rollout",
+        "status",
+        "deployment/higress-controller",
+        "-n",
+        "higress-system",
+        "--timeout=120s"
+      ],
+      "started_at": "2026-09-23T08:13:08.303623+00:00",
+      "log": "wait-controller.log",
+      "exit_code": 1,
+      "finished_at": "2026-09-23T08:13:11.448689+00:00"
+    }
+  ],
+  "adaptation": "../kind/environment-adaptation.json",
+  "token_overrides_unset": true,
+  "pass_": false,
+  "error": "failed wait-controller",
+  "finished_at": "2026-09-23T08:13:11.449322+00:00"
+}
